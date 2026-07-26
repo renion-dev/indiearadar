@@ -1,1 +1,28 @@
-<div class="tool-card" data-category="{{ include.tool.category }}"><div class="tool-card-image">{% if include.tool.image %}<img src="{{ include.tool.image | relative_url }}" alt="{{ include.tool.title }}" loading="lazy">{% else %}<div class="tool-card-placeholder"><span>{{ include.tool.title | slice: 0 }}</span></div>{% endif %}<span class="tool-card-category">{{ include.tool.category }}</span></div><div class="tool-card-body"><h3 class="tool-card-title"><a href="{{ include.tool.url | relative_url }}">{{ include.tool.title | split: ' — ' | first }}</a></h3>{% if include.tool.tagline %}<p class="tool-card-tagline">{{ include.tool.tagline }}</p>{% else %}<p class="tool-card-excerpt">{{ include.tool.excerpt | strip_html | truncate: 100 }}</p>{% endif %}<div class="tool-card-footer"><div class="tool-card-meta">{% if include.tool.rating %}<span class="tool-card-rating">⭐ {{ include.tool.rating }}</span>{% endif %}{% if include.tool.pricing %}<span class="tool-card-pricing">{{ include.tool.pricing }}</span>{% endif %}</div><a href="{{ include.tool.url | relative_url }}" class="tool-card-link">Review →</a></div></div></div>
+<article class="tool-card">
+  <div class="tool-image">
+    <img 
+      src="https://logo.clearbit.com/{{ include.tool.domain }}" 
+      alt="{{ include.tool.title }} logo"
+      loading="lazy"
+      onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='flex';"
+    >
+    <div class="logo-fallback" style="display:none;">
+      <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
+    </div>
+  </div>
+  
+  <div class="tool-body">
+    <span class="tool-category">{{ include.tool.category | upcase }}</span>
+    <h3 class="tool-title">{{ include.tool.title }}</h3>
+    <p class="tool-desc">{{ include.tool.description }}</p>
+    
+    <div class="tool-meta">
+      <div class="tool-rating">
+        <span class="star">★</span>
+        <span class="rating-value">{{ include.tool.rating }}</span>
+      </div>
+      <span class="tool-pricing">{{ include.tool.pricing }}</span>
+      <a href="{{ include.tool.url | relative_url }}" class="tool-review">Review →</a>
+    </div>
+  </div>
+</article>

@@ -1,6 +1,7 @@
 ---
 name: "vercel-v0"
 title: "v0 by Vercel — AI UI Generator"
+domain: "v0.dev"
 tagline: "Generate React components from text prompts. Copy, paste, ship."
 category: "code"
 date: 2026-07-24

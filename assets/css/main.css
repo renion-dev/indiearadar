@@ -20,3 +20,45 @@
 @media(max-width:1024px){.tool-content-wrapper,.post-content-wrapper{grid-template-columns:1fr}.tool-sidebar,.post-sidebar{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-lg)}}
 @media(max-width:768px){:root{--container-padding:1rem}.main-nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg-primary);border-bottom:1px solid var(--border);flex-direction:column;padding:var(--space-lg);gap:var(--space-md)}.main-nav.active{display:flex}.menu-toggle{display:flex}.hero-stats{flex-direction:column;gap:var(--space-lg)}.hero-cta{flex-direction:column;align-items:center}.newsletter-box{grid-template-columns:1fr;text-align:center}.newsletter-form{flex-direction:column}.newsletter-visual{display:none}.tool-header-main{flex-direction:column;align-items:center;text-align:center}.tool-meta-row{justify-content:center}.footer-grid{grid-template-columns:1fr 1fr;gap:var(--space-xl)}.newsletter-popup{left:var(--space-md);right:var(--space-md);bottom:var(--space-md);max-width:none}}
 @media(max-width:480px){.tools-grid{grid-template-columns:1fr}.posts-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
+
+
+/* === LOGO STYLES === */
+.tool-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0f0f13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-image img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 8px;
+  background: #1a1a1f;
+}
+
+.logo-fallback {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.tool-card:nth-child(2) .logo-fallback { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.tool-card:nth-child(3) .logo-fallback { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.tool-card:nth-child(4) .logo-fallback { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.tool-card:nth-child(5) .logo-fallback { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.tool-card:nth-child(6) .logo-fallback { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
