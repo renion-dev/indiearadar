@@ -1,0 +1,27 @@
+name: Deploy Only
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      - run: |
+          bundle install
+          bundle exec jekyll build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+      - id: deployment
+        uses: actions/deploy-pages@v4

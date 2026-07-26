@@ -1,0 +1,74 @@
+name: Auto Content + Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 9 * * *'  # Щодня о 9:00 UTC
+  workflow_dispatch:      # Ручний запуск з GitHub UI
+
+jobs:
+  harvest-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      # ─── Checkout ───
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ─── Setup Python + venv ───
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Create venv and install deps
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # ─── Run Harvest Script ───
+      - name: Harvest AI Tools
+        env:
+          PH_API_TOKEN: ${{ secrets.PH_API_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          source venv/bin/activate
+          python scripts/harvest.py
+
+      # ─── Commit new reviews ───
+      - name: Commit changes
+        run: |
+          git config user.name "AI Curator"
+          git config user.email "bot@indiearadar.com"
+          git add _tools/ assets/images/
+          git diff --cached --quiet || git commit -m "🤖 Auto: add new AI tool reviews [$(date +%Y-%m-%d)]"
+          git push
+
+      # ─── Build Jekyll ───
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build site
+        run: |
+          bundle install
+          bundle exec jekyll build
+
+      # ─── Deploy to GitHub Pages ───
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

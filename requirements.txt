@@ -1,0 +1,6 @@
+# Python automation dependencies
+# All free, no trials, no paid tiers required
+
+requests>=2.31.0          # HTTP requests to APIs
+python-dotenv>=1.0.0      # Environment variables
+Pillow>=10.0.0            # Image processing (optional)
