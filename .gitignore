@@ -9,3 +9,8 @@ Gemfile.lock
 venv/
 __pycache__/
 *.pyc
+# Логи, кеш, тимчасові файли
+_logs/
+_cache/
+*.log
+*.cache
