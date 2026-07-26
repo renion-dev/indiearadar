@@ -75,6 +75,8 @@ def fetch_product_hunt():
             name
             tagline
             url
+            website        # ← реальний сайт інструменту
+            description    # ← опис для AI-фільтра
             votesCount
             topics { edges { node { name } } }
             thumbnail { url }
@@ -151,31 +153,31 @@ def generate_review_with_gemini(tool_data):
     url = tool_data.get("url", "")
 
     prompt = f"""Write a detailed product review for an AI tool called "{name}".
-Tagline: {tagline}
-Website: {url}
+    Tagline: {tagline}
+    Website: {url}
 
-Format as Markdown with these sections:
-## What is {name}?
-(2-3 sentences explaining what the tool does)
+    Format as Markdown with these sections:
+    ## What is {name}?
+    (2-3 sentences explaining what the tool does)
 
-## Key Features
-- (3-5 bullet points with specific features)
+    ## Key Features
+    - (3-5 bullet points with specific features)
 
-## Pricing
-| Plan | Price | Best For |
-|------|-------|----------|
-| Free | $0 | (who) |
-| Pro | $X/mo | (who) |
-| Enterprise | Custom | (who) |
+    ## Pricing
+    | Plan | Price | Best For |
+    |------|-------|----------|
+    | Free | $0 | (who) |
+    | Pro | $X/mo | (who) |
+    | Enterprise | Custom | (who) |
 
-## Why Indie Hackers Love It
-(1 paragraph with specific use case)
+    ## Why Indie Hackers Love It
+    (1 paragraph with specific use case)
 
-## Verdict
-**Best for:** (target audience)
-**Skip if:** (who shouldn't use it)
+    ## Verdict
+    **Best for:** (target audience)
+    **Skip if:** (who shouldn't use it)
 
-Keep it honest, practical, and under 400 words."""
+    Keep it honest, practical, and under 400 words."""
 
     try:
         resp = requests.post(
@@ -195,20 +197,50 @@ Keep it honest, practical, and under 400 words."""
         print(f"❌ Gemini error: {e}")
         return None
 
+def resolve_real_url(ph_tracking_url: str) -> str:
+    """Follow Product Hunt redirect to get real website URL."""
+    if not ph_tracking_url or "producthunt.com" not in ph_tracking_url:
+        return ph_tracking_url
+    try:
+        resp = requests.get(
+            ph_tracking_url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            },
+            allow_redirects=True,
+            timeout=10,
+        )
+        return resp.url.split("?")[0]  # прибираємо ?ref=producthunt
+    except Exception:
+        return ph_tracking_url
+
+
 
 def save_tool_review(slug, tool_data, review_body, og_image_url):
-    """Save generated review as Jekyll markdown file."""
     TOOLS_DIR.mkdir(parents=True, exist_ok=True)
 
+    # ---- Заміни цей рядок ----
+    ph_url = tool_data.get("website") or tool_data.get("url", "")
+    url = resolve_real_url(ph_url)
+    # --------------------------
+
+    domain = ""
+    if url:
+        raw_domain = re.sub(r"^https?://", "", url)
+        domain = raw_domain.split("/")[0].split("?")[0]
+
     frontmatter = {
-        "name": slug,
+        "name": tool_data['name'],
+        "slug": slug,
         "title": f"{tool_data['name']} — {tool_data.get('tagline', 'AI Tool')[:60]}",
         "tagline": tool_data.get("tagline", ""),
-        "category": "productivity",  # Default, can be refined
+        "category": "productivity",
         "date": datetime.now().strftime("%Y-%m-%d"),
         "rating": 4.0,
         "pricing": "freemium",
-        "affiliate_link": tool_data.get("url", ""),
+        "affiliate_link": url,
+        "domain": domain,   # ← тепер реальний домен
         "image": f"/assets/images/tools/{slug}.jpg",
         "tags": ["ai", "tool"],
         "source": "producthunt"

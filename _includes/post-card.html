@@ -1,1 +1,31 @@
-<article class="post-card">{% if include.post.image %}<div class="post-card-image"><a href="{{ include.post.url | relative_url }}"><img src="{{ include.post.image | relative_url }}" alt="{{ include.post.title }}" loading="lazy"></a></div>{% endif %}<div class="post-card-body"><div class="post-card-meta"><span class="post-card-date">{{ include.post.date | date: "%b %d, %Y" }}</span>{% if include.post.reading_time %}<span class="post-card-reading">{{ include.post.reading_time }} min</span>{% endif %}</div><h3 class="post-card-title"><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>{% if include.post.excerpt %}<p class="post-card-excerpt">{{ include.post.excerpt | strip_html | truncate: 120 }}</p>{% endif %}<a href="{{ include.post.url | relative_url }}" class="post-card-link">Read more →</a></div></article>
+<!-- ============================================ -->
+<!-- FILE: post-card.html                         -->
+<!-- ============================================ -->
+<article class="post-card">
+  {% if include.post.image %}
+  <div class="post-card-image">
+    <a href="{{ include.post.url | relative_url }}">
+      <img src="{{ include.post.image | relative_url }}" alt="{{ include.post.title }}" loading="lazy">
+    </a>
+  </div>
+  {% endif %}
+
+  <div class="post-card-body">
+    <div class="post-card-meta">
+      <span class="post-card-date">{{ include.post.date | date: "%b %d, %Y" }}</span>
+      {% if include.post.reading_time %}
+      <span class="post-card-reading">{{ include.post.reading_time }} min</span>
+      {% endif %}
+    </div>
+
+    <h3 class="post-card-title">
+      <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
+    </h3>
+
+    {% if include.post.excerpt %}
+    <p class="post-card-excerpt">{{ include.post.excerpt | strip_html | truncate: 120 }}</p>
+    {% endif %}
+
+    <a href="{{ include.post.url | relative_url }}" class="post-card-link">Read more →</a>
+  </div>
+</article>

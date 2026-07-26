@@ -1,21 +1,21 @@
+<!-- ============================================ -->
+<!-- FILE: tool-card.html                         -->
+<!-- ============================================ -->
 <article class="tool-card">
   <div class="tool-image">
-    <img 
-      src="https://logo.clearbit.com/{{ include.tool.domain }}" 
-      alt="{{ include.tool.title }} logo"
-      loading="lazy"
-      onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='flex';"
-    >
+    <img src="https://cdn.brandfetch.io/{{ include.tool.domain }}?c=1idI4t6i_MMJkOfdUzq"
+      alt="{{ include.tool.title }} logo" loading="lazy"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
     <div class="logo-fallback" style="display:none;">
       <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
     </div>
   </div>
-  
+
   <div class="tool-body">
     <span class="tool-category">{{ include.tool.category | upcase }}</span>
     <h3 class="tool-title">{{ include.tool.title }}</h3>
     <p class="tool-desc">{{ include.tool.description }}</p>
-    
+
     <div class="tool-meta">
       <div class="tool-rating">
         <span class="star">★</span>
