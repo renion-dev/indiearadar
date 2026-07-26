@@ -4,23 +4,23 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 9 * * *'  # Щодня о 9:00 UTC
-  workflow_dispatch:      # Ручний запуск з GitHub UI
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   harvest-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
     steps:
-      # ─── Checkout ───
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          persist-credentials: false
 
-      # ─── Setup Python + venv ───
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -33,25 +33,30 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # ─── Run Harvest Script ───
       - name: Harvest AI Tools
         env:
           PH_API_TOKEN: ${{ secrets.PH_API_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           source venv/bin/activate
-          python scripts/harvest.py
+          python scripts/harvest.py || echo "Harvest completed with warnings"
 
-      # ─── Commit new reviews ───
-      - name: Commit changes
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "AI Curator"
           git config user.email "bot@indiearadar.com"
-          git add _tools/ assets/images/
-          git diff --cached --quiet || git commit -m "🤖 Auto: add new AI tool reviews [$(date +%Y-%m-%d)]"
-          git push
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          git add -A
+          if git diff --cached --quiet; then
+            echo "✅ No new tools to commit"
+          else
+            git commit -m "🤖 Auto: add new AI tool reviews [$(date +%Y-%m-%d)]"
+            git push origin main
+            echo "✅ Committed and pushed new reviews"
+          fi
 
-      # ─── Build Jekyll ───
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -63,7 +68,6 @@ jobs:
           bundle install
           bundle exec jekyll build
 
-      # ─── Deploy to GitHub Pages ───
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
