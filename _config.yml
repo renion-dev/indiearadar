@@ -1,6 +1,6 @@
 title: "Indie AI Radar"
 description: "Curated AI tools for solopreneurs. Updated daily by AI."
-url: "https://yourusername.github.io"
+url: "https://renion-dev.github.io"
 baseurl: "/indiearadar"
 markdown: kramdown
 highlighter: rouge
@@ -32,3 +32,4 @@ exclude:
   - vendor/
   - .sass-cache/
   - .jekyll-cache/
+google_analytics: G-NZHQE0W33E
