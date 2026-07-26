@@ -1,1 +1,52 @@
-<header class="site-header"><div class="container"><div class="header-inner"><a href="{{ '/' | relative_url }}" class="logo"><span class="logo-icon">🧠</span><span class="logo-text">Indie AI Radar</span></a><nav class="main-nav" id="mainNav"><a href="{{ '/tools' | relative_url }}" class="nav-link">Tools</a><a href="{{ '/blog' | relative_url }}" class="nav-link">Blog</a><a href="{{ '/newsletter' | relative_url }}" class="nav-link">Newsletter</a><a href="{{ '/about' | relative_url }}" class="nav-link">About</a></nav><div class="header-actions"><button class="search-toggle" id="searchToggle" aria-label="Search"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2"/><path d="M14 14l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><a href="{{ '/newsletter' | relative_url }}" class="btn btn-sm btn-primary">Subscribe</a><button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button></div></div></div><div class="search-overlay" id="searchOverlay"><div class="search-container"><input type="text" id="searchInput" placeholder="Search tools, reviews, categories..." autocomplete="off"><button class="search-close" id="searchClose">✕</button><div class="search-results" id="searchResults"></div></div></div></header>
+<!-- ============================================ -->
+<!-- FILE: header.html                            -->
+<!-- ============================================ -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <!-- Logo -->
+        <a href="{{ '/' | relative_url }}" class="logo">
+        <img src="{{ '/assets/images/logo.svg' | relative_url }}"
+            alt="Indie AI Radar"
+            height="32"
+            width="auto">
+        </a>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav" id="mainNav">
+        <a href="{{ '/tools' | relative_url }}" class="nav-link">Tools</a>
+        <a href="{{ '/blog' | relative_url }}" class="nav-link">Blog</a>
+        <a href="{{ '/newsletter' | relative_url }}" class="nav-link">Newsletter</a>
+        <a href="{{ '/about' | relative_url }}" class="nav-link">About</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="search-toggle" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" />
+            <path d="M14 14l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <a href="{{ '/newsletter' | relative_url }}" class="btn btn-sm btn-primary">Subscribe</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search tools, reviews, categories..." autocomplete="off">
+      <button class="search-close" id="searchClose">✕</button>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</header>
