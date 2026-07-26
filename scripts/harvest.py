@@ -16,9 +16,30 @@ import os
 import sys
 import json
 import re
+import time          # ← додано для retry
 import requests
 from datetime import datetime
 from pathlib import Path
+
+
+# ─── Retry Decorator ──────────────────────────────────────────────
+def with_retry(max_retries=3, backoff=2):
+    """Повторює виконання функції при винятках із зростаючою затримкою."""
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for attempt in range(1, max_retries + 1):
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    if attempt == max_retries:
+                        raise   # остання спроба – піднімаємо виняток
+                    wait = backoff ** (attempt - 1)  # 1, 2, 4, 8...
+                    print(f"⚠️  Retry {attempt}/{max_retries} for {func.__name__} after {wait}s due to: {e}")
+                    time.sleep(wait)
+            return None
+        return wrapper
+    return decorator
+
 
 # ─── Configuration ───
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -36,6 +57,7 @@ AI_KEYWORDS = [
 MIN_VOTES = 10  # мінімум голосів для фільтрації
 
 
+@with_retry(max_retries=3, backoff=2)   # ← додано
 def fetch_product_hunt():
     """Fetch top posts from Product Hunt via GraphQL API."""
     token = os.environ.get("PH_API_TOKEN", "")
@@ -80,7 +102,7 @@ def fetch_product_hunt():
         return data.get("data", {}).get("posts", {}).get("edges", [])
     except Exception as e:
         print(f"❌ Product Hunt API error: {e}")
-        return []
+        return []   # повертаємо порожній список, не піднімаємо виняток – це дозволяє продовжити роботу
 
 
 def is_ai_tool(post):
@@ -116,6 +138,7 @@ def generate_og_image(tool_name, category):
     return url
 
 
+@with_retry(max_retries=3, backoff=2)   # ← додано
 def generate_review_with_gemini(tool_data):
     """Generate full review using Google Gemini API (free tier)."""
     api_key = os.environ.get("GEMINI_API_KEY", "")
@@ -156,7 +179,7 @@ Keep it honest, practical, and under 400 words."""
 
     try:
         resp = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}",
+            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={api_key}",
             headers={"Content-Type": "application/json"},
             json={
                 "contents": [{"parts": [{"text": prompt}]}],
@@ -252,6 +275,9 @@ def main():
             generated += 1
         else:
             print(f"   ⚠️  Failed to generate review for {slug}")
+
+        # Пауза 5 секунд, щоб не перевищити 15 запитів за хвилину (безкоштовний тариф Gemini)
+        time.sleep(5)
 
     print(f"\n🎉 Done! Generated {generated} new reviews.")
     return 0
