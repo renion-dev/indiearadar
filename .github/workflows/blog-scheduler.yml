@@ -1,0 +1,49 @@
+name: Blog Scheduler
+
+on:
+  schedule:
+    # Кожні 2 години з різними хвилинами для природності
+    - cron: '7 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run blog generator
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/blog_generator.py
+
+      - name: Commit and push if changes
+        run: |
+          git config user.name "AI Curator"
+          git config user.email "bot@indiearadar.com"
+          git add _posts/ assets/images/og/
+          if git diff --staged --quiet; then
+            echo "✅ No new posts to commit"
+          else
+            git commit -m "🤖 New blog post [$(date +'%Y-%m-%d %H:%M')]"
+            git push
+            echo "✅ Committed and pushed new post"
+          fi

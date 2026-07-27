@@ -142,7 +142,7 @@ Keep it honest, practical, and under 400 words."""
     GEMINI_RATE_LIMIT.wait()
 
     resp = requests.post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-lite:generateContent?key={api_key}",
+        f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={api_key}",
         headers={"Content-Type": "application/json"},
         json={
             "contents": [{"parts": [{"text": prompt}]}],

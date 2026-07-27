@@ -1,0 +1,61 @@
+# Базові теми для блог-постів
+- title: "How to Build an AI-Powered Side Project for Free"
+  category: "tutorial"
+  tags: ["tutorial", "ai", "free"]
+- title: "The Best AI Tools for Indie Hackers in 2026"
+  category: "review"
+  tags: ["review", "tools"]
+- title: "Why Indie Hackers Should Embrace AI Now"
+  category: "opinion"
+  tags: ["opinion", "ai"]
+- title: "How to Automate Your Newsletter with AI"
+  category: "tutorial"
+  tags: ["tutorial", "newsletter", "automation"]
+- title: "Top 10 AI Tools for Bootstrapped Startups"
+  category: "resource"
+  tags: ["resource", "tools", "startup"]
+- title: "How I Built This Site with Zero Budget"
+  category: "case-study"
+  tags: ["case-study", "jekyll", "automation"]
+- title: "The Future of AI for Solopreneurs"
+  category: "opinion"
+  tags: ["opinion", "future"]
+- title: "AI-Powered Marketing Strategies for Indie Makers"
+  category: "tutorial"
+  tags: ["tutorial", "marketing"]
+- title: "5 AI Tools That Saved Me 10 Hours a Week"
+  category: "review"
+  tags: ["review", "productivity"]
+- title: "How to Use AI for Code Generation"
+  category: "tutorial"
+  tags: ["tutorial", "coding"]
+- title: "The Rise of No-Code AI Platforms"
+  category: "news"
+  tags: ["news", "no-code"]
+- title: "AI vs. Traditional Software: What Indie Hackers Need to Know"
+  category: "opinion"
+  tags: ["opinion", "comparison"]
+- title: "Building a Micro-SaaS with AI Agents"
+  category: "case-study"
+  tags: ["case-study", "micro-saas", "agents"]
+- title: "How to Stay Updated with AI Trends as a Solopreneur"
+  category: "resource"
+  tags: ["resource", "trends"]
+- title: "Monetizing AI Tools: Affiliate Strategies"
+  category: "tutorial"
+  tags: ["tutorial", "monetization", "affiliate"]
+- title: "The Ethics of AI in Indie Projects"
+  category: "opinion"
+  tags: ["opinion", "ethics"]
+- title: "10 AI Prompts That Every Indie Hacker Should Know"
+  category: "resource"
+  tags: ["resource", "prompts"]
+- title: "How to Validate Your AI Product Idea"
+  category: "tutorial"
+  tags: ["tutorial", "validation"]
+- title: "AI-Powered Customer Support for Bootstrappers"
+  category: "tutorial"
+  tags: ["tutorial", "customer-support"]
+- title: "The Best AI Tools for Content Creation"
+  category: "review"
+  tags: ["review", "content", "writing"]
