@@ -2,7 +2,6 @@ name: Blog Scheduler
 
 on:
   schedule:
-    # Кожні 2 години з різними хвилинами для природності
     - cron: '7 */2 * * *'
   workflow_dispatch:
 
@@ -35,15 +34,20 @@ jobs:
         run: |
           python scripts/blog_generator.py
 
+      - name: Generate tag pages
+        run: |
+          source venv/bin/activate
+          python scripts/generate_tags.py
+
       - name: Commit and push if changes
         run: |
           git config user.name "AI Curator"
           git config user.email "bot@indiearadar.com"
-          git add _posts/ assets/images/og/
+          git add _posts/ assets/images/og/ tag/ _layouts/tag.html
           if git diff --staged --quiet; then
             echo "✅ No new posts to commit"
           else
-            git commit -m "🤖 New blog post [$(date +'%Y-%m-%d %H:%M')]"
+            git commit -m "🤖 New blog post and updated tag pages [$(date +'%Y-%m-%d %H:%M')]"
             git push
             echo "✅ Committed and pushed new post"
           fi
