@@ -25,7 +25,7 @@ POSTS_DIR = PROJECT_ROOT / "_posts"
 THEMES_FILE = PROJECT_ROOT / "_data" / "blog_themes.yml"
 
 # Мінімальний інтервал між постами (години)
-MIN_INTERVAL_HOURS = 0
+MIN_INTERVAL_HOURS = 12
 # Випадкова затримка перед публікацією (хвилини)
 RANDOM_DELAY_MIN = 0
 RANDOM_DELAY_MAX = 30
