@@ -52,8 +52,7 @@ GitHub API     (venv)        Review        _tools/       (Actions)
 **Total monthly cost: $0**
 
 ## Contact
-
-- Twitter/X: [@IndieAIRadar](https://twitter.com/IndieAIRadar)
-- GitHub: [yourusername/indiearadar](https://github.com/yourusername/indiearadar)
+- Twitter/X: [@reniondev](https://twitter.com/reniondev)
+- GitHub: [renion-dev/indiearadar](https://github.com/renion-dev/indiearadar)
 
 *Built with curiosity, caffeine, and zero budget.*

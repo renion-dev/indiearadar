@@ -1,31 +1,43 @@
-<!-- ============================================ -->
-<!-- FILE: post-card.html                         -->
-<!-- ============================================ -->
-<article class="post-card">
-  {% if include.post.image %}
-  <div class="post-card-image">
-    <a href="{{ include.post.url | relative_url }}">
-      <img src="{{ include.post.image | relative_url }}" alt="{{ include.post.title }}" loading="lazy">
-    </a>
-  </div>
-  {% endif %}
-
-  <div class="post-card-body">
-    <div class="post-card-meta">
-      <span class="post-card-date">{{ include.post.date | date: "%b %d, %Y" }}</span>
-      {% if include.post.reading_time %}
-      <span class="post-card-reading">{{ include.post.reading_time }} min</span>
-      {% endif %}
-    </div>
-
-    <h3 class="post-card-title">
-      <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
-    </h3>
-
-    {% if include.post.excerpt %}
-    <p class="post-card-excerpt">{{ include.post.excerpt | strip_html | truncate: 120 }}</p>
+<article class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+  <a href="{{ post.url | relative_url }}" class="post-card-link" aria-labelledby="post-title-{{ post.id | slugify }}">
+    <!-- Зображення -->
+    {% assign card_img = post.image | default: "/assets/images/og-default.svg" %}
+    {% if card_img contains '://' %}
+    {% assign img_url = card_img %}
+    {% else %}
+    {% assign img_url = card_img | relative_url %}
     {% endif %}
 
-    <a href="{{ include.post.url | relative_url }}" class="post-card-link">Read more →</a>
-  </div>
+    <div class="post-card-image-wrapper">
+      <img src="{{ img_url }}" alt="{{ post.title | escape }}" class="post-card-image" loading="lazy" width="600"
+        height="340" decoding="async" itemprop="image">
+    </div>
+
+    <div class="post-card-content">
+      {% if post.category %}
+      <span class="post-card-category">{{ post.category }}</span>
+      {% endif %}
+
+      <h3 class="post-card-title" id="post-title-{{ post.id | slugify }}" itemprop="headline">
+        {{ post.title }}
+      </h3>
+
+      <p class="post-card-excerpt" itemprop="description">
+        {{ post.excerpt | strip_html | truncate: 140 }}
+      </p>
+
+      <div class="post-card-meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </time>
+        {% if post.author %}
+        <span class="post-card-author" itemprop="name">&middot; {{ post.author }}</span>
+        {% endif %}
+        <span class="read-time">
+          {% assign words = post.content | number_of_words %}
+          {{ words | divided_by: 200 | plus: 1 }} min read
+        </span>
+      </div>
+    </div>
+  </a>
 </article>

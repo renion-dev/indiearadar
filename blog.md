@@ -1,8 +1,11 @@
 ---
 layout: page
-title: Blog
-description: Deep dives into AI tools for indie hackers. Honest reviews, no fluff.
+title: "Blog & Weekly Digest"
+permalink: /blog/
 ---
+
 <div class="posts-grid">
-  {% for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
+  {% for post in site.posts %}
+    {% include post-card.html %}
+  {% endfor %}
 </div>

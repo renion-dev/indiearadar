@@ -1,4 +1,450 @@
 ---
 layout: default
 ---
-<article class="post-page"><div class="container"><nav class="breadcrumb"><a href="{{ '/' | relative_url }}">Home</a><span>/</span><a href="{{ '/blog' | relative_url }}">Blog</a><span>/</span><span>{{ page.title }}</span></nav><header class="post-header"><div class="post-meta"><span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>{% if page.reading_time %}<span class="post-reading">{{ page.reading_time }} min read</span>{% endif %}</div><h1>{{ page.title }}</h1>{% if page.excerpt %}<p class="post-excerpt">{{ page.excerpt | strip_html }}</p>{% endif %}{% if page.image %}<div class="post-hero-image"><img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="eager"></div>{% endif %}</header><div class="post-content-wrapper"><div class="post-main"><div class="post-body">{{ content }}</div><div class="post-share"><h3>Share this</h3><div class="share-buttons"><a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank" class="share-btn twitter">𝕏</a><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" class="share-btn linkedin">in</a><a href="https://www.reddit.com/submit?url={{ page.url | absolute_url | url_encode }}&title={{ page.title | url_encode }}" target="_blank" class="share-btn reddit">Reddit</a></div></div></div><aside class="post-sidebar"><div class="sidebar-card"><h3>About Indie AI Radar</h3><p>Curated by AI, refined for humans. We discover and review AI tools that help indie hackers build faster.</p></div>{% assign related_posts = site.posts | where_exp: 'p', 'p.url != page.url' | limit: 3 %}{% if related_posts.size > 0 %}<div class="sidebar-card"><h3>More Reads</h3><ul class="related-posts">{% for rp in related_posts %}<li><a href="{{ rp.url | relative_url }}">{{ rp.title }}</a></li>{% endfor %}</ul></div>{% endif %}</aside></div></div></article>
+
+<article class="post" itemscope itemtype="https://schema.org/Article">
+  <!-- JSON-LD для SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | escape }}",
+    "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}",
+    "image": "{{ page.image | default: '/assets/images/og-default.svg' | absolute_url }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ page.author | default: site.author.name | escape }}"
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title | escape }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.logo | absolute_url }}"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+  }
+  </script>
+
+  <header class="post-header">
+    <nav class="post-navigation">
+      <a href="{{ '/blog/' | relative_url }}" class="back-link">← All posts</a>
+    </nav>
+
+    <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%b %-d, %Y" }}
+      </time>
+      {% if page.author %}
+      <span class="post-author" itemprop="author">&middot; {{ page.author }}</span>
+      {% endif %}
+      <span class="post-reading-time">&middot; {{ content | number_of_words | divided_by: 200 | plus: 1 }} min
+        read</span>
+    </div>
+  </header>
+
+  <!-- Hero image -->
+  {% assign og_img = page.image | default: "/assets/images/og-default.svg" %}
+  <div class="post-hero">
+    <img src="{{ og_img | relative_url }}" alt="{{ page.title }}" class="post-hero-image" loading="lazy"
+      itemprop="image">
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <!-- Tags -->
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      <span class="tags-label">🏷️ Tags:</span>
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Social Sharing -->
+    <div class="post-share">
+      <span class="share-label">Share:</span>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}"
+        target="_blank" rel="noopener noreferrer" class="share-btn twitter" aria-label="Twitter">
+        🐦 Twitter
+      </a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}"
+        target="_blank" rel="noopener noreferrer" class="share-btn linkedin" aria-label="LinkedIn">
+        🔗 LinkedIn
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank"
+        rel="noopener noreferrer" class="share-btn facebook" aria-label="Facebook">
+        👍 Facebook
+      </a>
+    </div>
+
+    <!-- CTA -->
+    <div class="post-cta">
+      <p>Enjoyed this digest? <a href="{{ '/newsletter/' | relative_url }}">Subscribe to the weekly newsletter</a> for
+        more indie AI tools.</p>
+      <a href="{{ '/newsletter/' | relative_url }}" class="cta-button">📬 Subscribe</a>
+    </div>
+
+    <!-- Related posts -->
+    {% if site.related_posts %}
+    <aside class="related-posts">
+      <h3>Related posts</h3>
+      <ul class="related-list">
+        {% for post in site.related_posts limit:3 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        </li>
+        {% endfor %}
+      </ul>
+    </aside>
+    {% endif %}
+  </footer>
+</article>
+
+<!-- Optional styles (if not already in your main CSS) -->
+<style>
+  /* These styles are provided as a fallback; ideally they should be in your main stylesheet */
+  .post {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary, #1a1a1a);
+    line-height: 1.7;
+  }
+
+  .post-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .post-navigation {
+    margin-bottom: 1.5rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--text-secondary, #555);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-bottom-color: var(--text-secondary, #555);
+  }
+
+  .post-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .post-meta {
+    font-size: 0.95rem;
+    color: var(--text-secondary, #666);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    align-items: center;
+  }
+
+  .post-author {
+    font-weight: 500;
+  }
+
+  .post-hero {
+    margin: 1.5rem 0 2.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .post-hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .post-hero-image:hover {
+    transform: scale(1.01);
+  }
+
+  .post-content {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .post-content h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+
+  .post-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-content a {
+    color: var(--accent, #0066cc);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s;
+  }
+
+  .post-content a:hover {
+    color: var(--accent-hover, #004499);
+  }
+
+  .post-content blockquote {
+    border-left: 4px solid var(--accent, #0066cc);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    background: var(--bg-elevated, #f8f8f8);
+    padding: 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+
+  .post-content ul,
+  .post-content ol {
+    padding-left: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-footer {
+    border-top: 1px solid var(--border, #e0e0e0);
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+
+  .tags-label {
+    font-weight: 600;
+    margin-right: 0.3rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary, #555);
+  }
+
+  .tag {
+    background: var(--bg-elevated, #f0f0f0);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary, #444);
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .tag:hover {
+    background: var(--border, #d0d0d0);
+  }
+
+  .post-share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .share-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-secondary, #555);
+    margin-right: 0.3rem;
+  }
+
+  .share-btn {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 30px;
+    background: var(--bg-elevated, #f0f0f0);
+    color: var(--text-primary, #1a1a1a);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border: 1px solid var(--border, #ddd);
+  }
+
+  .share-btn:hover {
+    background: var(--border, #d0d0d0);
+    transform: translateY(-2px);
+  }
+
+  .share-btn.twitter:hover {
+    background: #1da1f2;
+    color: white;
+    border-color: #1da1f2;
+  }
+
+  .share-btn.linkedin:hover {
+    background: #0a66c2;
+    color: white;
+    border-color: #0a66c2;
+  }
+
+  .share-btn.facebook:hover {
+    background: #1877f2;
+    color: white;
+    border-color: #1877f2;
+  }
+
+  .post-cta {
+    background: var(--bg-elevated, #f8f8f8);
+    padding: 2rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2.5rem 0 2rem 0;
+    border: 1px solid var(--border, #e8e8e8);
+  }
+
+  .post-cta p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: var(--accent, #0066cc);
+    color: white !important;
+    padding: 0.7rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    border: none;
+    font-size: 1rem;
+  }
+
+  .cta-button:hover {
+    background: var(--accent-hover, #004499);
+    transform: translateY(-2px);
+  }
+
+  .related-posts {
+    margin-top: 3rem;
+  }
+
+  .related-posts h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+  }
+
+  .related-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .related-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border, #eee);
+  }
+
+  .related-list a {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-primary, #1a1a1a);
+    transition: color 0.2s;
+  }
+
+  .related-list a:hover {
+    color: var(--accent, #0066cc);
+    text-decoration: underline;
+  }
+
+  .related-list time {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #666);
+  }
+
+  @media (max-width: 640px) {
+    .post {
+      padding: 1.5rem 1rem;
+    }
+
+    .post-title {
+      font-size: 2rem;
+    }
+
+    .post-content {
+      font-size: 1rem;
+    }
+
+    .post-content h2 {
+      font-size: 1.5rem;
+    }
+
+    .post-content h3 {
+      font-size: 1.25rem;
+    }
+
+    .post-share {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .share-btn {
+      text-align: center;
+    }
+
+    .post-cta {
+      padding: 1.5rem 1rem;
+    }
+
+    .related-list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+    }
+  }
+</style>
