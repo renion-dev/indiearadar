@@ -1,6 +1,8 @@
-# Python automation dependencies
-# All free, no trials, no paid tiers required
-
-requests>=2.31.0          # HTTP requests to APIs
-python-dotenv>=1.0.0      # Environment variables
-Pillow>=10.0.0            # Image processing (optional)
+certifi==2026.7.22
+charset-normalizer==3.4.9
+dotenv==0.9.9
+idna==3.18
+python-dotenv==1.2.2
+requests==2.34.2
+urllib3==2.7.0
+PyYAML>=6.0
