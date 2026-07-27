@@ -2,33 +2,194 @@
 layout: default
 ---
 
+<style>
+  .tag-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .tag-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .tag-hash {
+    color: #6366f1;
+  }
+
+  .tag-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+  }
+
+  .tag-desc {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .tag-desc strong {
+    color: #cbd5e1;
+    font-family: monospace;
+    background: rgba(99, 102, 241, 0.12);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 1.25rem;
+  }
+
+  .count {
+    color: #64748b;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .card {
+    display: block;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(99, 102, 241, 0.3);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0 0 0.4rem;
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .post-card {
+    display: block;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s;
+  }
+
+  .post-card:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+  }
+
+  .post-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0 0 0.3rem;
+  }
+
+  .post-date {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-family: monospace;
+  }
+
+  .empty {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #64748b;
+    font-size: 1.1rem;
+  }
+</style>
+
+{% assign words = page.tag | split: '-' %}
+{% capture tag_title %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
+{% assign tag_title = tag_title | strip %}
+
 <div class="tag-page">
-  <h1>#{{ page.tag | capitalize }}</h1>
-  <p class="tag-description">All content tagged with <strong>{{ page.tag }}</strong></p>
+  <header class="tag-header">
+    <h1 class="tag-title"><span class="tag-hash">#</span>{{ tag_title }}</h1>
+    <p class="tag-desc">All content tagged with <strong>{{ page.tag }}</strong></p>
+  </header>
 
-  <h2>Tools</h2>
-  <div class="tool-grid">
-    {% assign tools = site.tools | where_exp: "tool", "tool.tags contains page.tag" %}
-    {% if tools.size == 0 %}
-      <p>No tools with this tag yet.</p>
-    {% else %}
-      {% for tool in tools %}
-        {% include tool-card.html tool=tool %}
-      {% endfor %}
-    {% endif %}
-  </div>
+  {% assign matching_tools = "" | split: "" %}
+  {% for tool in site.tools %}
+  {% assign tool_tags = tool.tags | join: ',' | downcase | split: ',' %}
+  {% if tool_tags contains page.tag %}
+  {% assign matching_tools = matching_tools | push: tool %}
+  {% endif %}
+  {% endfor %}
 
-  <h2>Blog Posts</h2>
-  <div class="post-list">
-    {% assign posts = site.posts | where_exp: "post", "post.tags contains page.tag" %}
-    {% if posts.size == 0 %}
-      <p>No blog posts with this tag yet.</p>
-    {% else %}
-      <ul>
-      {% for post in posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a> <time>{{ post.date | date: "%b %-d, %Y" }}</time></li>
+  {% if matching_tools.size > 0 %}
+  <section style="margin-bottom: 3rem;">
+    <h2 class="section-title">🔧 Tools <span class="count">({{ matching_tools.size }})</span></h2>
+    <div class="grid">
+      {% for tool in matching_tools %}
+      <a href="{{ tool.url }}" class="card">
+        <h3 class="card-title">{{ tool.title }}</h3>
+        {% if tool.description %}
+        <p class="card-desc">{{ tool.description | truncate: 120 }}</p>
+        {% endif %}
+      </a>
       {% endfor %}
-      </ul>
-    {% endif %}
-  </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% assign matching_posts = "" | split: "" %}
+  {% for post in site.posts %}
+  {% assign post_tags = post.tags | join: ',' | downcase | split: ',' %}
+  {% if post_tags contains page.tag %}
+  {% assign matching_posts = matching_posts | push: post %}
+  {% endif %}
+  {% endfor %}
+
+  {% if matching_posts.size > 0 %}
+  <section style="margin-bottom: 3rem;">
+    <h2 class="section-title">📝 Blog Posts <span class="count">({{ matching_posts.size }})</span></h2>
+    <div class="list">
+      {% for post in matching_posts %}
+      <a href="{{ post.url }}" class="post-card">
+        <h3 class="post-title">{{ post.title }}</h3>
+        <time class="post-date">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if matching_tools.size == 0 and matching_posts.size == 0 %}
+  <div class="empty">😕 No content found with this tag yet.</div>
+  {% endif %}
 </div>
