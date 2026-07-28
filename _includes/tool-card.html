@@ -9,8 +9,8 @@
              "{{ ' /assets/logos/' | append: include.tool.logo | default: include.tool.slug | append: '.svg' |
       relative_url }}", "https://unavatar.io/{{ include.tool.domain }}"
       , "https://icon.horse/icon/{{ include.tool.domain }}" , "https://{{ include.tool.domain }}/favicon.ico"
-      , "https://www.google.com/s2/favicons?domain={{ include.tool.domain }}&sz=128" ]' onload="this.loadNextSource()"
-      onerror="this.loadNextSource()" />
+      , "https://www.google.com/s2/favicons?domain={{ include.tool.domain }}&sz=128" ]' onload="loadNextSource(this)"
+      onerror="loadNextSource(this)" />
     <div class="logo-fallback" style="display:none;">
       <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
     </div>
@@ -41,8 +41,9 @@
 <!-- Невеликий скрипт для перебору джерел (працює автономно) -->
 <script>
   (function () {
-    function loadNextSource() {
-      var img = this;
+    // Глобальна функція, доступна з onload/onerror
+    window.loadNextSource = function (img) {
+      if (!img) return;
       var sources = JSON.parse(img.getAttribute('data-sources'));
       var currentIndex = parseInt(img.getAttribute('data-current-index') || '0');
 
@@ -64,20 +65,18 @@
           fallback.style.display = 'flex';
         }
       }
-    }
+    };
 
     document.addEventListener('DOMContentLoaded', function () {
       var images = document.querySelectorAll('img.tool-logo-img');
       images.forEach(function (img) {
+        // Якщо src ще не встановлено – ставимо перше джерело
         if (!img.src || img.src === '') {
           var sources = JSON.parse(img.getAttribute('data-sources'));
           img.setAttribute('data-current-index', '0');
           img.src = sources[0];
         }
-        img.loadNextSource = loadNextSource.bind(img);
-        if (img.complete) {
-          img.loadNextSource();
-        }
+        // Прив'язка більше не потрібна, бо onload/onerror викликають глобальну функцію
       });
     });
   })();

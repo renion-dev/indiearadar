@@ -22,7 +22,7 @@ layout: default
                         relative_url }}", "https://unavatar.io/{{ page.domain }}"
                         , "https://icon.horse/icon/{{ page.domain }}" , "https://{{ page.domain }}/favicon.ico"
                         , "https://www.google.com/s2/favicons?domain={{ page.domain }}&sz=256" ]'
-                        onload="this.loadNextSource()" onerror="this.loadNextSource()" />
+                        onload="loadNextSource(this)" onerror="loadNextSource(this)" />
                     <div class="logo-fallback-page" style="display:none;">
                         <span>{{ page.title | split: ' — ' | first | slice: 0, 2 | upcase }}</span>
                     </div>
@@ -181,27 +181,31 @@ layout: default
 <!-- JavaScript для каскадного завантаження логотипів на сторінці продукту -->
 <script>
     (function () {
-        function loadNextSource() {
-            var img = this;
+        // Глобальна функція, доступна з onload/onerror
+        window.loadNextSource = function (img) {
+            if (!img) return;
             var sources = JSON.parse(img.getAttribute('data-sources'));
             var currentIndex = parseInt(img.getAttribute('data-current-index') || '0');
 
+            // Якщо зображення завантажилося і має реальну ширину – зупиняємось
             if (img.naturalWidth > 32) {
                 return;
             }
 
+            // Інакше – переходимо до наступного джерела
             currentIndex++;
             if (currentIndex < sources.length) {
                 img.setAttribute('data-current-index', currentIndex);
                 img.src = sources[currentIndex];
             } else {
+                // Всі джерела вичерпано – показуємо fallback
                 img.style.display = 'none';
                 var fallback = img.nextElementSibling;
                 if (fallback && fallback.classList.contains('logo-fallback-page')) {
                     fallback.style.display = 'flex';
                 }
             }
-        }
+        };
 
         document.addEventListener('DOMContentLoaded', function () {
             var images = document.querySelectorAll('img.tool-logo-page');
@@ -211,9 +215,10 @@ layout: default
                     img.setAttribute('data-current-index', '0');
                     img.src = sources[0];
                 }
-                img.loadNextSource = loadNextSource.bind(img);
+                // Прив'язка більше не потрібна, оскільки onload/onerror викликають глобальну функцію
+                // Перевіряємо, чи вже завантажилось, і викликаємо loadNextSource, якщо зображення вже завершене
                 if (img.complete) {
-                    img.loadNextSource();
+                    window.loadNextSource(img);
                 }
             });
         });
