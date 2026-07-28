@@ -1619,61 +1619,92 @@ p {
 .tool-image {
   width: 100%;
   aspect-ratio: 1 / 1;
-  /* квадратна область */
   background: #0f0f13;
-  /* темний фон, щоб не світило */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
   padding: 12px;
-  /* відступи від країв */
 }
 
 .tool-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* зберігає пропорції, вписується */
-  border-radius: 12px;
-  background: transparent;
-  /* прозорий фон – не заважає */
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 6px;
 }
 
 .logo-fallback {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 18px;
   display: none;
-  /* ховаємо, поки не знадобиться */
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
+  background: #eceff3;
+  color: #1a1a1a;
   font-weight: 700;
   font-size: 2.2rem;
-  /* великі літери */
   letter-spacing: 0.05em;
 }
 
-/* Кольори для fallback (залишаємо як було, але можна налаштувати) */
+/* Стилі для сторінки інструменту */
+.tool-logo-wrapper {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0f0f13;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.tool-logo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 8px;
+}
+
+.logo-fallback-page {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #eceff3;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+/* Кольорові варіанти для fallback (опціонально) */
 .tool-card:nth-child(2) .logo-fallback {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #f093fb;
 }
 
 .tool-card:nth-child(3) .logo-fallback {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: #4facfe;
 }
 
 .tool-card:nth-child(4) .logo-fallback {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  background: #43e97b;
 }
 
 .tool-card:nth-child(5) .logo-fallback {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  background: #fa709a;
 }
 
 .tool-card:nth-child(6) .logo-fallback {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  background: #a8edea;
 }

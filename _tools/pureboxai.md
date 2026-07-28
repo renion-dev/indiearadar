@@ -7,8 +7,8 @@ category: "productivity"
 date: "2026-07-26"
 rating: 4.0
 pricing: "freemium"
-affiliate_link: "https://PureBox.ai"
-domain: "PureBox.ai"
+affiliate_link: "https://purebox.ai"
+domain: "purebox.ai"
 image: "/assets/images/tools/pureboxai.jpg"
 tags:
   - ai

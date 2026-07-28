@@ -1,6 +1,7 @@
 ---
 name: "beehiiv"
 title: "Beehiiv — Newsletter Platform for Creators"
+domain: "beehiiv.com"
 tagline: "The newsletter platform built by creators, for creators. No coding needed."
 category: "marketing"
 date: 2026-07-26

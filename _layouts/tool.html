@@ -16,9 +16,63 @@ layout: default
         <header class="tool-header">
             <div class="tool-header-main">
                 {% if page.image %}
-                <div class="tool-logo-wrapper">
-                    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="tool-logo" loading="lazy">
+                <div class="tool-logo-wrapper" id="logo-wrapper-{{ page.slug }}">
+                    <img class="tool-logo-page" src="" alt="{{ page.title }} logo" loading="lazy" data-sources='[
+                            "{{ ' /assets/logos/' | append: page.logo | default: page.slug | append: '.svg' |
+                        relative_url }}", "https://unavatar.io/{{ page.domain }}"
+                        , "https://icon.horse/icon/{{ page.domain }}" , "https://{{ page.domain }}/favicon.ico"
+                        , "https://www.google.com/s2/favicons?domain={{ page.domain }}&sz=256" ]'
+                        onload="this.loadNextSource()" onerror="this.loadNextSource()" />
+                    <div class="logo-fallback-page" style="display:none;">
+                        <span>{{ page.title | split: ' — ' | first | slice: 0, 2 | upcase }}</span>
+                    </div>
                 </div>
+
+                <!-- Той самий скрипт (можна винести в окремий файл, але поки продублюємо) -->
+                <script>
+                    (function () {
+                        function loadNextSource() {
+                            var img = this;
+                            var sources = JSON.parse(img.getAttribute('data-sources'));
+                            var currentIndex = parseInt(img.getAttribute('data-current-index') || '0');
+
+                            if (img.naturalWidth > 32) {
+                                return;
+                            }
+
+                            currentIndex++;
+                            if (currentIndex < sources.length) {
+                                img.setAttribute('data-current-index', currentIndex);
+                                img.src = sources[currentIndex];
+                            } else {
+                                img.style.display = 'none';
+                                var fallback = img.nextElementSibling;
+                                if (fallback && fallback.classList.contains('logo-fallback-page')) {
+                                    fallback.style.display = 'flex';
+                                }
+                            }
+                        }
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var images = document.querySelectorAll('img.tool-logo-page');
+                            images.forEach(function (img) {
+                                if (!img.src || img.src === '') {
+                                    var sources = JSON.parse(img.getAttribute('data-sources'));
+                                    img.setAttribute('data-current-index', '0');
+                                    img.src = sources[0];
+                                }
+                                img.loadNextSource = loadNextSource.bind(img);
+                                if (img.complete) {
+                                    img.loadNextSource();
+                                }
+                            });
+                        });
+                    })();
+                </script>
+
+
+
+
                 {% endif %}
                 <div class="tool-header-info">
                     <div class="tool-meta-row">
