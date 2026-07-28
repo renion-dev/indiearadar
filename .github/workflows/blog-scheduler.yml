@@ -32,7 +32,17 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python scripts/blog_generator.py
+          echo "=== Current directory ==="
+          pwd
+          echo "=== Files in scripts/ ==="
+          ls -la scripts/
+          echo "=== Python version ==="
+          python --version
+          echo "=== GEMINI_API_KEY is set? ==="
+          if [ -n "$GEMINI_API_KEY" ]; then echo "✅ GEMINI_API_KEY is set"; else echo "❌ GEMINI_API_KEY is NOT set"; fi
+          echo "=== Running blog_generator.py ==="
+          python -u scripts/blog_generator.py
+          echo "=== Script finished ==="
 
       - name: Generate tag pages
         run: |
