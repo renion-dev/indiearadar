@@ -1,0 +1,41 @@
+<!-- _includes/affiliate-banner.html -->
+<div class="affiliate-banner" style="
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-left: 6px solid #4f46e5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+">
+  <div>
+    <p style="margin: 0; font-weight: 600; color: #1e293b;">
+      🚀 <strong>Special offer</strong>
+    </p>
+    <p style="margin: 0.25rem 0 0; color: #334155; font-size: 0.95rem;">
+      {{ include.text | default: "Check out this tool with our exclusive link!" }}
+      {% if page.affiliate_commission %}
+      <span
+        style="display: inline-block; background: #4f46e5; color: white; padding: 0.1rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem;">
+        {{ page.affiliate_commission }}
+      </span>
+      {% endif %}
+    </p>
+  </div>
+  <a href="{{ include.url }}" target="_blank" rel="sponsored nofollow" style="
+    background: #4f46e5;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+    white-space: nowrap;
+  ">
+    Get Started →
+  </a>
+</div>

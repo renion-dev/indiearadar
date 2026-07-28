@@ -1,0 +1,16 @@
+# _data/affiliates.yml
+# Ключі — або slug інструменту (з _tools/), або домен (для співпадіння)
+beehiiv:
+  url: "https://www.beehiiv.com?via=indiearadar"
+  banner_text: "Start your newsletter with Beehiiv — 60% recurring commission"
+  commission: "60% recurring"
+
+
+
+# Можна додавати будь-які інструменти з вашого каталогу
+# Приклад для інструменту зі slug "cursor":
+cursor:
+  url: "https://cursor.
+  sh?ref=indiearadar"
+  banner_text: "Try Cursor AI — the best AI code editor"
+  commission: "varies"
