@@ -10,7 +10,7 @@ tags:
 image: "/assets/images/og/how-i-built-and-launched-a-high-converting-site-for-0-in-202.png"
 ---
 
-# How I Built and Launched a High-Converting Site for $0 in 2028
+# How I Built and Launched a High-Converting Site for $0 in 2026
 
 Let’s be honest: the "indie hacker" dream often starts with spending $500 on a premium template, $50 on a domain you’ll never use, and three weeks tweaking a CSS shadow that no one will notice.
 
