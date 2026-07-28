@@ -25,10 +25,10 @@ POSTS_DIR = PROJECT_ROOT / "_posts"
 THEMES_FILE = PROJECT_ROOT / "_data" / "blog_themes.yml"
 
 # Мінімальний інтервал між постами (години)
-MIN_INTERVAL_HOURS = 12
+MIN_INTERVAL_HOURS = 4
 # Випадкова затримка перед публікацією (хвилини)
 RANDOM_DELAY_MIN = 0
-RANDOM_DELAY_MAX = 30
+RANDOM_DELAY_MAX = 10
 
 # Час публікації щотижневого дайджесту (п'ятниця 16:00)
 DIGEST_DAY = 4  # Friday (0=Monday)
