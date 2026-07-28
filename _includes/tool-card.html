@@ -1,64 +1,104 @@
 <!-- ============================================ -->
-<!-- FILE: tool-card.html                         -->
+<!-- tool-card.html (з оригінальним каскадом)     -->
 <!-- ============================================ -->
-<article class="tool-card">
-  <div class="tool-image" id="logo-container-{{ include.tool.slug }}">
-    {% if include.tool.domain and include.tool.domain != "" %}
-    <!-- Єдиний img з каскадом джерел через JS -->
-    <img class="tool-logo-img" src="" alt="{{ include.tool.title }} logo" loading="lazy" data-sources='[
-             "{{ ' /assets/logos/' | append: include.tool.logo | default: include.tool.slug | append: '.svg' |
-      relative_url }}", "https://unavatar.io/{{ include.tool.domain }}"
-      , "https://icon.horse/icon/{{ include.tool.domain }}" , "https://{{ include.tool.domain }}/favicon.ico"
-      , "https://www.google.com/s2/favicons?domain={{ include.tool.domain }}&sz=128" ]' onload="loadNextSource(this)"
-      onerror="loadNextSource(this)" />
-    <div class="logo-fallback" style="display:none;">
-      <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
-    </div>
-    {% else %}
-    <!-- Якщо домену немає – одразу літери (без зовнішніх запитів) -->
-    <div class="logo-fallback" style="display:flex;">
-      <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
-    </div>
-    {% endif %}
-  </div>
-
-  <div class="tool-body">
-    <span class="tool-category">{{ include.tool.category | upcase }}</span>
-    <h3 class="tool-title">{{ include.tool.title }}</h3>
-    <p class="tool-desc">{{ include.tool.description }}</p>
-
-    <div class="tool-meta">
-      <div class="tool-rating">
-        <span class="star">★</span>
-        <span class="rating-value">{{ include.tool.rating }}</span>
+<article class="tool-card" data-category="{{ include.tool.category | downcase | slugify }}">
+  <div class="tool-card-inner">
+    <!-- Логотип (з каскадом) -->
+    <div class="tool-card-logo" id="logo-container-{{ include.tool.slug }}">
+      {% if include.tool.domain and include.tool.domain != "" %}
+      <img class="tool-logo-img" src="" alt="{{ include.tool.title }} logo" loading="lazy"
+        data-sources='["{{ site.baseurl }}/assets/logos/{{ include.tool.logo | default: include.tool.slug }}.svg","https://unavatar.io/{{ include.tool.domain }}","https://icon.horse/icon/{{ include.tool.domain }}","https://{{ include.tool.domain }}/favicon.ico","https://www.google.com/s2/favicons?domain={{ include.tool.domain }}&sz=128"]'
+        onload="loadNextSource(this)" onerror="loadNextSource(this)" />
+      <div class="logo-fallback" style="display:none;">
+        <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
       </div>
-      <span class="tool-pricing">{{ include.tool.pricing }}</span>
-      <a href="{{ include.tool.url | relative_url }}" class="tool-review">Review →</a>
+      {% else %}
+      <div class="logo-fallback"
+        style="display:flex; background: linear-gradient(135deg, var(--bg-elevated), var(--accent-glow));">
+        <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Контент -->
+    <div class="tool-card-content">
+      <div class="tool-card-header">
+        <h3 class="tool-card-title">
+          <a href="{{ include.tool.url | relative_url }}">{{ include.tool.title }}</a>
+        </h3>
+        <!-- Бейджі -->
+        <div class="tool-card-badges">
+          {% assign pricing = include.tool.pricing | downcase %}
+          {% if pricing contains 'free' %}
+          <span class="badge badge-free">Free</span>
+          {% elsif pricing contains 'open source' or pricing contains 'oss' %}
+          <span class="badge badge-oss">Open Source</span>
+          {% elsif pricing contains 'freemium' %}
+          <span class="badge badge-freemium">Freemium</span>
+          {% elsif pricing contains 'paid' or pricing contains 'pro' %}
+          <span class="badge badge-paid">Paid</span>
+          {% elsif include.tool.pricing %}
+          <span class="badge badge-default">{{ include.tool.pricing }}</span>
+          {% endif %}
+          {% if include.tool.featured %}
+          <span class="badge badge-popular">🔥 Popular</span>
+          {% endif %}
+          {% if include.tool.new %}
+          <span class="badge badge-new">✨ New</span>
+          {% endif %}
+        </div>
+      </div>
+
+      <p class="tool-card-desc">{{ include.tool.description | default: include.tool.tagline | truncate: 120 }}</p>
+
+      <div class="tool-card-meta">
+        {% if include.tool.rating %}
+        <span class="tool-rating">⭐ {{ include.tool.rating }}</span>
+        {% endif %}
+        <span class="tool-category">{{ include.tool.category }}</span>
+        {% if include.tool.tags %}
+        <span class="tool-tags">
+          {% for tag in include.tool.tags limit: 2 %}
+          <span class="tag-pill">#{{ tag }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
+
+      <div class="tool-card-footer">
+        <a href="{{ include.tool.url | relative_url }}" class="btn btn-ghost btn-sm">Review →</a>
+        {% assign product_url = include.tool.affiliate_link | default: include.tool.link | default: include.tool.website
+        %}
+        {% if product_url == blank or product_url == '#' %}
+        {% if include.tool.domain %}
+        {% assign product_url = 'https://' | append: include.tool.domain %}
+        {% else %}
+        {% assign product_url = '#' %}
+        {% endif %}
+        {% endif %}
+        <a href="{{ product_url }}" class="btn btn-primary btn-sm" target="_blank" rel="nofollow sponsored">Visit</a>
+      </div>
     </div>
   </div>
 </article>
 
-<!-- Невеликий скрипт для перебору джерел (працює автономно) -->
+<!-- Ваш оригінальний скрипт каскаду (без змін, тільки виправлено JSON) -->
 <script>
   (function () {
-    // Глобальна функція, доступна з onload/onerror
     window.loadNextSource = function (img) {
       if (!img) return;
       var sources = JSON.parse(img.getAttribute('data-sources'));
       var currentIndex = parseInt(img.getAttribute('data-current-index') || '0');
 
-      // Якщо зображення завантажилося і має реальну ширину – зупиняємось
       if (img.naturalWidth > 32) {
         return;
       }
 
-      // Інакше – переходимо до наступного джерела
       currentIndex++;
       if (currentIndex < sources.length) {
         img.setAttribute('data-current-index', currentIndex);
         img.src = sources[currentIndex];
       } else {
-        // Всі джерела вичерпано – показуємо fallback
         img.style.display = 'none';
         var fallback = img.nextElementSibling;
         if (fallback && fallback.classList.contains('logo-fallback')) {
@@ -70,13 +110,14 @@
     document.addEventListener('DOMContentLoaded', function () {
       var images = document.querySelectorAll('img.tool-logo-img');
       images.forEach(function (img) {
-        // Якщо src ще не встановлено – ставимо перше джерело
         if (!img.src || img.src === '') {
           var sources = JSON.parse(img.getAttribute('data-sources'));
           img.setAttribute('data-current-index', '0');
           img.src = sources[0];
         }
-        // Прив'язка більше не потрібна, бо onload/onerror викликають глобальну функцію
+        if (img.complete) {
+          window.loadNextSource(img);
+        }
       });
     });
   })();
