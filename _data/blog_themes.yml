@@ -1,61 +1,136 @@
-# Базові теми для блог-постів
-- title: "How to Build an AI-Powered Side Project for Free"
+# ========== TUTORIAL (як зробити) ==========
+- title: "How to Build an AI-Powered Side Project for Free"  # ⭐ ОРИГІНАЛ
   category: "tutorial"
-  tags: ["tutorial", "ai", "free"]
-- title: "The Best AI Tools for Indie Hackers in 2026"
+  tags: ["tutorial", "ai", "side-project"]
+
+- title: "How to Build a RAG Chatbot on Your Laptop Using Ollama and LangChain"
+  category: "tutorial"
+  tags: ["rag", "ollama", "langchain", "local-ai", "tutorial"]
+
+- title: "Fine-Tuning Open-Source LLMs on a $10 Cloud GPU: A Step-by-Step Guide"
+  category: "tutorial"
+  tags: ["fine-tuning", "llm", "cloud-gpu", "cost-optimization"]
+
+- title: "From Idea to MVP: Building an AI SaaS in 7 Days with No-Code + APIs"
+  category: "tutorial"
+  tags: ["mvp", "no-code", "bubble", "api", "rapid-development"]
+
+- title: "How to Build an AI-Powered SEO Audit Tool (and Rank Your Own Content)"
+  category: "tutorial"
+  tags: ["seo", "content-strategy", "ai-tool", "growth-hack"]
+
+
+# ========== REVIEW (порівняння та огляди) ==========
+- title: "The Best AI Tools for Indie Hackers in 2026"  # ⭐ ОРИГІНАЛ
   category: "review"
-  tags: ["review", "tools"]
-- title: "Why Indie Hackers Should Embrace AI Now"
-  category: "opinion"
-  tags: ["opinion", "ai"]
-- title: "How to Automate Your Newsletter with AI"
-  category: "tutorial"
-  tags: ["tutorial", "newsletter", "automation"]
-- title: "Top 10 AI Tools for Bootstrapped Startups"
-  category: "resource"
-  tags: ["resource", "tools", "startup"]
-- title: "How I Built This Site with Zero Budget"
+  tags: ["review", "tools", "indie"]
+
+- title: "Claude vs. GPT-4o vs. Gemini: Which API Is Most Profitable for Indie Hacks?"
+  category: "review"
+  tags: ["llm-comparison", "api-cost", "profitability", "benchmark"]
+
+- title: "Open-Source vs. Proprietary AI: Total Cost of Ownership for Solo Devs"
+  category: "review"
+  tags: ["open-source", "proprietary", "tco", "budgeting"]
+
+- title: "Vector Databases Showdown: Pinecone, Milvus, Chroma, and Qdrant for Side Projects"
+  category: "review"
+  tags: ["vector-db", "rag", "performance", "scalability"]
+
+
+# ========== MONETIZATION (гроші та бізнес) ==========
+- title: "Monetizing AI Tools: Affiliate Strategies for Developers"  # ⭐ ОРИГІНАЛ
+  category: "monetization"
+  tags: ["monetization", "affiliate", "passive-income"]
+
+- title: "Pricing AI Features: Subscription, Usage-Based, or One-Time Payment?"
+  category: "monetization"
+  tags: ["pricing", "business-model", "billing", "user-psychology"]
+
+- title: "How to Find Underserved Niches for AI Tools (and Validate in 24 Hours)"
+  category: "monetization"
+  tags: ["niche-research", "validation", "product-market-fit", "lean"]
+
+- title: "Building a Micro-SaaS with AI: Real Case Study of $5k MRR in 3 Months"
   category: "case-study"
-  tags: ["case-study", "jekyll", "automation"]
-- title: "The Future of AI for Solopreneurs"
+  tags: ["micro-saas", "mrr", "real-numbers", "growth"]
+
+- title: "Legal Landmines for AI Indie Hackers: GDPR, Copyright, and Liability"
+  category: "legal"
+  tags: ["legal", "compliance", "gdpr", "risk-management"]
+
+
+# ========== DEVELOPMENT (розробка та архітектура) ==========
+- title: "Top 5 AI APIs Every Solopreneur Should Know"  # ⭐ ОРИГІНАЛ
+  category: "development"
+  tags: ["api", "development", "solopreneur"]
+
+- title: "Prompt Engineering 2.0: Dynamic Chains, Routing, and Self-Reflection"
+  category: "development"
+  tags: ["prompt-engineering", "chains", "agents", "advanced"]
+
+- title: "Caching AI Responses Efficiently: Save 80% on API Costs"
+  category: "development"
+  tags: ["caching", "redis", "cost-saving", "latency"]
+
+- title: "Building a Multi-Modal AI App (Text + Image + Audio) with One Unified API"
+  category: "development"
+  tags: ["multimodal", "api", "integration", "unified"]
+
+- title: "Evaluating AI Outputs Automatically: Metrics That Matter for Your Use Case"
+  category: "development"
+  tags: ["evaluation", "metrics", "rouge", "bertscore", "quality"]
+
+
+# ========== AUTOMATION (автоматизація) ==========
+- title: "How to Automate Your Content Creation with AI (Without Losing Your Voice)"  # ⭐ ОРИГІНАЛ
+  category: "automation"
+  tags: ["automation", "content", "ai"]
+
+- title: "AI Agents for Personal Task Management: Build Your Own Second Brain"
+  category: "automation"
+  tags: ["agents", "productivity", "second-brain", "personal-ai"]
+
+- title: "Automatic QA Testing for AI Features: Catch Regressions Before Users Do"
+  category: "automation"
+  tags: ["testing", "ci-cd", "regression", "quality"]
+
+- title: "Using AI to Translate and Localize Your App in 20 Languages for Free"
+  category: "automation"
+  tags: ["localization", "i18n", "translation", "cost-free"]
+
+
+# ========== TRENDS / FUTURE (тренди та майбутнє) ==========
+- title: "The Future of AI for Indie Developers: Trends to Watch"  # ⭐ ОРИГІНАЛ
+  category: "trends"
+  tags: ["trends", "future", "indie"]
+
+- title: "The Rise of Small Language Models (SLMs): Why Bigger Isn't Better for Indie Devs"
+  category: "trends"
+  tags: ["slm", "efficiency", "edge-ai", "future"]
+
+- title: "Agentic Workflows Will Kill Traditional SaaS Interfaces by 2027"
   category: "opinion"
-  tags: ["opinion", "future"]
-- title: "AI-Powered Marketing Strategies for Indie Makers"
-  category: "tutorial"
-  tags: ["tutorial", "marketing"]
-- title: "5 AI Tools That Saved Me 10 Hours a Week"
-  category: "review"
-  tags: ["review", "productivity"]
-- title: "How to Use AI for Code Generation"
-  category: "tutorial"
-  tags: ["tutorial", "coding"]
-- title: "The Rise of No-Code AI Platforms"
-  category: "news"
-  tags: ["news", "no-code"]
-- title: "AI vs. Traditional Software: What Indie Hackers Need to Know"
+  tags: ["agents", "ux", "paradigm-shift", "future"]
+
+- title: "How to Prepare for AI-First Browsers and Search Engines (SEO 2026)"
+  category: "trends"
+  tags: ["seo", "ai-browsers", "discovery", "traffic"]
+
+- title: "Will Open-Source AI Catch Up to Closed Models This Year? A Developer’s Perspective"
   category: "opinion"
-  tags: ["opinion", "comparison"]
-- title: "Building a Micro-SaaS with AI Agents"
-  category: "case-study"
-  tags: ["case-study", "micro-saas", "agents"]
-- title: "How to Stay Updated with AI Trends as a Solopreneur"
-  category: "resource"
-  tags: ["resource", "trends"]
-- title: "Monetizing AI Tools: Affiliate Strategies"
-  category: "tutorial"
-  tags: ["tutorial", "monetization", "affiliate"]
-- title: "The Ethics of AI in Indie Projects"
-  category: "opinion"
-  tags: ["opinion", "ethics"]
-- title: "10 AI Prompts That Every Indie Hacker Should Know"
-  category: "resource"
-  tags: ["resource", "prompts"]
-- title: "How to Validate Your AI Product Idea"
-  category: "tutorial"
-  tags: ["tutorial", "validation"]
-- title: "AI-Powered Customer Support for Bootstrappers"
-  category: "tutorial"
-  tags: ["tutorial", "customer-support"]
-- title: "The Best AI Tools for Content Creation"
-  category: "review"
-  tags: ["review", "content", "writing"]
+  tags: ["open-source", "closed-models", "benchmark", "debate"]
+
+
+# ========== MINDSET & GROWTH (ментальні моделі та розвиток) ==========
+- title: "How to Stay Sane as an AI Solopreneur: Avoiding Shiny Object Syndrome"
+  category: "mindset"
+  tags: ["productivity", "mental-health", "focus", "solopreneur"]
+
+- title: "The 80/20 Rule for AI Projects: Which 20% of Effort Gives 80% of Value?"
+  category: "mindset"
+  tags: ["pareto", "prioritization", "lean", "efficiency"]
+
+- title: "Community-Building for AI Tools: Discord, Reddit, or Beta Users First?"
+  category: "growth"
+  tags: ["community", "launch", "early-adopters", "feedback"]
