@@ -15,10 +15,10 @@ layout: default
         <!-- Header -->
         <header class="tool-header">
             <div class="tool-header-main">
-                {% if page.image %}
-                <div class="tool-logo-wrapper" id="logo-wrapper-{{ page.slug }}">
+                <div class="tool-logo-wrapper">
+                    {% if page.domain and page.domain != "" %}
                     <img class="tool-logo-page" src="" alt="{{ page.title }} logo" loading="lazy" data-sources='[
-                            "{{ ' /assets/logos/' | append: page.logo | default: page.slug | append: '.svg' |
+                               "{{ ' /assets/logos/' | append: page.logo | default: page.slug | append: '.svg' |
                         relative_url }}", "https://unavatar.io/{{ page.domain }}"
                         , "https://icon.horse/icon/{{ page.domain }}" , "https://{{ page.domain }}/favicon.ico"
                         , "https://www.google.com/s2/favicons?domain={{ page.domain }}&sz=256" ]'
@@ -26,54 +26,22 @@ layout: default
                     <div class="logo-fallback-page" style="display:none;">
                         <span>{{ page.title | split: ' — ' | first | slice: 0, 2 | upcase }}</span>
                     </div>
+                    {% else %}
+                    <!-- Якщо домену немає – використовуємо page.image або fallback -->
+                    {% if page.image %}
+                    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="tool-logo" loading="lazy"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="logo-fallback-page" style="display:none;">
+                        <span>{{ page.title | split: ' — ' | first | slice: 0, 2 | upcase }}</span>
+                    </div>
+                    {% else %}
+                    <div class="logo-fallback-page" style="display:flex;">
+                        <span>{{ page.title | split: ' — ' | first | slice: 0, 2 | upcase }}</span>
+                    </div>
+                    {% endif %}
+                    {% endif %}
                 </div>
 
-                <!-- Той самий скрипт (можна винести в окремий файл, але поки продублюємо) -->
-                <script>
-                    (function () {
-                        function loadNextSource() {
-                            var img = this;
-                            var sources = JSON.parse(img.getAttribute('data-sources'));
-                            var currentIndex = parseInt(img.getAttribute('data-current-index') || '0');
-
-                            if (img.naturalWidth > 32) {
-                                return;
-                            }
-
-                            currentIndex++;
-                            if (currentIndex < sources.length) {
-                                img.setAttribute('data-current-index', currentIndex);
-                                img.src = sources[currentIndex];
-                            } else {
-                                img.style.display = 'none';
-                                var fallback = img.nextElementSibling;
-                                if (fallback && fallback.classList.contains('logo-fallback-page')) {
-                                    fallback.style.display = 'flex';
-                                }
-                            }
-                        }
-
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var images = document.querySelectorAll('img.tool-logo-page');
-                            images.forEach(function (img) {
-                                if (!img.src || img.src === '') {
-                                    var sources = JSON.parse(img.getAttribute('data-sources'));
-                                    img.setAttribute('data-current-index', '0');
-                                    img.src = sources[0];
-                                }
-                                img.loadNextSource = loadNextSource.bind(img);
-                                if (img.complete) {
-                                    img.loadNextSource();
-                                }
-                            });
-                        });
-                    })();
-                </script>
-
-
-
-
-                {% endif %}
                 <div class="tool-header-info">
                     <div class="tool-meta-row">
                         <span class="badge badge-category">{{ page.category }}</span>
@@ -87,9 +55,16 @@ layout: default
                     <p class="tool-tagline">{{ page.tagline }}</p>
                     {% endif %}
                     <div class="tool-actions">
-                        <!-- ГОЛОВНА КНОПКА – використовуємо affiliate_url, якщо є -->
-                        {% assign tool_link = page.affiliate_url | default: page.link %}
-                        <a href="{{ tool_link }}" class="btn btn-primary btn-lg" target="_blank"
+                        <!-- Головна кнопка – використовуємо affiliate_link, link, website, або домен -->
+                        {% assign product_url = page.affiliate_link | default: page.link | default: page.website %}
+                        {% if product_url == blank or product_url == '#' %}
+                        {% if page.domain %}
+                        {% assign product_url = 'https://' | append: page.domain %}
+                        {% else %}
+                        {% assign product_url = '#' %}
+                        {% endif %}
+                        {% endif %}
+                        <a href="{{ product_url }}" class="btn btn-primary btn-lg" target="_blank"
                             rel="nofollow sponsored">
                             Try It Free
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -112,7 +87,7 @@ layout: default
                     {{ content }}
                 </div>
 
-                <!-- АФІЛЕЙТ-БАНЕР (додаємо ПІСЛЯ основного тексту) -->
+                <!-- АФІЛЕЙТ-БАНЕР (якщо є) -->
                 {% if page.affiliate_url %}
                 {% include affiliate-banner.html url=page.affiliate_url %}
                 {% endif %}
@@ -120,7 +95,7 @@ layout: default
                 <!-- Inline CTA (друга кнопка) -->
                 <div class="inline-cta">
                     <p>💡 <strong>Ready to try {{ page.title | split: ' — ' | first }}?</strong></p>
-                    <a href="{{ tool_link }}" class="btn btn-primary" target="_blank" rel="nofollow sponsored">
+                    <a href="{{ product_url }}" class="btn btn-primary" target="_blank" rel="nofollow sponsored">
                         Get Started Free →
                     </a>
                 </div>
@@ -140,7 +115,6 @@ layout: default
 
             <!-- Сайдбар -->
             <aside class="tool-sidebar">
-                <!-- Quick Facts -->
                 <div class="sidebar-card">
                     <h3>Quick Facts</h3>
                     <dl class="quick-facts">
@@ -161,11 +135,10 @@ layout: default
                     </dl>
                 </div>
 
-                <!-- CTA в сайдбарі -->
                 <div class="sidebar-card sidebar-cta">
                     <h3>Start Building</h3>
                     <p>Most indie hackers see results within the first week.</p>
-                    <a href="{{ tool_link }}" class="btn btn-primary btn-block" target="_blank"
+                    <a href="{{ product_url }}" class="btn btn-primary btn-block" target="_blank"
                         rel="nofollow sponsored">
                         Try {{ page.title | split: ' — ' | first }} Free
                     </a>
@@ -191,7 +164,6 @@ layout: default
                 </div>
                 {% endif %}
 
-                <!-- Підписка -->
                 <div class="sidebar-card sidebar-newsletter">
                     <h3>📨 Weekly Digest</h3>
                     <p>5 new tools every Monday.</p>
@@ -205,3 +177,45 @@ layout: default
         </div>
     </div>
 </article>
+
+<!-- JavaScript для каскадного завантаження логотипів на сторінці продукту -->
+<script>
+    (function () {
+        function loadNextSource() {
+            var img = this;
+            var sources = JSON.parse(img.getAttribute('data-sources'));
+            var currentIndex = parseInt(img.getAttribute('data-current-index') || '0');
+
+            if (img.naturalWidth > 32) {
+                return;
+            }
+
+            currentIndex++;
+            if (currentIndex < sources.length) {
+                img.setAttribute('data-current-index', currentIndex);
+                img.src = sources[currentIndex];
+            } else {
+                img.style.display = 'none';
+                var fallback = img.nextElementSibling;
+                if (fallback && fallback.classList.contains('logo-fallback-page')) {
+                    fallback.style.display = 'flex';
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var images = document.querySelectorAll('img.tool-logo-page');
+            images.forEach(function (img) {
+                if (!img.src || img.src === '') {
+                    var sources = JSON.parse(img.getAttribute('data-sources'));
+                    img.setAttribute('data-current-index', '0');
+                    img.src = sources[0];
+                }
+                img.loadNextSource = loadNextSource.bind(img);
+                if (img.complete) {
+                    img.loadNextSource();
+                }
+            });
+        });
+    })();
+</script>

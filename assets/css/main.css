@@ -1628,7 +1628,7 @@ p {
   padding: 12px;
 }
 
-.tool-image img {
+.tool-image img.tool-logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -1666,7 +1666,7 @@ p {
   padding: 12px;
 }
 
-.tool-logo-wrapper img {
+.tool-logo-wrapper img.tool-logo-page {
   width: 100%;
   height: 100%;
   object-fit: contain;

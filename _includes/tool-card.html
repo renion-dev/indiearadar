@@ -1,19 +1,25 @@
 <!-- ============================================ -->
-<!-- FILE: tool-card.html (оновлений з JS-перевіркою) -->
+<!-- FILE: tool-card.html                         -->
 <!-- ============================================ -->
 <article class="tool-card">
   <div class="tool-image" id="logo-container-{{ include.tool.slug }}">
-    <!-- Єдиний img, який буде перебирати джерела -->
+    {% if include.tool.domain and include.tool.domain != "" %}
+    <!-- Єдиний img з каскадом джерел через JS -->
     <img class="tool-logo-img" src="" alt="{{ include.tool.title }} logo" loading="lazy" data-sources='[
-           "{{ ' /assets/logos/' | append: include.tool.logo | default: include.tool.slug | append: '.svg' |
+             "{{ ' /assets/logos/' | append: include.tool.logo | default: include.tool.slug | append: '.svg' |
       relative_url }}", "https://unavatar.io/{{ include.tool.domain }}"
       , "https://icon.horse/icon/{{ include.tool.domain }}" , "https://{{ include.tool.domain }}/favicon.ico"
       , "https://www.google.com/s2/favicons?domain={{ include.tool.domain }}&sz=128" ]' onload="this.loadNextSource()"
       onerror="this.loadNextSource()" />
-    <!-- Текстовий fallback (показується, коли всі джерела не спрацювали) -->
     <div class="logo-fallback" style="display:none;">
       <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
     </div>
+    {% else %}
+    <!-- Якщо домену немає – одразу літери (без зовнішніх запитів) -->
+    <div class="logo-fallback" style="display:flex;">
+      <span>{{ include.tool.title | slice: 0, 2 | upcase }}</span>
+    </div>
+    {% endif %}
   </div>
 
   <div class="tool-body">
@@ -32,10 +38,9 @@
   </div>
 </article>
 
-<!-- Невеликий скрипт для перебору джерел -->
+<!-- Невеликий скрипт для перебору джерел (працює автономно) -->
 <script>
   (function () {
-    // Функція, яка буде викликатися для кожного img
     function loadNextSource() {
       var img = this;
       var sources = JSON.parse(img.getAttribute('data-sources'));
@@ -61,19 +66,15 @@
       }
     }
 
-    // Ініціалізація: для всіх img з класом tool-logo-img
     document.addEventListener('DOMContentLoaded', function () {
       var images = document.querySelectorAll('img.tool-logo-img');
       images.forEach(function (img) {
-        // Якщо src ще не встановлено – ставимо перше джерело
         if (!img.src || img.src === '') {
           var sources = JSON.parse(img.getAttribute('data-sources'));
           img.setAttribute('data-current-index', '0');
           img.src = sources[0];
         }
-        // Прив'язуємо функцію до об'єкта (щоб this працював)
         img.loadNextSource = loadNextSource.bind(img);
-        // Якщо зображення вже завантажене (наприклад, з кешу) – перевіряємо naturalWidth
         if (img.complete) {
           img.loadNextSource();
         }
