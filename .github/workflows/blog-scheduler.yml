@@ -36,7 +36,6 @@ jobs:
 
       - name: Generate tag pages
         run: |
-          source venv/bin/activate
           python scripts/generate_tags.py
 
       - name: Commit and push if changes

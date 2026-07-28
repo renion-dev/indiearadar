@@ -67,7 +67,7 @@ jobs:
           fi
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1       # ⬅️ v1 — стабільна, v2 не існує
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
@@ -78,10 +78,10 @@ jobs:
           bundle exec jekyll build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3   # ⬅️ використовує Node.js 24, без попереджень
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v5            # ⬅️ також на Node.js 24
+        uses: actions/deploy-pages@v5
