@@ -55,7 +55,9 @@
         {% if include.tool.rating %}
         <span class="tool-rating">⭐ {{ include.tool.rating }}</span>
         {% endif %}
+        {% if include.tool.category %}
         <span class="tool-category">{{ include.tool.category }}</span>
+        {% endif %}
         {% if include.tool.tags %}
         <span class="tool-tags">
           {% for tag in include.tool.tags limit: 2 %}
