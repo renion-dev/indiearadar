@@ -1,58 +1,65 @@
 ---
 layout: page
 title: About
-description: How Indie AI Radar works and why it exists.
+description: Indie AI Radar — curated AI tools for solopreneurs. No fluff, no paid slots, just honest reviews.
 ---
+
 ## What is Indie AI Radar?
 
-Indie AI Radar is an **autonomous curation system** that discovers, reviews, and publishes AI tools specifically for solopreneurs and indie hackers.
+**Indie AI Radar** is a handcrafted directory of AI tools that actually make sense for indie hackers, solopreneurs, and small teams.
 
-Unlike traditional directories that rely on manual submissions or paid placements, this site is **powered entirely by open-source automation**:
+We don’t list everything. We list **what works** — tools that solve real problems, have fair pricing, and ship often.
 
-- 🤖 **Discovery** — Python script scans Product Hunt, GitHub, Reddit daily
-- ✍️ **Reviews** — Google Gemini generates honest, detailed reviews
-- 🎨 **Images** — AI generates OG images automatically via Pollinations.ai
-- 📧 **Distribution** — Newsletter goes out via Buttondown (free up to 1000 subs)
-- 🔄 **Updates** — Content refreshes daily via GitHub Actions without human intervention
+---
 
-## Why I Built This
+## Why we exist
 
-As an indie hacker, I was tired of:
-- Sifting through hundreds of AI tools to find the 5% that actually work
-- Reading generic "top 50 AI tools" lists with zero depth
-- Missing early access to tools that could 10x my workflow
+There’s too much noise in AI. Every day, dozens of “AI tools” launch. Most are wrappers, reskins, or vaporware. Sorting through them takes hours — and still you end up missing the gems.
 
-This site solves that by curating **only** tools that meet three criteria:
+We do that work for you.
 
-1. **Actually useful** for solo builders (not enterprise sales decks)
-2. **Has a free tier** or reasonable indie pricing
-3. **Shipped recently** — no 3-year-old "AI tools" that are just ChatGPT wrappers
+Every tool here passes a simple test:
+- Can a solo builder actually use it?
+- Is there a real free tier or indie-friendly pricing?
+- Does it do something better than existing solutions?
 
-## How It Works
+No paid placements. No sponsored fluff. Just honest reviews written by AI, curated by humans.
 
-```
-Data Sources → Python Script → Gemini AI → Jekyll Site → GitHub Pages
-     ↓              ↓              ↓            ↓              ↓
-Product Hunt   harvest.py    Generate      Markdown      Auto-Deploy
-GitHub API     (venv)        Review        _tools/       (Actions)
-```
+---
 
-## Tech Stack (All Free, No Trials)
+## What you get
 
-| Layer | Tool | Cost |
-|-------|------|------|
-| Site | Jekyll + GitHub Pages | $0 |
-| Automation | Python 3 + venv | $0 |
-| CI/CD | GitHub Actions | $0 |
-| AI Text | Google Gemini API | $0 (1500 req/day) |
-| AI Images | Pollinations.ai | $0 (no API key) |
-| Newsletter | Buttondown | $0 (1000 subs) |
-| Analytics | Google Analytics 4 | $0 |
+- **Daily updates** — fresh tools, no stale content
+- **Honest reviews** — strengths, weaknesses, pricing, alternatives
+- **Actionable insights** — why it matters for your workflow
 
-**Total monthly cost: $0**
+---
 
-## Contact
-- Twitter/X: [@reniondev](https://twitter.com/reniondev)
-- GitHub: [renion-dev/indiearadar](https://github.com/renion-dev/indiearadar)
+## Behind the scenes
+
+This site is powered by automation — but built for people.  
+We combine:
+- Smart discovery from launch platforms and communities
+- Generative AI to write clear, detailed reviews
+- A simple, fast site that loads anywhere
+
+All with a total monthly cost of **$0** — because indie hackers deserve free tools.
+
+---
+
+## Who’s behind it
+
+My name is **Ihor**. I’m an indie hacker who builds tools for other builders.  
+I got tired of chasing hype, so I built a radar that cuts through it.
+
+If you’re building something, I’d love to hear from you.
+
+---
+
+## Stay in touch
+
+- [Twitter / X](https://twitter.com/reniondev)
+- [GitHub](https://github.com/renion-dev/indiearadar)
+- Subscribe to the [weekly newsletter]({{ '/newsletter' | relative_url }})
 
 *Built with curiosity, caffeine, and zero budget.*
