@@ -1,19 +1,22 @@
 ---
-name: "Via 1.0"
-slug: "via-10"
-title: "Via 1.0 \u2014 Find the optimal path through your work"
-tagline: "Find the optimal path through your work"
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.usevia.io/"
-domain: "www.usevia.io"
-image: "/assets/images/tools/via-10.jpg"
+affiliate_link: https://www.usevia.io/
+category: productivity
+date: '2026-07-26'
+domain: www.usevia.io
+image: /assets/images/tools/via-10.jpg
+name: Via 1.0
+pricing: freemium
+rating: 3.2
+slug: via-10
+source: producthunt
+tagline: Find the optimal path through your work
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- via
+- find
+- the
+title: Via 1.0 — Find the optimal path through your work
 ---
 
 ## What is Via 1.0?

@@ -1,19 +1,22 @@
 ---
-name: "Lottie Creator 2.0"
-slug: "lottie-creator-20"
-title: "Lottie Creator 2.0 \u2014 After Effects for the web, built on Lottie"
-tagline: "After Effects for the web, built on Lottie"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://creator.lottiefiles.com/"
-domain: "creator.lottiefiles.com"
-image: "/assets/images/og/tool-lottie-creator-20.png"
+affiliate_link: https://creator.lottiefiles.com/
+category: design
+date: '2026-07-28'
+domain: creator.lottiefiles.com
+image: /assets/images/og/tool-lottie-creator-20.png
+name: Lottie Creator 2.0
+pricing: freemium
+rating: 3.9
+slug: lottie-creator-20
+source: producthunt
+tagline: After Effects for the web, built on Lottie
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- design
+- lottie
+- creator
+- productivity
+title: Lottie Creator 2.0 — After Effects for the web, built on Lottie
 ---
 
 ## What is Lottie Creator 2.0?

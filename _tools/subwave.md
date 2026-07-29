@@ -1,19 +1,22 @@
 ---
-name: "SUB/WAVE"
-slug: "subwave"
-title: "SUB/WAVE \u2014 Self-hosted radio with an AI DJ and one shared stream"
-tagline: "Self-hosted radio with an AI DJ and one shared stream"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.getsubwave.com"
-domain: "www.getsubwave.com"
-image: "/assets/images/og/tool-subwave.png"
+affiliate_link: https://www.getsubwave.com
+category: productivity
+date: '2026-07-28'
+domain: www.getsubwave.com
+image: /assets/images/og/tool-subwave.png
+name: SUB/WAVE
+pricing: freemium
+rating: 3.1
+slug: subwave
+source: producthunt
+tagline: Self-hosted radio with an AI DJ and one shared stream
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- sub
+- wave
+- self
+title: SUB/WAVE — Self-hosted radio with an AI DJ and one shared stream
 ---
 
 ## What is SUB/WAVE?

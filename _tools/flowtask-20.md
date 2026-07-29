@@ -1,19 +1,22 @@
 ---
-name: "FlowTask 2.0"
-slug: "flowtask-20"
-title: "FlowTask 2.0 \u2014 Company brain for AI Agents"
-tagline: "Company brain for AI Agents"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://flowtask.work"
-domain: "flowtask.work"
-image: "/assets/images/og/tool-flowtask-20.png"
+affiliate_link: https://flowtask.work
+category: productivity
+date: '2026-07-28'
+domain: flowtask.work
+image: /assets/images/og/tool-flowtask-20.png
+name: FlowTask 2.0
+pricing: freemium
+rating: 3.4
+slug: flowtask-20
+source: producthunt
+tagline: Company brain for AI Agents
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- flowtask
+- company
+- brain
+title: FlowTask 2.0 — Company brain for AI Agents
 ---
 
 ## What is FlowTask 2.0?

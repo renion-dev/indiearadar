@@ -1,19 +1,22 @@
 ---
-name: "RecipeBook by Shofo"
-slug: "recipebook-by-shofo"
-title: "RecipeBook by Shofo \u2014 Buy video training data by the hour featuring 25M+ clips"
-tagline: "Buy video training data by the hour featuring 25M+ clips"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://recipebook.shofo.ai/"
-domain: "recipebook.shofo.ai"
-image: "/assets/images/og/tool-recipebook-by-shofo.png"
+affiliate_link: https://recipebook.shofo.ai/
+category: content
+date: '2026-07-28'
+domain: recipebook.shofo.ai
+image: /assets/images/og/tool-recipebook-by-shofo.png
+name: RecipeBook by Shofo
+pricing: freemium
+rating: 4.1
+slug: recipebook-by-shofo
+source: producthunt
+tagline: Buy video training data by the hour featuring 25M+ clips
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- content
+- recipebook
+- shofo
+- productivity
+title: RecipeBook by Shofo — Buy video training data by the hour featuring 25M+ clips
 ---
 
 ## What is RecipeBook by Shofo?

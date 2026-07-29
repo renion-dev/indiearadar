@@ -1,17 +1,23 @@
 ---
-name: "beehiiv"
-title: "Beehiiv — Newsletter Platform for Creators"
-domain: "beehiiv.com"
-tagline: "The newsletter platform built by creators, for creators. No coding needed."
-category: "marketing"
+affiliate_link: https://www.beehiiv.com/?via=renion-lab
+category: marketing
 date: 2026-07-26
-rating: 4.6
-pricing: "freemium"
-affiliate_link: "https://www.beehiiv.com/?via=renion-lab"
-image: "/assets/images/tools/beehiiv.jpg"
-tags: ["newsletter", "email", "marketing", "creator-tools"]
-source: "producthunt"
+domain: beehiiv.com
+image: /assets/images/tools/beehiiv.jpg
+name: beehiiv
+pricing: freemium
+rating: 3.2
+source: producthunt
+tagline: The newsletter platform built by creators, for creators. No coding needed.
+tags:
+- ai
+- marketing
+- beehiiv
+- newsletter
+- platform
+title: Beehiiv — Newsletter Platform for Creators
 ---
+
 ## What is Beehiiv?
 
 Beehiiv is a newsletter platform built by the team behind Morning Brew. It's designed specifically for creators who want to grow, monetize, and own their audience — without dealing with complex tech stacks.

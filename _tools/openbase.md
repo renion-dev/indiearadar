@@ -1,19 +1,22 @@
 ---
-name: "Openbase"
-slug: "openbase"
-title: "Openbase \u2014 Manage your team of AI agents by voice, from anywhere"
-tagline: "Manage your team of AI agents by voice, from anywhere"
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://openbase.cloud"
-domain: "openbase.cloud"
-image: "/assets/images/tools/openbase.jpg"
+affiliate_link: https://openbase.cloud
+category: productivity
+date: '2026-07-26'
+domain: openbase.cloud
+image: /assets/images/tools/openbase.jpg
+name: Openbase
+pricing: freemium
+rating: 3.2
+slug: openbase
+source: producthunt
+tagline: Manage your team of AI agents by voice, from anywhere
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- openbase
+- manage
+- your
+title: Openbase — Manage your team of AI agents by voice, from anywhere
 ---
 
 ## What is Openbase?

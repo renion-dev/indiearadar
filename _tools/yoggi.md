@@ -1,19 +1,22 @@
 ---
-name: "Yoggi"
-slug: "yoggi"
-title: "Yoggi \u2014 Safe AI chat for kids"
-tagline: "Safe AI chat for kids"
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://yoggichat.app/"
-domain: "yoggichat.app"
-image: "/assets/images/tools/yoggi.jpg"
+affiliate_link: https://yoggichat.app/
+category: productivity
+date: '2026-07-26'
+domain: yoggichat.app
+image: /assets/images/tools/yoggi.jpg
+name: Yoggi
+pricing: freemium
+rating: 3.8
+slug: yoggi
+source: producthunt
+tagline: Safe AI chat for kids
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- yoggi
+- safe
+- chat
+title: Yoggi — Safe AI chat for kids
 ---
 
 ## What is Yoggi?

@@ -1,19 +1,22 @@
 ---
-name: "MCP-Billing"
-slug: "mcp-billing"
-title: "MCP-Billing \u2014 OAuth 2.1 + usage-based Stripe billing for MCP servers"
-tagline: "OAuth 2.1 + usage-based Stripe billing for MCP servers"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://mcp-billing.com"
-domain: "mcp-billing.com"
-image: "/assets/images/og/tool-mcp-billing.png"
+affiliate_link: https://mcp-billing.com
+category: productivity
+date: '2026-07-28'
+domain: mcp-billing.com
+image: /assets/images/og/tool-mcp-billing.png
+name: MCP-Billing
+pricing: freemium
+rating: 3.1
+slug: mcp-billing
+source: producthunt
+tagline: OAuth 2.1 + usage-based Stripe billing for MCP servers
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- mcp
+- billing
+- oauth
+title: MCP-Billing — OAuth 2.1 + usage-based Stripe billing for MCP servers
 ---
 
 ## What is MCP-Billing?

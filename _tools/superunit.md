@@ -1,19 +1,22 @@
 ---
-name: "Superunit"
-slug: "superunit"
-title: "Superunit \u2014 AI agents that verify employment by phone, email & fax "
-tagline: "AI agents that verify employment by phone, email & fax "
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.superunit.com/"
-domain: "www.superunit.com"
-image: "/assets/images/og/tool-superunit.png"
+affiliate_link: https://www.superunit.com/
+category: marketing
+date: '2026-07-28'
+domain: www.superunit.com
+image: /assets/images/og/tool-superunit.png
+name: Superunit
+pricing: freemium
+rating: 3.9
+slug: superunit
+source: producthunt
+tagline: 'AI agents that verify employment by phone, email & fax '
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- marketing
+- superunit
+- agents
+- productivity
+title: 'Superunit — AI agents that verify employment by phone, email & fax '
 ---
 
 ## What is Superunit?

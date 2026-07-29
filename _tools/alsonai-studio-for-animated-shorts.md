@@ -1,19 +1,22 @@
 ---
-name: "AlsonAI Studio for Animated Shorts"
-slug: "alsonai-studio-for-animated-shorts"
-title: "AlsonAI Studio for Animated Shorts \u2014 From bedtime story to animated short film."
-tagline: "From bedtime story to animated short film."
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://alson.ai/"
-domain: "alson.ai"
-image: "/assets/images/tools/alsonai-studio-for-animated-shorts.jpg"
+affiliate_link: https://alson.ai/
+category: content
+date: '2026-07-26'
+domain: alson.ai
+image: /assets/images/tools/alsonai-studio-for-animated-shorts.jpg
+name: AlsonAI Studio for Animated Shorts
+pricing: freemium
+rating: 4.5
+slug: alsonai-studio-for-animated-shorts
+source: producthunt
+tagline: From bedtime story to animated short film.
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- content
+- alsonai
+- animated
+- productivity
+title: AlsonAI Studio for Animated Shorts — From bedtime story to animated short film.
 ---
 
 ## What is AlsonAI Studio for Animated Shorts?

@@ -1,19 +1,22 @@
 ---
-name: "Aymo AI"
-slug: "aymo-ai"
-title: "Aymo AI \u2014 All-in-one AI Platform for Teams"
-tagline: "All-in-one AI Platform for Teams"
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://aymo.ai"
-domain: "aymo.ai"
-image: "/assets/images/tools/aymo-ai.jpg"
+affiliate_link: https://aymo.ai
+category: productivity
+date: '2026-07-26'
+domain: aymo.ai
+image: /assets/images/tools/aymo-ai.jpg
+name: Aymo AI
+pricing: freemium
+rating: 3.4
+slug: aymo-ai
+source: producthunt
+tagline: All-in-one AI Platform for Teams
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- aymo
+- all
+- one
+title: Aymo AI — All-in-one AI Platform for Teams
 ---
 
 ## What is Aymo AI?

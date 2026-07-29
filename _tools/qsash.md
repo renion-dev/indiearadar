@@ -1,19 +1,22 @@
 ---
-name: "qsa.sh "
-slug: "qsash"
-title: "qsa.sh  \u2014 External security scan of your own IP, in your terminal"
-tagline: "External security scan of your own IP, in your terminal"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://qsa.sh"
-domain: "qsa.sh"
-image: "/assets/images/og/tool-qsash.png"
+affiliate_link: https://qsa.sh
+category: productivity
+date: '2026-07-28'
+domain: qsa.sh
+image: /assets/images/og/tool-qsash.png
+name: 'qsa.sh '
+pricing: freemium
+rating: 4.6
+slug: qsash
+source: producthunt
+tagline: External security scan of your own IP, in your terminal
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- qsa
+- external
+- security
+title: qsa.sh  — External security scan of your own IP, in your terminal
 ---
 
 ## What is qsa.sh ?

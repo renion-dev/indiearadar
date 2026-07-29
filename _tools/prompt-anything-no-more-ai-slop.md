@@ -1,19 +1,23 @@
 ---
-name: "Prompt Anything: No more AI slop"
-slug: "prompt-anything-no-more-ai-slop"
-title: "Prompt Anything: No more AI slop \u2014 Become an expert prompt engineer in minutes, for anything AI"
-tagline: "Become an expert prompt engineer in minutes, for anything AI"
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.promptanything.io/"
-domain: "www.promptanything.io"
-image: "/assets/images/tools/prompt-anything-no-more-ai-slop.jpg"
+affiliate_link: https://www.promptanything.io/
+category: productivity
+date: '2026-07-26'
+domain: www.promptanything.io
+image: /assets/images/tools/prompt-anything-no-more-ai-slop.jpg
+name: 'Prompt Anything: No more AI slop'
+pricing: freemium
+rating: 3.8
+slug: prompt-anything-no-more-ai-slop
+source: producthunt
+tagline: Become an expert prompt engineer in minutes, for anything AI
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- prompt
+- anything
+- more
+title: 'Prompt Anything: No more AI slop — Become an expert prompt engineer in minutes,
+  for anything AI'
 ---
 
 ## What is Prompt Anything: No more AI slop?

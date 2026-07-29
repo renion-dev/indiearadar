@@ -1,19 +1,22 @@
 ---
-name: "PureBox.ai"
-slug: "pureboxai"
-title: "PureBox.ai \u2014 Review-first AI cleanup for your real Gmail inbox."
-tagline: "Review-first AI cleanup for your real Gmail inbox."
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://purebox.ai"
-domain: "purebox.ai"
-image: "/assets/images/tools/pureboxai.jpg"
+affiliate_link: https://purebox.ai
+category: productivity
+date: '2026-07-26'
+domain: purebox.ai
+image: /assets/images/tools/pureboxai.jpg
+name: PureBox.ai
+pricing: freemium
+rating: 3.5
+slug: pureboxai
+source: producthunt
+tagline: Review-first AI cleanup for your real Gmail inbox.
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- purebox
+- review
+- first
+title: PureBox.ai — Review-first AI cleanup for your real Gmail inbox.
 ---
 
 ## What is PureBox.ai?

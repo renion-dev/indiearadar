@@ -1,19 +1,22 @@
 ---
-name: "Liminal"
-slug: "liminal"
-title: "Liminal \u2014 A workspace & 2nd brain for you, your agent, and your team"
-tagline: "A workspace & 2nd brain for you, your agent, and your team"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://useliminal.xyz"
-domain: "useliminal.xyz"
-image: "/assets/images/og/tool-liminal.png"
+affiliate_link: https://useliminal.xyz
+category: productivity
+date: '2026-07-28'
+domain: useliminal.xyz
+image: /assets/images/og/tool-liminal.png
+name: Liminal
+pricing: freemium
+rating: 4.7
+slug: liminal
+source: producthunt
+tagline: A workspace & 2nd brain for you, your agent, and your team
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- liminal
+- workspace
+- brain
+title: Liminal — A workspace & 2nd brain for you, your agent, and your team
 ---
 
 ## What is Liminal?

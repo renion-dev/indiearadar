@@ -1,19 +1,22 @@
 ---
-name: "Pawesome"
-slug: "pawesome"
-title: "Pawesome \u2014 Your AI Native Inbound Marketing Engine"
-tagline: "Your AI Native Inbound Marketing Engine"
-category: "productivity"
-date: "2026-07-26"
+affiliate_link: https://pawesome.space/
+category: marketing
+date: '2026-07-26'
+domain: pawesome.space
+image: /assets/images/tools/pawesome.jpg
+name: Pawesome
+pricing: freemium
 rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://pawesome.space/"
-domain: "pawesome.space"
-image: "/assets/images/tools/pawesome.jpg"
+slug: pawesome
+source: producthunt
+tagline: Your AI Native Inbound Marketing Engine
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- marketing
+- pawesome
+- your
+- productivity
+title: Pawesome — Your AI Native Inbound Marketing Engine
 ---
 
 ## What is Pawesome?

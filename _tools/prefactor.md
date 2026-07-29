@@ -1,19 +1,22 @@
 ---
-name: "Prefactor"
-slug: "prefactor"
-title: "Prefactor \u2014 Evaluate your AI Agents in real-time"
-tagline: "Evaluate your AI Agents in real-time"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://prefactor.tech/producthunt"
-domain: "prefactor.tech"
-image: "/assets/images/og/tool-prefactor.png"
+affiliate_link: https://prefactor.tech/producthunt
+category: productivity
+date: '2026-07-28'
+domain: prefactor.tech
+image: /assets/images/og/tool-prefactor.png
+name: Prefactor
+pricing: freemium
+rating: 3.7
+slug: prefactor
+source: producthunt
+tagline: Evaluate your AI Agents in real-time
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- prefactor
+- evaluate
+- your
+title: Prefactor — Evaluate your AI Agents in real-time
 ---
 
 ## What is Prefactor?

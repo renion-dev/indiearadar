@@ -1,19 +1,22 @@
 ---
-name: "BrainFeed"
-slug: "brainfeed"
-title: "BrainFeed \u2014 A personalized learning feed that redirects your scroll"
-tagline: "A personalized learning feed that redirects your scroll"
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.scrollbrainfeed.com"
-domain: "www.scrollbrainfeed.com"
-image: "/assets/images/tools/brainfeed.jpg"
+affiliate_link: https://www.scrollbrainfeed.com
+category: productivity
+date: '2026-07-26'
+domain: www.scrollbrainfeed.com
+image: /assets/images/tools/brainfeed.jpg
+name: BrainFeed
+pricing: freemium
+rating: 4.6
+slug: brainfeed
+source: producthunt
+tagline: A personalized learning feed that redirects your scroll
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- brainfeed
+- personalized
+- learning
+title: BrainFeed — A personalized learning feed that redirects your scroll
 ---
 
 ## What is BrainFeed?

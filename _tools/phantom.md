@@ -1,19 +1,22 @@
 ---
-name: "Phantom"
-slug: "phantom"
-title: "Phantom \u2014 Voice-first AI agent that operates your Mac"
-tagline: "Voice-first AI agent that operates your Mac"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.heyphantom.app"
-domain: "www.heyphantom.app"
-image: "/assets/images/og/tool-phantom.png"
+affiliate_link: https://www.heyphantom.app
+category: productivity
+date: '2026-07-28'
+domain: www.heyphantom.app
+image: /assets/images/og/tool-phantom.png
+name: Phantom
+pricing: freemium
+rating: 3.5
+slug: phantom
+source: producthunt
+tagline: Voice-first AI agent that operates your Mac
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- phantom
+- voice
+- first
+title: Phantom — Voice-first AI agent that operates your Mac
 ---
 
 ## What is Phantom?

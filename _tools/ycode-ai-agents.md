@@ -1,19 +1,22 @@
 ---
-name: "Ycode AI Agents"
-slug: "ycode-ai-agents"
-title: "Ycode AI Agents \u2014 Build websites with AI"
-tagline: "Build websites with AI"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.ycode.com/ai-agents"
-domain: "www.ycode.com"
-image: "/assets/images/og/tool-ycode-ai-agents.png"
+affiliate_link: https://www.ycode.com/ai-agents
+category: code
+date: '2026-07-28'
+domain: www.ycode.com
+image: /assets/images/og/tool-ycode-ai-agents.png
+name: Ycode AI Agents
+pricing: freemium
+rating: 4.8
+slug: ycode-ai-agents
+source: producthunt
+tagline: Build websites with AI
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- code
+- ycode
+- agents
+- productivity
+title: Ycode AI Agents — Build websites with AI
 ---
 
 ## What is Ycode AI Agents?

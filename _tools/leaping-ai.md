@@ -1,19 +1,22 @@
 ---
-name: "Leaping AI"
-slug: "leaping-ai"
-title: "Leaping AI \u2014 AI agents that call and text in multi-day campaigns"
-tagline: "AI agents that call and text in multi-day campaigns"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://leapingai.com"
-domain: "leapingai.com"
-image: "/assets/images/og/tool-leaping-ai.png"
+affiliate_link: https://leapingai.com
+category: productivity
+date: '2026-07-28'
+domain: leapingai.com
+image: /assets/images/og/tool-leaping-ai.png
+name: Leaping AI
+pricing: freemium
+rating: 3.8
+slug: leaping-ai
+source: producthunt
+tagline: AI agents that call and text in multi-day campaigns
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- leaping
+- agents
+- that
+title: Leaping AI — AI agents that call and text in multi-day campaigns
 ---
 
 ## What is Leaping AI?

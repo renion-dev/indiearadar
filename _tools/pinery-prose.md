@@ -1,19 +1,22 @@
 ---
-name: "Pinery Prose"
-slug: "pinery-prose"
-title: "Pinery Prose \u2014 AI co-author for books + every edit is a diff you approve"
-tagline: "AI co-author for books + every edit is a diff you approve"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://pinery.app/"
-domain: "pinery.app"
-image: "/assets/images/og/tool-pinery-prose.png"
+affiliate_link: https://pinery.app/
+category: productivity
+date: '2026-07-28'
+domain: pinery.app
+image: /assets/images/og/tool-pinery-prose.png
+name: Pinery Prose
+pricing: freemium
+rating: 3.6
+slug: pinery-prose
+source: producthunt
+tagline: AI co-author for books + every edit is a diff you approve
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- pinery
+- prose
+- author
+title: Pinery Prose — AI co-author for books + every edit is a diff you approve
 ---
 
 ## What is Pinery Prose?

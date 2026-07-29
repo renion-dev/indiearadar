@@ -1,19 +1,22 @@
 ---
-name: "Athena by Shoplazza"
-slug: "athena-by-shoplazza"
-title: "Athena by Shoplazza \u2014 An orchestrator agent for your entire commerce stack"
-tagline: "An orchestrator agent for your entire commerce stack"
-category: "productivity"
-date: "2026-07-26"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.shoplaza.ai"
-domain: "www.shoplaza.ai"
-image: "/assets/images/tools/athena-by-shoplazza.jpg"
+affiliate_link: https://www.shoplaza.ai
+category: productivity
+date: '2026-07-26'
+domain: www.shoplaza.ai
+image: /assets/images/tools/athena-by-shoplazza.jpg
+name: Athena by Shoplazza
+pricing: freemium
+rating: 4.3
+slug: athena-by-shoplazza
+source: producthunt
+tagline: An orchestrator agent for your entire commerce stack
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- athena
+- shoplazza
+- orchestrator
+title: Athena by Shoplazza — An orchestrator agent for your entire commerce stack
 ---
 
 ## What is Athena by Shoplazza?

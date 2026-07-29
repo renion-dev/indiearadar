@@ -1,19 +1,22 @@
 ---
-name: "Conduit"
-slug: "conduit"
-title: "Conduit \u2014 AI agents purpose-built for Hospitality"
-tagline: "AI agents purpose-built for Hospitality"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.conduit.ai/"
-domain: "www.conduit.ai"
-image: "/assets/images/og/tool-conduit.png"
+affiliate_link: https://www.conduit.ai/
+category: design
+date: '2026-07-28'
+domain: www.conduit.ai
+image: /assets/images/og/tool-conduit.png
+name: Conduit
+pricing: freemium
+rating: 3.6
+slug: conduit
+source: producthunt
+tagline: AI agents purpose-built for Hospitality
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- design
+- conduit
+- agents
+- productivity
+title: Conduit — AI agents purpose-built for Hospitality
 ---
 
 ## What is Conduit?

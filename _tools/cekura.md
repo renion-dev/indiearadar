@@ -1,19 +1,22 @@
 ---
-name: "Cekura"
-slug: "cekura"
-title: "Cekura \u2014 The self-improvement loop for voice agents"
-tagline: "The self-improvement loop for voice agents"
-category: "productivity"
-date: "2026-07-28"
-rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.cekura.ai/"
-domain: "www.cekura.ai"
-image: "/assets/images/og/tool-cekura.png"
+affiliate_link: https://www.cekura.ai/
+category: productivity
+date: '2026-07-28'
+domain: www.cekura.ai
+image: /assets/images/og/tool-cekura.png
+name: Cekura
+pricing: freemium
+rating: 4.7
+slug: cekura
+source: producthunt
+tagline: The self-improvement loop for voice agents
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- productivity
+- cekura
+- self
+- the
+title: Cekura — The self-improvement loop for voice agents
 ---
 
 ## What is Cekura?

@@ -1,19 +1,22 @@
 ---
-name: "Jotform Website Widgets"
-slug: "jotform-website-widgets"
-title: "Jotform Website Widgets \u2014 Build and embed no-code website widgets in minutes"
-tagline: "Build and embed no-code website widgets in minutes"
-category: "productivity"
-date: "2026-07-28"
+affiliate_link: https://www.jotform.com/website-widgets/
+category: code
+date: '2026-07-28'
+domain: www.jotform.com
+image: /assets/images/og/tool-jotform-website-widgets.png
+name: Jotform Website Widgets
+pricing: freemium
 rating: 4.0
-pricing: "freemium"
-affiliate_link: "https://www.jotform.com/website-widgets/"
-domain: "www.jotform.com"
-image: "/assets/images/og/tool-jotform-website-widgets.png"
+slug: jotform-website-widgets
+source: producthunt
+tagline: Build and embed no-code website widgets in minutes
 tags:
-  - ai
-  - tool
-source: "producthunt"
+- ai
+- code
+- jotform
+- website
+- productivity
+title: Jotform Website Widgets — Build and embed no-code website widgets in minutes
 ---
 
 ## What is Jotform Website Widgets?
