@@ -11,7 +11,7 @@ OUTPUT_DIR = Path("pages/programmatic")
 def load_pages():
     pages = []
 
-    for file in sorted(PROGRAMMATIC_DIR.glob("*.yml")):
+    for file in sorted(PROGRAMMATIC_DIR.rglob("*.yml")):
         with open(file, "r", encoding="utf-8") as f:
             page = yaml.safe_load(f)
 
