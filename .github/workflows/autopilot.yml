@@ -38,7 +38,7 @@ jobs:
           PH_API_TOKEN: ${{ secrets.PH_API_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python3 scripts/harvest.py || echo "No new tools today"
+          python3 scripts/harvest_range.py --days 365 --min-votes 10 || echo "No new tools today"
 
       - name: Generate seed pages
         run: |
