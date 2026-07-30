@@ -1,0 +1,141 @@
+items:
+
+  - slug: developers
+    title: Developers
+    description: Discover the best AI tools for software developers.
+    tool_filters:
+      categories: [coding, productivity]
+    limit: 20
+
+  - slug: designers
+    title: Designers
+    description: Discover the best AI tools for designers.
+    tool_filters:
+      categories: [design]
+    limit: 20
+
+  - slug: marketers
+    title: Marketers
+    description: Discover the best AI tools for marketers.
+    tool_filters:
+      categories: [marketing]
+    limit: 20
+
+  - slug: founders
+    title: Startup Founders
+    description: Discover the best AI tools for startup founders.
+    tool_filters:
+      categories: [productivity, marketing]
+    limit: 20
+
+  - slug: students
+    title: Students
+    description: Discover the best AI tools for students.
+    tool_filters:
+      categories: [education, productivity]
+    limit: 20
+
+  - slug: teachers
+    title: Teachers
+    description: Discover the best AI tools for teachers.
+    tool_filters:
+      categories: [education]
+    limit: 20
+
+  - slug: lawyers
+    title: Lawyers
+    description: Discover the best AI tools for lawyers.
+    tool_filters:
+      categories: [legal]
+    limit: 20
+
+  - slug: accountants
+    title: Accountants
+    description: Discover the best AI tools for accountants.
+    tool_filters:
+      categories: [finance]
+    limit: 20
+
+  - slug: recruiters
+    title: Recruiters
+    description: Discover the best AI tools for recruiters.
+    tool_filters:
+      categories: [hr]
+    limit: 20
+
+  - slug: product-managers
+    title: Product Managers
+    description: Discover the best AI tools for product managers.
+    tool_filters:
+      categories: [productivity]
+    limit: 20
+
+  - slug: project-managers
+    title: Project Managers
+    description: Discover the best AI tools for project managers.
+    tool_filters:
+      categories: [productivity]
+    limit: 20
+
+  - slug: researchers
+    title: Researchers
+    description: Discover the best AI tools for researchers.
+    tool_filters:
+      categories: [research]
+    limit: 20
+
+  - slug: writers
+    title: Writers
+    description: Discover the best AI tools for writers.
+    tool_filters:
+      categories: [writing]
+    limit: 20
+
+  - slug: copywriters
+    title: Copywriters
+    description: Discover the best AI tools for copywriters.
+    tool_filters:
+      categories: [writing, marketing]
+    limit: 20
+
+  - slug: content-creators
+    title: Content Creators
+    description: Discover the best AI tools for content creators.
+    tool_filters:
+      categories: [content, marketing]
+    limit: 20
+
+  - slug: video-editors
+    title: Video Editors
+    description: Discover the best AI tools for video editors.
+    tool_filters:
+      categories: [video]
+    limit: 20
+
+  - slug: ux-designers
+    title: UX Designers
+    description: Discover the best AI tools for UX designers.
+    tool_filters:
+      categories: [design]
+    limit: 20
+
+  - slug: graphic-designers
+    title: Graphic Designers
+    description: Discover the best AI tools for graphic designers.
+    tool_filters:
+      categories: [design]
+    limit: 20
+
+  - slug: sales
+    title: Sales Teams
+    description: Discover the best AI tools for sales teams.
+    tool_filters:
+      categories: [sales]
+    limit: 20
+
+  - slug: customer-support
+    title: Customer Support
+    description: Discover the best AI tools for customer support.
+    tool_filters:
+      categories: [support]
+    limit: 20

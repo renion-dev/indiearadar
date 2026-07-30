@@ -1,11 +1,11 @@
 ---
 layout: programmatic
 
-title: "Best AI Tools for Developers"
+title: "Best AI Tools for Students"
 
-description: "Discover the best AI tools for software developers."
+description: "Discover the best AI tools for students."
 
-permalink: /best-ai-tools-for-developers/
+permalink: /best-ai-tools-for-students/
 
 programmatic: true
 
@@ -38,4 +38,4 @@ related_tools:
 
 ## Recommended AI Tools
 
-Discover the best AI tools for software developers.
+Discover the best AI tools for students.

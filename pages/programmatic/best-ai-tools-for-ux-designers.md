@@ -1,11 +1,11 @@
 ---
 layout: programmatic
 
-title: "Best AI Tools for Designers"
+title: "Best AI Tools for UX Designers"
 
-description: "Discover the best AI tools for designers."
+description: "Discover the best AI tools for UX designers."
 
-permalink: /best-ai-tools-for-designers/
+permalink: /best-ai-tools-for-ux-designers/
 
 programmatic: true
 
@@ -23,4 +23,4 @@ related_tools:
 
 ## Recommended AI Tools
 
-Discover the best AI tools for designers.
+Discover the best AI tools for UX designers.

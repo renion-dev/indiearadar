@@ -1,20 +1,27 @@
-# Indie AI Radar Documentation
+# Indie AI Radar — Documentation
 
-This directory contains all long-term project documentation.
+Цей розділ містить технічну документацію проєкту.
 
-## Structure
+## Швидка навігація
 
-architecture/
-    System architecture and technical design.
+- [Архітектура](architecture/overview.md)
+- [Потоки даних](architecture/data-flow.md)
+- [Компоненти](architecture/components.md)
+- [ADR](adr/)
+- [Поточний етап](roadmap/current.md)
 
-adr/
-    Architecture Decision Records.
+## Основні принципи
 
-roadmap/
-    Product roadmap and implementation plans.
+1. **Data-first** — усі сторінки генеруються з даних.
+2. **Seed як джерело істини** — зміни починаються з `_data/seed/`.
+3. **Мінімум коду** — Python залишається стабільним, дані ростуть.
+4. **Автономність** — система працює без зовнішніх API для базової функціональності.
 
-monetization/
-    Revenue strategy and affiliate model.
+## Поточний стан
 
-workflows/
-    Automated pipelines and GitHub Actions.
+- ✅ Автоматичний збір інструментів (Product Hunt)
+- ✅ Блог (дайджести)
+- ✅ OG-зображення
+- ✅ Афілейт-движок
+- ✅ Programmatic SEO (Seed → YAML → Pages)
+- ⏳ Наступне: масштабування контенту (більше seed-даних)
