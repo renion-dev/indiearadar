@@ -167,7 +167,7 @@ layout: default
                 <div class="sidebar-card sidebar-newsletter">
                     <h3>📨 Weekly Digest</h3>
                     <p>5 new tools every Monday.</p>
-                    <form action="https://buttondown.email/api/emails/embed-subscribe/indiearadar" method="post"
+                    <form action="https://buttondown.email/api/emails/embed-subscribe/renion" method="post"
                         target="popupwindow">
                         <input type="email" name="email" placeholder="Email" required class="input-sm">
                         <button type="submit" class="btn btn-primary btn-sm btn-block">Subscribe</button>
@@ -224,16 +224,17 @@ layout: default
         });
     })();
 </script><!-- Similar AI Tools -->
-{% assign similar = site.tools | where_exp: "tool", "tool.category == page.category and tool.slug != page.slug" | slice: 0, 6 %}
+{% assign similar = site.tools | where_exp: "tool", "tool.category == page.category and tool.slug != page.slug" | slice:
+0, 6 %}
 {% if similar.size > 0 %}
 <section style="padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border);">
-  <div class="section-header">
-    <h2>Similar AI Tools</h2>
-  </div>
-  <div class="tools-grid">
-    {% for tool in similar %}
-      {% include tool-card.html tool=tool %}
-    {% endfor %}
-  </div>
+    <div class="section-header">
+        <h2>Similar AI Tools</h2>
+    </div>
+    <div class="tools-grid">
+        {% for tool in similar %}
+        {% include tool-card.html tool=tool %}
+        {% endfor %}
+    </div>
 </section>
 {% endif %}

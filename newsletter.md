@@ -8,11 +8,11 @@ description: Get 5 curated AI tools every Monday. One email, zero spam.
     <span style="font-size: 3rem; display: block; margin-bottom: 1rem;">📬</span>
     <h2>Join the Weekly Digest</h2>
     <p style="font-size: 1.125rem; margin-bottom: 2rem;">Every Monday, I send 5 hand-picked AI tools with honest reviews, pricing breakdowns, and exclusive deals for indie hackers.</p>
-    <form action="https://buttondown.email/api/emails/embed-subscribe/indiearadar" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/indiearadar', 'popupwindow')" style="max-width: 400px; margin: 0 auto;">
+    <form action="https://buttondown.email/api/emails/embed-subscribe/renion" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/renion', 'popupwindow')" style="max-width: 400px; margin: 0 auto;">
       <input type="email" name="email" placeholder="you@example.com" required class="newsletter-input" style="margin-bottom: 0.75rem;">
       <button type="submit" class="btn btn-primary btn-block">Subscribe Free</button>
     </form>
-    <p class="newsletter-note" style="margin-top: 1rem;">Join 2,400+ indie hackers. Unsubscribe anytime. No spam, ever.</p>
+    <p class="newsletter-note" style="margin-top: 1rem;">Join. Unsubscribe anytime. No spam, ever.</p>
   </div>
 </div>
 <div style="max-width: 600px; margin: 4rem auto 0; text-align: center;">
