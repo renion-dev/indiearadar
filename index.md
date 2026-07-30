@@ -5,14 +5,14 @@ layout: home
 ## Popular AI Tool Categories
 
 <div class="categories-grid">
-  <a href="/indiearadar/best-ai-tools-for-developers/" class="category-card">💻 Developers</a>
-  <a href="/indiearadar/best-ai-tools-for-designers/" class="category-card">🎨 Designers</a>
-  <a href="/indiearadar/best-ai-tools-for-marketers/" class="category-card">📈 Marketers</a>
-  <a href="/indiearadar/best-ai-tools-for-founders/" class="category-card">🚀 Founders</a>
-  <a href="/indiearadar/best-ai-tools-for-students/" class="category-card">🎓 Students</a>
-  <a href="/indiearadar/best-ai-tools-for-content/" class="category-card">✍️ Content</a>
-  <a href="/indiearadar/best-ai-tools-for-automation/" class="category-card">⚡ Automation</a>
-  <a href="/indiearadar/best-ai-tools-for-analytics/" class="category-card">📊 Analytics</a>
+  <a href="/renion/best-ai-tools-for-developers/" class="category-card">💻 Developers</a>
+  <a href="/renion/best-ai-tools-for-designers/" class="category-card">🎨 Designers</a>
+  <a href="/renion/best-ai-tools-for-marketers/" class="category-card">📈 Marketers</a>
+  <a href="/renion/best-ai-tools-for-founders/" class="category-card">🚀 Founders</a>
+  <a href="/renion/best-ai-tools-for-students/" class="category-card">🎓 Students</a>
+  <a href="/renion/best-ai-tools-for-content/" class="category-card">✍️ Content</a>
+  <a href="/renion/best-ai-tools-for-automation/" class="category-card">⚡ Automation</a>
+  <a href="/renion/best-ai-tools-for-analytics/" class="category-card">📊 Analytics</a>
 </div>
 
 <style>
