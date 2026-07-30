@@ -1,0 +1,57 @@
+name: Autopilot — Daily Harvest & Deploy
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # щодня о 8:00 UTC
+  workflow_dispatch:       # ручний запуск
+
+jobs:
+  autopilot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install requests pyyaml python-dotenv pillow
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Install Jekyll dependencies
+        run: bundle install
+
+      - name: Run harvest (new tools)
+        env:
+          PH_API_TOKEN: ${{ secrets.PH_API_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 scripts/harvest.py || echo "No new tools today"
+
+      - name: Generate seed pages
+        run: |
+          python3 scripts/seed_generator.py
+          python3 scripts/programmatic_generator.py
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _tools/ _data/programmatic/ pages/programmatic/ _site/
+          git diff --staged --quiet || git commit -m "chore: autopilot update $(date -u +'%Y-%m-%d')"
+          git push origin HEAD:feature/seo-automation
