@@ -1,0 +1,34 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>1.0</priority>
+  </url>
+  {% for page in site.pages %}
+    {% if page.url != "/404.html" and page.url != "/sitemap.xml" %}
+      <url>
+        <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+        <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
+        <priority>{% if page.url == "/" %}1.0{% else %}0.8{% endif %}</priority>
+      </url>
+    {% endif %}
+  {% endfor %}
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <priority>0.7</priority>
+    </url>
+  {% endfor %}
+  {% for tool in site.tools %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ tool.url }}</loc>
+      <lastmod>{{ tool.date | default: site.time | date_to_xmlschema }}</lastmod>
+      <priority>0.6</priority>
+    </url>
+  {% endfor %}
+</urlset>
