@@ -5,7 +5,7 @@ title: "ExploreYC \u2014 Open-source API for Y Combinator & a16z company data"
 tagline: "Open-source API for Y Combinator & a16z company data"
 category: "code"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://exploreyc.com/api-docs"
 domain: "exploreyc.com"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 657
 ---
+
 
 ## What is ExploreYC?
 

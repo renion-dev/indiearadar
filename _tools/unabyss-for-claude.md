@@ -5,7 +5,7 @@ title: "Unabyss for Claude \u2014 Shared memory across all apps and LLMs. In Cla
 tagline: "Shared memory across all apps and LLMs. In Claude"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://unabyss.com"
 domain: "unabyss.com"
@@ -18,6 +18,7 @@ tags:
 source: "producthunt"
 votes: 664
 ---
+
 
 ## What is Unabyss for Claude?
 

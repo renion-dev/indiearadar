@@ -5,7 +5,7 @@ title: "ChatCut \u2014 Your AI video editor in ChatGPT, desktop, and web"
 tagline: "Your AI video editor in ChatGPT, desktop, and web"
 category: "marketing"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://chatcut.io"
 domain: "chatcut.io"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 520
 ---
+
 
 ## What is ChatCut?
 

@@ -5,7 +5,7 @@ title: "V2Fun \u2014 Generate 3D character with 8K textures and AI motion captur
 tagline: "Generate 3D character with 8K textures and AI motion capture"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://v2fun.ai"
 domain: "v2fun.ai"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 593
 ---
+
 
 ## What is V2Fun?
 

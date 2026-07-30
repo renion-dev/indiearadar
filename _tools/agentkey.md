@@ -5,7 +5,7 @@ title: "AgentKey \u2014 One-stop live data marketplace for your agent"
 tagline: "One-stop live data marketplace for your agent"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.8
 pricing: "freemium"
 affiliate_link: "https://agentkey.app"
 domain: "agentkey.app"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 533
 ---
+
 
 ## What is AgentKey?
 

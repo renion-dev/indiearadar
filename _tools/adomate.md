@@ -5,7 +5,7 @@ title: "Adomate \u2014 Turn data into winning ads. At scale."
 tagline: "Turn data into winning ads. At scale."
 category: "design"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://www.adomate.com/"
 domain: "adomate.com"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 549
 ---
+
 
 ## What is Adomate?
 Adomate is an AI-powered advertising platform designed to bridge the gap between complex data analytics and high-converting ad creative. Its core mission is simple: **Turn data into winning ads. At scale.** 

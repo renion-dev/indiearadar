@@ -5,7 +5,7 @@ title: "Osaurus \u2014 Open source agents that run 100% locally on your Mac"
 tagline: "Open source agents that run 100% locally on your Mac"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://osaurus.ai"
 domain: "osaurus.ai"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 586
 ---
+
 
 ## What is Osaurus?
 

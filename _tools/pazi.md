@@ -5,7 +5,7 @@ title: "Pazi \u2014 Vibe code business operations"
 tagline: "Vibe code business operations"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://pazi.ai/"
 domain: "pazi.ai"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 892
 ---
+
 
 ## What is Pazi?
 **Pazi** (https://pazi.ai/) is an AI-powered operations platform designed to bridge the gap between complex business logic and execution. Its tagline, *“Vibe code business operations,”* perfectly captures its philosophy: moving away from rigid, bloated enterprise software toward a more fluid, conversational, and intuitive way of managing workflows. It acts as the "operating system" for your business, allowing you to automate tasks and manage data without needing a degree in software engineering.

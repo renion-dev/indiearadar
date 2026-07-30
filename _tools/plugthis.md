@@ -5,7 +5,7 @@ title: "PlugThis \u2014 Create your own Chrome Extensions by chatting with AI"
 tagline: "Create your own Chrome Extensions by chatting with AI"
 category: "code"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://plugthis.ai"
 domain: "plugthis.ai"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 514
 ---
+
 
 ## What is PlugThis?
 **PlugThis** (https://plugthis.ai) is a revolutionary development tool that bridges the gap between idea and execution for non-technical users. It allows you to build functional Chrome Extensions simply by describing what you want in plain English. By leveraging advanced AI, it handles the complex boilerplate, manifest files, and JavaScript logic, transforming your chat prompts into ready-to-install browser tools.

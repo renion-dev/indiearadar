@@ -5,7 +5,7 @@ title: "Glaze by Raycast \u2014 Create your own Mac apps by chatting with AI"
 tagline: "Create your own Mac apps by chatting with AI"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.glaze.app/"
 domain: "glaze.app"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 681
 ---
+
 
 ## What is Glaze by Raycast?
 

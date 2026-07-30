@@ -5,7 +5,7 @@ title: "Fuzzy AI \u2014 We warm your prospects before reaching out"
 tagline: "We warm your prospects before reaching out"
 category: "marketing"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.8
 pricing: "freemium"
 affiliate_link: "https://getfuzzy.ai"
 domain: "getfuzzy.ai"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 688
 ---
+
 
 ## What is Fuzzy AI?
 **[Fuzzy AI](https://getfuzzy.ai)** is an intelligent sales automation platform designed to solve the "cold outreach" problem. Instead of blasting prospects with generic, robotic emails, Fuzzy AI acts as a digital researcher. It scrapes, analyzes, and synthesizes data about your leads to craft hyper-personalized touchpoints that feel human. Its core mission is simple: to "warm up" your prospects before you ever send that first sales message.

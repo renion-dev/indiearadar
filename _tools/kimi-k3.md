@@ -5,7 +5,7 @@ title: "Kimi K3 \u2014 The world's first open 3T-class model"
 tagline: "The world's first open 3T-class model"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://www.kimi.com/blog/kimi-k3"
 domain: "kimi.com"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 507
 ---
+
 
 ## What is Kimi K3?
 

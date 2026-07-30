@@ -5,7 +5,7 @@ title: "Cursor for iOS \u2014 Build with coding agents from anywhere"
 tagline: "Build with coding agents from anywhere"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://apps.apple.com/us/app/cursor/id6767085653"
 domain: "apps.apple.com"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 657
 ---
+
 
 # Review: Cursor for iOS
 

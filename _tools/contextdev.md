@@ -5,7 +5,7 @@ title: "Context.dev \u2014 One API to scrape, enrich, and extract the internet"
 tagline: "One API to scrape, enrich, and extract the internet"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.context.dev/"
 domain: "context.dev"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 877
 ---
+
 
 ## What is Context.dev?
 

@@ -5,7 +5,7 @@ title: "AnySearch \u2014 Real-time structured search trusted by agents and devel
 tagline: "Real-time structured search trusted by agents and developers"
 category: "code"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.anysearch.com"
 domain: "anysearch.com"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 768
 ---
+
 
 ## What is AnySearch?
 

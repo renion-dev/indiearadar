@@ -5,7 +5,7 @@ title: "Prelint \u2014 Prevent product drift in AI-written code"
 tagline: "Prevent product drift in AI-written code"
 category: "code"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://prelint.com"
 domain: "prelint.com"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 533
 ---
+
 
 ## What is Prelint?
 

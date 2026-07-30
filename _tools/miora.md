@@ -5,7 +5,7 @@ title: "Miora \u2014 Scale your creativity on editable canvas with agent memory"
 tagline: "Scale your creativity on editable canvas with agent memory"
 category: "design"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://miora.design"
 domain: "miora.design"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 510
 ---
+
 
 ## What is Miora?
 Miora is a next-generation design workspace that bridges the gap between generative AI and professional editing. Unlike standard text-to-image prompts that feel like a "black box," Miora provides an **editable canvas** where AI acts as a collaborative partner rather than a replacement. By integrating **agent memory**, the tool learns your specific aesthetic preferences and project context, allowing you to scale your creative output without losing brand consistency.

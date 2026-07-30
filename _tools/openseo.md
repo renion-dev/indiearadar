@@ -5,7 +5,7 @@ title: "OpenSEO \u2014 The open source Ahrefs alternative"
 tagline: "The open source Ahrefs alternative"
 category: "marketing"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.8
 pricing: "freemium"
 affiliate_link: "https://openseo.so/"
 domain: "openseo.so"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 908
 ---
+
 
 ## What is OpenSEO?
 

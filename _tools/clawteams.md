@@ -5,7 +5,7 @@ title: "ClawTeams \u2014 The first goal-driven, proactive AI team for e-commerce
 tagline: "The first goal-driven, proactive AI team for e-commerce"
 category: "marketing"
 date: "2026-07-30"
-rating: 4.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://www.producthunt.com/r/XOOTYQZQO66BZK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Indie+AI+Radar+%28ID%3A+294476%29"
 domain: "producthunt.com"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 566
 ---
+
 
 ## What is ClawTeams?
 ClawTeams is the first goal-driven, proactive AI team specifically designed for e-commerce. Unlike traditional AI chatbots that simply react to customer queries, ClawTeams acts as an autonomous workforce. It integrates directly into your e-commerce operations to identify gaps, suggest improvements, and execute tasks—essentially functioning as a tireless digital department that keeps your store optimized around the clock.

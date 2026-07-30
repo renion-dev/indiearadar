@@ -5,7 +5,7 @@ title: "Acti \u2014 Agentic keyboard for mobile commands and search"
 tagline: "Agentic keyboard for mobile commands and search"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://openacti.com:443/"
 domain: "openacti.com:443"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 925
 ---
+
 
 ## What is Acti?
 Acti is an "agentic keyboard" for mobile that transforms how you interact with your smartphone. Unlike standard keyboards that simply input text, Acti acts as a command layer for your device. By integrating directly into your mobile experience, it allows you to execute complex tasks, perform deep searches, and automate workflows without ever switching apps. It essentially turns your keyboard into a personal assistant.

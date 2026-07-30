@@ -5,7 +5,7 @@ title: "Sim \u2014 Open-source workspace for AI agents and workflows"
 tagline: "Open-source workspace for AI agents and workflows"
 category: "code"
 date: "2026-07-30"
-rating: 4.0
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.sim.ai"
 domain: "sim.ai"
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 672
 ---
+
 
 ## What is Sim?
 
