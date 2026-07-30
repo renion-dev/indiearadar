@@ -1,5 +1,5 @@
 ---
-title: "Stop Renting Intelligence: Why 2024 is the Year Open-Source AI Finally Crushes the API Giants"
+title: "Stop Renting Intelligence: Why 2026 is the Year Open-Source AI Finally Crushes the API Giants"
 date: "2026-07-30"
 layout: "post"
 category: "opinion"
