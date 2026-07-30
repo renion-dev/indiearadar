@@ -1,34 +1,84 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <loc>https://renion-dev.github.io/indiearadar/</loc>
+    <lastmod>2026-07-23T00:00:00+03:00</lastmod>
     <priority>1.0</priority>
   </url>
-  {% for page in site.pages %}
-    {% if page.url != "/404.html" and page.url != "/sitemap.xml" %}
-      <url>
-        <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
-        <lastmod>{{ page.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
-        <priority>{% if page.url == "/" %}1.0{% else %}0.8{% endif %}</priority>
-      </url>
-    {% endif %}
-  {% endfor %}
-  {% for post in site.posts %}
-    <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      <priority>0.7</priority>
-    </url>
-  {% endfor %}
-  {% for tool in site.tools %}
-    <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ tool.url }}</loc>
-      <lastmod>{{ tool.date | default: site.time | date_to_xmlschema }}</lastmod>
-      <priority>0.6</priority>
-    </url>
-  {% endfor %}
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/01/31/daily-ai-tools-digest/</loc>
+    <lastmod>2026-01-31T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/02/10/daily-ai-tools-digest/</loc>
+    <lastmod>2026-02-10T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/02/12/daily-ai-tools-digest/</loc>
+    <lastmod>2026-02-12T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/02/14/daily-ai-tools-digest/</loc>
+    <lastmod>2026-02-14T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/02/22/daily-ai-tools-digest/</loc>
+    <lastmod>2026-02-22T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/02/26/daily-ai-tools-digest/</loc>
+    <lastmod>2026-02-26T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/03/19/daily-ai-tools-digest/</loc>
+    <lastmod>2026-03-19T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/03/20/daily-ai-tools-digest/</loc>
+    <lastmod>2026-03-20T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/06/30/daily-ai-tools-digest/</loc>
+    <lastmod>2026-06-30T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/01/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-01T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/02/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-02T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/03/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-03T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/04/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-04T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/07/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-07T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/11/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-11T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/14/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-14T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/15/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-15T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/16/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-16T00:00:00+03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://renion-dev.github.io/indiearadar/blog/2026/07/23/daily-ai-tools-digest/</loc>
+    <lastmod>2026-07-23T00:00:00+03:00</lastmod>
+  </url>
 </urlset>
