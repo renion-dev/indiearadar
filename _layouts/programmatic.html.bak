@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<div class="container">
+
+  <article class="page-content">
+
+    <header class="page-header">
+
+      <h1>{{ page.title }}</h1>
+
+      {% if page.description %}
+      <p class="page-description">
+        {{ page.description }}
+      </p>
+      {% endif %}
+
+      <div class="programmatic-stats">
+        <span>🤖 {{ page.tool_count }} AI tools</span>
+        <span>📅 Updated {{ site.time | date: "%B %Y" }}</span>
+      </div>
+
+    </header>
+
+    {% assign selected_tools = site.tools | where_exp: "tool", "page.related_tools contains tool.slug" %}
+
+    {{ content }}
+
+    {% if selected_tools.size > 0 %}
+
+      <h2>Quick Comparison</h2>
+
+      <table class="comparison-table">
+
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Category</th>
+            <th>Pricing</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          {% for tool in selected_tools %}
+
+          <tr>
+
+            <td>
+              <a href="{{ tool.url | relative_url }}">
+                {{ tool.name | default: tool.title }}
+              </a>
+            </td>
+
+            <td>{{ tool.category }}</td>
+
+            <td>{{ tool.pricing }}</td>
+
+            <td>
+              {% if tool.rating %}
+                ⭐ {{ tool.rating }}
+              {% else %}
+                —
+              {% endif %}
+            </td>
+
+          </tr>
+
+          {% endfor %}
+
+        </tbody>
+
+      </table>
+
+      
+{% if page.faq %}
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-list">
+
+{% for item in page.faq %}
+
+<details>
+<summary>{{ item.question }}</summary>
+<p>{{ item.answer }}</p>
+</details>
+
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+<div class="tool-grid">
+
+        {% for tool in selected_tools %}
+
+          {% include tool-card.html tool=tool %}
+
+        {% endfor %}
+
+      </div>
+
+    {% endif %}
+
+  </article>
+
+</div>

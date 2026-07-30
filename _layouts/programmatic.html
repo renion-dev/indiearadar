@@ -2,48 +2,68 @@
 layout: default
 ---
 
-<div class="container">
+<div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
 
-    <article class="page-content">
+  <!-- HERO -->
+  <section class="hero" style="text-align: left; padding: 2rem 0;">
+    <h1 class="hero-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="hero-description">{{ page.description }}</p>
+    {% endif %}
 
-        <header class="page-header">
+    <div class="hero-stats" style="justify-content: flex-start; gap: 2.5rem;">
+      <div class="stat">
+        <span class="stat-number">{{ page.tool_count | default: 0 }}</span>
+        <span class="stat-label">AI Tools</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">⬆️</span>
+        <span class="stat-label">Updated {{ page.date | default: site.time | date: "%b %d, %Y" }}</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">📌</span>
+        <span class="stat-label">Programmatic SEO</span>
+      </div>
+    </div>
 
-            <h1>{{ page.title }}</h1>
+    <div class="hero-cta" style="justify-content: flex-start;">
+      <a href="#tools" class="btn btn-primary">Browse Tools</a>
+      <a href="#faq" class="btn btn-ghost">FAQ</a>
+    </div>
+  </section>
 
-            {% if page.description %}
-            <p class="page-description">
-                {{ page.description }}
-            </p>
-            {% endif %}
+  <!-- TOOLS GRID -->
+  <section id="tools" style="padding: 2rem 0;">
+    <div class="section-header">
+      <h2>Recommended AI Tools</h2>
+    </div>
+    <div class="tools-grid">
+      {% assign selected_tools = site.tools | where_exp: "tool", "page.related_tools contains tool.slug" %}
+      {% for tool in selected_tools %}
+        {% include tool-card.html tool=tool %}
+      {% endfor %}
+    </div>
+  </section>
 
-            <div class="programmatic-stats">
-
-                <span>🤖 {{ page.tool_count }} AI tools</span>
-
-                <span>📅 Updated {{ site.time | date: "%B %Y" }}</span>
-
-            </div>
-
-        </header>
-
-        {{ content }}
-
-        {% assign selected_tools = site.tools | where_exp: "tool", "page.related_tools contains tool.slug" %}
-
-        {% if selected_tools.size > 0 %}
-
-        <div class="tool-grid">
-
-            {% for tool in selected_tools %}
-
-                {% include tool-card.html tool=tool %}
-
-            {% endfor %}
-
+  <!-- FAQ -->
+  {% if page.faq and page.faq.size > 0 %}
+  <section id="faq" style="padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border);">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      {% for item in page.faq %}
+        <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+          <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem; color: var(--text-primary);">
+            {{ item.question }}
+          </h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;">
+            {{ item.answer }}
+          </p>
         </div>
-
-        {% endif %}
-
-    </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
 </div>

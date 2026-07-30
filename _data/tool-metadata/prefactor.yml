@@ -1,0 +1,27 @@
+slug: prefactor
+
+professions:
+  - developers
+  - ai-engineers
+  - founders
+
+use_cases:
+  - ai-evaluation
+  - llm-testing
+  - observability
+
+platforms:
+  - web
+
+content_types:
+  - code
+
+search_intents:
+  - ai agent evaluation
+  - llm observability
+  - prompt testing
+
+semantic_tags:
+  - ai-agents
+  - evaluation
+  - monitoring

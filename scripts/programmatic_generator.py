@@ -95,6 +95,15 @@ def render_markdown(page, tools):
         for tool in tools
     )
 
+    faq_items = page.get("faq", [])
+
+    faq = ""
+    if faq_items:
+        faq = "\nfaq:\n"
+        for item in faq_items:
+            faq += f"  - question: \"{item['question']}\"\n"
+            faq += f"    answer: \"{item['answer']}\"\n"
+
     description = page.get(
         "description",
         f"Discover the best {page['title']}."
@@ -117,6 +126,7 @@ tool_count: {len(tools)}
 
 related_tools:
 {related_tools}
+{faq}
 ---
 
 ## Recommended AI Tools

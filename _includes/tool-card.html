@@ -1,8 +1,9 @@
 <!-- ============================================ -->
-<!-- tool-card.html (з оригінальним каскадом)     -->
+<!-- tool-card.html — чиста картка інструменту     -->
 <!-- ============================================ -->
 <article class="tool-card" data-category="{{ include.tool.category | downcase | slugify }}">
   <div class="tool-card-inner">
+
     <!-- Логотип (з каскадом) -->
     <div class="tool-card-logo" id="logo-container-{{ include.tool.slug }}">
       {% if include.tool.domain and include.tool.domain != "" %}
@@ -20,71 +21,53 @@
       {% endif %}
     </div>
 
-    <!-- Контент -->
-    <div class="tool-card-content">
-      <div class="tool-card-header">
-        <h3 class="tool-card-title">
-          <a href="{{ include.tool.url | relative_url }}">{{ include.tool.title }}</a>
-        </h3>
-        <!-- Бейджі -->
-        <div class="tool-card-badges">
-          {% assign pricing = include.tool.pricing | downcase %}
-          {% if pricing contains 'free' %}
-          <span class="badge badge-free">Free</span>
-          {% elsif pricing contains 'open source' or pricing contains 'oss' %}
-          <span class="badge badge-oss">Open Source</span>
-          {% elsif pricing contains 'freemium' %}
-          <span class="badge badge-freemium">Freemium</span>
-          {% elsif pricing contains 'paid' or pricing contains 'pro' %}
-          <span class="badge badge-paid">Paid</span>
-          {% elsif include.tool.pricing %}
-          <span class="badge badge-default">{{ include.tool.pricing }}</span>
-          {% endif %}
-          {% if include.tool.featured %}
-          <span class="badge badge-popular">🔥 Popular</span>
-          {% endif %}
-          {% if include.tool.new %}
-          <span class="badge badge-new">✨ New</span>
-          {% endif %}
-        </div>
-      </div>
+    <!-- Назва та посилання -->
+    <h3 class="tool-card-title">
+      <a href="{{ include.tool.url | relative_url }}">
+        {{ include.tool.name | default: include.tool.title }}
+      </a>
+    </h3>
 
-      <p class="tool-card-desc">{{ include.tool.description | default: include.tool.tagline | truncate: 120 }}</p>
+    <!-- Опис -->
+    <p class="tool-card-desc">
+      {{ include.tool.description | default: include.tool.tagline | truncate: 120 }}
+    </p>
 
-      <div class="tool-card-meta">
-        {% if include.tool.rating %}
-        <span class="tool-rating">⭐ {{ include.tool.rating }}</span>
-        {% endif %}
-        {% if include.tool.category %}
-        <span class="tool-category">{{ include.tool.category }}</span>
-        {% endif %}
-        {% if include.tool.tags %}
-        <span class="tool-tags">
-          {% for tag in include.tool.tags limit: 2 %}
-          <span class="tag-pill">#{{ tag }}</span>
-          {% endfor %}
-        </span>
-        {% endif %}
-      </div>
-
-      <div class="tool-card-footer">
-        <a href="{{ include.tool.url | relative_url }}" class="btn btn-ghost btn-sm">Review →</a>
-        {% assign product_url = include.tool.affiliate_link | default: include.tool.link | default: include.tool.website
-        %}
-        {% if product_url == blank or product_url == '#' %}
-        {% if include.tool.domain %}
-        {% assign product_url = 'https://' | append: include.tool.domain %}
-        {% else %}
-        {% assign product_url = '#' %}
-        {% endif %}
-        {% endif %}
-        <a href="{{ product_url }}" class="btn btn-primary btn-sm" target="_blank" rel="nofollow sponsored">Visit</a>
-      </div>
+    <!-- Мета-дані -->
+    <div class="tool-card-meta">
+      {% if include.tool.rating %}
+      <span class="tool-rating">⭐ {{ include.tool.rating }}</span>
+      {% endif %}
+      {% if include.tool.category %}
+      <span class="tool-category">{{ include.tool.category }}</span>
+      {% endif %}
+      {% if include.tool.tags %}
+      <span class="tool-tags">
+        {% for tag in include.tool.tags limit: 2 %}
+        <span class="tag-pill">#{{ tag }}</span>
+        {% endfor %}
+      </span>
+      {% endif %}
     </div>
+
+    <!-- Футер з кнопками -->
+    <div class="tool-card-footer">
+      <a href="{{ include.tool.url | relative_url }}" class="btn btn-ghost btn-sm">Review →</a>
+      {% assign product_url = include.tool.affiliate_link | default: include.tool.link | default: include.tool.website %}
+      {% if product_url == blank or product_url == '#' %}
+        {% if include.tool.domain %}
+          {% assign product_url = 'https://' | append: include.tool.domain %}
+        {% else %}
+          {% assign product_url = '#' %}
+        {% endif %}
+      {% endif %}
+      <a href="{{ product_url }}" class="btn btn-primary btn-sm" target="_blank" rel="nofollow sponsored">Visit</a>
+    </div>
+
   </div>
 </article>
 
-<!-- Ваш оригінальний скрипт каскаду (без змін, тільки виправлено JSON) -->
+<!-- Каскад для логотипів -->
 <script>
   (function () {
     window.loadNextSource = function (img) {
