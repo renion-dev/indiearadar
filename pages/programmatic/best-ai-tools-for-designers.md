@@ -1,15 +1,18 @@
 ---
-layout: page
+layout: programmatic
 title: "Best AI Tools for Designers"
 permalink: /best-ai-tools-for-designers/
 programmatic: true
 generated: true
+
+related_tools:
+  - adomate
+  - conduit
+  - easycircuit
+  - lottie-creator-20
+  - miora
 ---
 
-# Best AI Tools for Designers
+## Recommended AI Tools
 
-> This page was generated automatically.
-
-Programmatic SEO page.
-
-Source: `designers.yml`
+Automatically selected tools for this category.
