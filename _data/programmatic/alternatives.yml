@@ -1,0 +1,17 @@
+title: Cursor Alternatives
+
+slug: cursor-alternatives
+
+template: alternatives
+
+intent: commercial
+
+target_tool: cursor
+
+sort: rating
+
+limit: 10
+
+generate_intro: true
+generate_faq: true
+generate_conclusion: true
