@@ -17,13 +17,13 @@ related_tools:
   - acti
   - adomate
   - agentkey
+  - agentos
+  - ai-search-console
   - alsonai-studio-for-animated-shorts
   - anysearch
   - athena-by-shoplazza
   - aymo-ai
   - bond
-  - brainfeed
-  - brew
 
 ---
 

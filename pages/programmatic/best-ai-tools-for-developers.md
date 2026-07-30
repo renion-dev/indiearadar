@@ -16,24 +16,24 @@ tool_count: 20
 related_tools:
   - acti
   - agentkey
+  - agentos
+  - ai-search-console
   - anysearch
   - athena-by-shoplazza
   - aymo-ai
   - bond
   - brainfeed
+  - caimera
   - cekura
+  - claude-code-usage-tracking-by-langwatch
   - clera
   - contextdev
+  - craftstory
+  - cursor-crane
   - cursor-for-ios
+  - expert-chase-for-ios-android
   - exploreyc
   - fathom-30
-  - flowtask-20
-  - fundraisly
-  - fypro
-  - glaze-by-raycast
-  - goldfish
-  - happycapy
-  - humalike-x-hermes
 
 faq:
   - question: "What are the best AI tools for developers?"

@@ -16,24 +16,24 @@ tool_count: 20
 related_tools:
   - acti
   - agentkey
+  - agentos
+  - ai-search-console
   - athena-by-shoplazza
   - aymo-ai
   - bond
   - brainfeed
+  - caimera
   - cekura
   - chatcut
+  - claude-code-usage-tracking-by-langwatch
   - clawteams
   - clera
+  - craftstory
+  - cursor-crane
   - cursor-for-ios
+  - expert-chase-for-ios-android
   - fathom-30
   - flowtask-20
-  - fundraisly
-  - fuzzy-ai
-  - fypro
-  - glaze-by-raycast
-  - goldfish
-  - happycapy
-  - kimi-k3
 
 faq:
   - question: "What AI tools should founders use?"
