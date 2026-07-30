@@ -21,6 +21,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+include:
+  - sitemap.xml
 exclude:
   - README.md
   - Gemfile
