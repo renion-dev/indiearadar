@@ -14,3 +14,7 @@ _logs/
 _cache/
 *.log
 *.cache
+docs/*.docx
+docs/.~lock*
+googledb*.html
+assets/images/favicon.png
