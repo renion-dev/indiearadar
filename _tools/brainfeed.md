@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://www.scrollbrainfeed.com
-category: productivity
-date: '2026-07-26'
-domain: www.scrollbrainfeed.com
-image: /assets/images/tools/brainfeed.jpg
-name: BrainFeed
-pricing: freemium
-rating: 4.6
-slug: brainfeed
-source: producthunt
-tagline: A personalized learning feed that redirects your scroll
+affiliate_link: "https://www.scrollbrainfeed.com"
+category: "productivity"
+date: "2026-07-26"
+domain: "www.scrollbrainfeed.com"
+image: "/assets/images/tools/brainfeed.jpg"
+name: "BrainFeed"
+pricing: "freemium"
+rating: 4.0
+slug: "brainfeed"
+source: "producthunt"
+tagline: "A personalized learning feed that redirects your scroll"
+title: "BrainFeed \u2014 A personalized learning feed that redirects your scroll"
 tags:
-- ai
-- productivity
-- brainfeed
-- personalized
-- learning
-title: BrainFeed — A personalized learning feed that redirects your scroll
+  - ai
+  - productivity
+  - brainfeed
 ---
+
 
 ## What is BrainFeed?
 BrainFeed is a smart browser extension designed to turn your mindless scrolling habits into a productive learning experience. By intercepting your social media feeds, it replaces distracting content with curated, high-quality educational snippets tailored to your specific interests.

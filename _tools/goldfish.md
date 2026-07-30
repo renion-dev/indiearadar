@@ -5,11 +5,11 @@ title: "Goldfish \u2014 Press Option. It knows your work and replies like you"
 tagline: "Press Option. It knows your work and replies like you"
 category: "productivity"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://goldfish.sh"
 domain: "goldfish.sh"
-image: ""
+image: "/assets/images/og/tool-goldfish.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 1040
 ---
+
 
 ## What is Goldfish?
 

@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.glaze.app/"
 domain: "glaze.app"
-image: ""
+image: "/assets/images/og/tool-glaze-by-raycast.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 681
 ---
+
 
 
 ## What is Glaze by Raycast?

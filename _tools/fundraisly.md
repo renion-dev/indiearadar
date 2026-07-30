@@ -5,11 +5,11 @@ title: "Fundraisly \u2014 AI fundraising agent that finds investors and books me
 tagline: "AI fundraising agent that finds investors and books meetings"
 category: "productivity"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.8
 pricing: "freemium"
 affiliate_link: "https://fundraisly.com/"
 domain: "fundraisly.com"
-image: ""
+image: "/assets/images/og/tool-fundraisly.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 1610
 ---
+
 
 ## What is Fundraisly?
 

@@ -5,11 +5,11 @@ title: "Kilo\u00a0Code for VS\u00a0Code \u2014 Parallel agents, diff reviewer, a
 tagline: "Parallel agents, diff reviewer, and multi-model comparisons"
 category: "code"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://kilo.ai/landing/vs-code"
 domain: "kilo.ai"
-image: ""
+image: "/assets/images/og/tool-kilo-code-for-vs-code.png"
 tags:
   - ai
   - code
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 948
 ---
+
 
 ## What is Kilo Code for VS Code?
 

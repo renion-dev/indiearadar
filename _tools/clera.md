@@ -5,11 +5,11 @@ title: "Clera \u2014 An AI agent matching candidates to the right roles."
 tagline: "An AI agent matching candidates to the right roles."
 category: "productivity"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.getclera.com/"
 domain: "getclera.com"
-image: ""
+image: "/assets/images/og/tool-clera.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 777
 ---
+
 
 ## What is Clera?
 

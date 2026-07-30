@@ -5,11 +5,11 @@ title: "ClawTeams \u2014 The first goal-driven, proactive AI team for e-commerce
 tagline: "The first goal-driven, proactive AI team for e-commerce"
 category: "marketing"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.producthunt.com/r/XOOTYQZQO66BZK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+Indie+AI+Radar+%28ID%3A+294476%29"
 domain: "producthunt.com"
-image: ""
+image: "/assets/images/og/tool-clawteams.png"
 tags:
   - ai
   - marketing
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 566
 ---
+
 
 
 ## What is ClawTeams?

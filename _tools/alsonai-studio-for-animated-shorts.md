@@ -1,23 +1,24 @@
 ---
-affiliate_link: https://alson.ai/
-category: content
-date: '2026-07-26'
-domain: alson.ai
-image: /assets/images/tools/alsonai-studio-for-animated-shorts.jpg
-name: AlsonAI Studio for Animated Shorts
-pricing: freemium
-rating: 4.5
-slug: alsonai-studio-for-animated-shorts
-source: producthunt
-tagline: From bedtime story to animated short film.
+affiliate_link: "https://alson.ai/"
+category: "content"
+date: "2026-07-26"
+domain: "alson.ai"
+image: "/assets/images/tools/alsonai-studio-for-animated-shorts.jpg"
+name: "AlsonAI Studio for Animated Shorts"
+pricing: "freemium"
+rating: 4.0
+slug: "alsonai-studio-for-animated-shorts"
+source: "producthunt"
+tagline: "From bedtime story to animated short film."
+title: "AlsonAI Studio for Animated Shorts \u2014 From bedtime story to animated short film."
 tags:
-- ai
-- content
-- alsonai
-- animated
-- productivity
-title: AlsonAI Studio for Animated Shorts — From bedtime story to animated short film.
+  - ai
+  - content
+  - alsonai
+  - animated
+  - shorts
 ---
+
 
 ## What is AlsonAI Studio for Animated Shorts?
 AlsonAI Studio is an all-in-one generative platform that streamlines the animation pipeline, allowing users to transform simple text prompts or bedtime stories into fully realized animated short films. By integrating AI-driven scriptwriting, character consistency, and motion generation, it lowers the barrier to entry for solo creators and storytellers.

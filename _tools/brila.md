@@ -3,13 +3,13 @@ name: "Brila"
 slug: "brila"
 title: "Brila \u2014 One-page websites from real Google Maps reviews"
 tagline: "One-page websites from real Google Maps reviews"
-category: "productivity"
+category: "design"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://brila.ai"
 domain: "brila.ai"
-image: ""
+image: "/assets/images/og/tool-brila.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 1411
 ---
+
 
 ## What is Brila?
 Brila is an innovative AI-driven tool designed to bridge the gap between local business reputation and digital presence. Its core value proposition is simple yet powerful: it scrapes your existing Google Maps reviews to generate a fully functional, professional one-page website. By leveraging the authentic feedback already provided by your customers, Brila creates a trust-focused landing page that is ready to publish in minutes.

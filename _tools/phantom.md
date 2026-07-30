@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://www.heyphantom.app
-category: productivity
-date: '2026-07-28'
-domain: www.heyphantom.app
-image: /assets/images/og/tool-phantom.png
-name: Phantom
-pricing: freemium
-rating: 3.5
-slug: phantom
-source: producthunt
-tagline: Voice-first AI agent that operates your Mac
+affiliate_link: "https://www.heyphantom.app"
+category: "productivity"
+date: "2026-07-28"
+domain: "www.heyphantom.app"
+image: "/assets/images/og/tool-phantom.png"
+name: "Phantom"
+pricing: "freemium"
+rating: 4.0
+slug: "phantom"
+source: "producthunt"
+tagline: "Voice-first AI agent that operates your Mac"
+title: "Phantom \u2014 Voice-first AI agent that operates your Mac"
 tags:
-- ai
-- productivity
-- phantom
-- voice
-- first
-title: Phantom — Voice-first AI agent that operates your Mac
+  - ai
+  - productivity
+  - phantom
 ---
+
 
 ## What is Phantom?
 Phantom is a voice-first AI agent designed to act as a hands-free operator for your Mac. By interpreting natural language commands, it navigates your desktop, interacts with applications, and executes complex workflows without you needing to touch your keyboard or mouse.

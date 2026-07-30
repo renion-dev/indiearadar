@@ -5,11 +5,11 @@ title: "Brew  \u2014 Like Claude design for email marketing"
 tagline: "Like Claude design for email marketing"
 category: "design"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.8
 pricing: "freemium"
 affiliate_link: "https://brew.new/"
 domain: "brew.new"
-image: ""
+image: "/assets/images/og/tool-brew.png"
 tags:
   - ai
   - design
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 978
 ---
+
 
 ## What is Brew?
 

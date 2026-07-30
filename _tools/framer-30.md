@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.framer.com"
 domain: "framer.com"
-image: ""
+image: "/assets/images/og/tool-framer-30.png"
 tags:
   - ai
   - design
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 831
 ---
+
 
 ## What is Framer 3.0?
 

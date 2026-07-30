@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.sim.ai"
 domain: "sim.ai"
-image: ""
+image: "/assets/images/og/tool-sim.png"
 tags:
   - ai
   - code
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 672
 ---
+
 
 
 ## What is Sim?

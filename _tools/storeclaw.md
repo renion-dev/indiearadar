@@ -5,11 +5,11 @@ title: "StoreClaw \u2014 Grow your store profits with agents that know how to se
 tagline: "Grow your store profits with agents that know how to sell"
 category: "marketing"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://www.storeclaw.ai"
 domain: "storeclaw.ai"
-image: ""
+image: "/assets/images/og/tool-storeclaw.png"
 tags:
   - ai
   - marketing
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 891
 ---
+
 
 ## What is StoreClaw?
 

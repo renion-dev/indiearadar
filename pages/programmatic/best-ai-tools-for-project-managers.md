@@ -18,22 +18,22 @@ related_tools:
   - agentkey
   - athena-by-shoplazza
   - aymo-ai
+  - bond
   - brainfeed
   - cekura
-  - contextdev
+  - clera
   - cursor-for-ios
+  - fathom-30
   - flowtask-20
+  - fundraisly
   - fypro
   - glaze-by-raycast
+  - goldfish
+  - happycapy
   - kimi-k3
-  - leaping-ai
+  - lightfield
   - liminal
-  - mcp-billing
-  - openbase
-  - osaurus
-  - pazi
-  - phantom
-  - pinery-prose
+  - lovon-ai-therapy
 
 ---
 

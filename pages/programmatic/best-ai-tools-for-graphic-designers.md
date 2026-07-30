@@ -11,14 +11,19 @@ programmatic: true
 
 generated: true
 
-tool_count: 5
+tool_count: 10
 
 related_tools:
   - adomate
+  - brew
+  - brila
   - conduit
   - easycircuit
+  - framer-30
   - lottie-creator-20
   - miora
+  - stitch-20-by-google
+  - tencent-edgeone-makers
 
 ---
 

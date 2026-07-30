@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://qsa.sh
-category: productivity
-date: '2026-07-28'
-domain: qsa.sh
-image: /assets/images/og/tool-qsash.png
-name: 'qsa.sh '
-pricing: freemium
-rating: 4.6
-slug: qsash
-source: producthunt
-tagline: External security scan of your own IP, in your terminal
+affiliate_link: "https://qsa.sh"
+category: "productivity"
+date: "2026-07-28"
+domain: "qsa.sh"
+image: "/assets/images/og/tool-qsash.png"
+name: "qsa.sh "
+pricing: "freemium"
+rating: 4.0
+slug: "qsash"
+source: "producthunt"
+tagline: "External security scan of your own IP, in your terminal"
+title: "qsa.sh  \u2014 External security scan of your own IP, in your terminal"
 tags:
-- ai
-- productivity
-- qsa
-- external
-- security
-title: qsa.sh  — External security scan of your own IP, in your terminal
+  - ai
+  - productivity
+  - qsa
 ---
+
 
 ## What is qsa.sh ?
 qsa.sh is a command-line utility that performs professional-grade external security scans directly from your terminal. It allows developers and sysadmins to instantly audit their public-facing IP addresses for vulnerabilities, open ports, and misconfigurations without needing complex web dashboards.

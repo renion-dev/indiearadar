@@ -9,7 +9,7 @@ rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://www.plurai.ai/launch"
 domain: "plurai.ai"
-image: ""
+image: "/assets/images/og/tool-plurai.png"
 tags:
   - ai
   - code
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 797
 ---
+
 
 ## What is Plurai?
 

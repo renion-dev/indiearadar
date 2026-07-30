@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://lightfield.app/"
 domain: "lightfield.app"
-image: ""
+image: "/assets/images/og/tool-lightfield.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 862
 ---
+
 
 ## What is Lightfield?
 

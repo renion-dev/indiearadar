@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://lev8.com/"
 domain: "lev8.com"
-image: ""
+image: "/assets/images/og/tool-lev8.png"
 tags:
   - ai
   - marketing
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 634
 ---
+
 
 
 ## What is Lev8?

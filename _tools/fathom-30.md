@@ -5,11 +5,11 @@ title: "Fathom 3.0 \u2014 AI meeting notes: now bot-free, in ChatGPT & Claude + 
 tagline: "AI meeting notes: now bot-free, in ChatGPT & Claude + more"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.fathom.ai/"
 domain: "fathom.ai"
-image: ""
+image: "/assets/images/og/tool-fathom-30.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 818
 ---
+
 
 ## What is Fathom 3.0?
 

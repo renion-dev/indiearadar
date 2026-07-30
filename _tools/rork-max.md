@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://rork.com/max"
 domain: "rork.com"
-image: ""
+image: "/assets/images/og/tool-rork-max.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 1465
 ---
+
 
 ## What is Rork Max?
 

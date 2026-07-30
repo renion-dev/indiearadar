@@ -25,7 +25,7 @@ POSTS_DIR = PROJECT_ROOT / "_posts"
 CACHE_PATH = PROJECT_ROOT / "_cache" / "harvest_cache.json"
 
 MIN_VOTES = 10
-PH_RATE_LIMIT = RateLimiter(calls=90, period=900)
+PH_RATE_LIMIT = RateLimiter(calls=60, period=900)
 GEMINI_RATE_LIMIT = RateLimiter(calls=60, period=60)
 
 def generate_rating(votes):

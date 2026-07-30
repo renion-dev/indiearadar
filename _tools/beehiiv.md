@@ -1,22 +1,21 @@
 ---
-affiliate_link: https://www.beehiiv.com/?via=renion-lab
-category: marketing
-date: 2026-07-26
-domain: beehiiv.com
-image: /assets/images/tools/beehiiv.jpg
-name: beehiiv
-pricing: freemium
-rating: 3.2
-source: producthunt
-tagline: The newsletter platform built by creators, for creators. No coding needed.
+affiliate_link: "https://www.beehiiv.com/?via=renion-lab"
+category: "marketing"
+date: "2026-07-26"
+domain: "beehiiv.com"
+image: "/assets/images/tools/beehiiv.jpg"
+name: "beehiiv"
+pricing: "freemium"
+rating: 4.0
+source: "producthunt"
+tagline: "The newsletter platform built by creators, for creators. No coding needed."
+title: "Beehiiv \u2014 Newsletter Platform for Creators"
 tags:
-- ai
-- marketing
-- beehiiv
-- newsletter
-- platform
-title: Beehiiv — Newsletter Platform for Creators
+  - ai
+  - marketing
+  - beehiiv
 ---
+
 
 ## What is Beehiiv?
 

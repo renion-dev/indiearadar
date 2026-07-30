@@ -5,11 +5,11 @@ title: "Adomate \u2014 Turn data into winning ads. At scale."
 tagline: "Turn data into winning ads. At scale."
 category: "design"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.adomate.com/"
 domain: "adomate.com"
-image: ""
+image: "/assets/images/og/tool-adomate.png"
 tags:
   - ai
   - design
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 549
 ---
+
 
 
 ## What is Adomate?

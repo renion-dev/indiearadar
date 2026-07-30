@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://www.conduit.ai/
-category: design
-date: '2026-07-28'
-domain: www.conduit.ai
-image: /assets/images/og/tool-conduit.png
-name: Conduit
-pricing: freemium
-rating: 3.6
-slug: conduit
-source: producthunt
-tagline: AI agents purpose-built for Hospitality
+affiliate_link: "https://www.conduit.ai/"
+category: "design"
+date: "2026-07-28"
+domain: "www.conduit.ai"
+image: "/assets/images/og/tool-conduit.png"
+name: "Conduit"
+pricing: "freemium"
+rating: 4.0
+slug: "conduit"
+source: "producthunt"
+tagline: "AI agents purpose-built for Hospitality"
+title: "Conduit \u2014 AI agents purpose-built for Hospitality"
 tags:
-- ai
-- design
-- conduit
-- agents
-- productivity
-title: Conduit — AI agents purpose-built for Hospitality
+  - ai
+  - design
+  - conduit
 ---
+
 
 ## What is Conduit?
 Conduit is a specialized AI agent platform designed specifically for the hospitality industry. It automates complex guest interactions, reservation management, and operational workflows by integrating directly with existing hospitality tech stacks.

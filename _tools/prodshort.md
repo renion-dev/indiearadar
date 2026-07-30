@@ -5,11 +5,11 @@ title: "ProdShort \u2014 Turn meetings into ready-to-post shorts and posts"
 tagline: "Turn meetings into ready-to-post shorts and posts"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.8
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://prodshort.com/"
 domain: "prodshort.com"
-image: ""
+image: "/assets/images/og/tool-prodshort.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 779
 ---
+
 
 ## What is ProdShort?
 

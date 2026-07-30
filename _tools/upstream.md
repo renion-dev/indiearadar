@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.upstream.do/"
 domain: "upstream.do"
-image: ""
+image: "/assets/images/og/tool-upstream.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 1004
 ---
+
 
 ## What is Upstream?
 Upstream is a next-generation email client that fundamentally reimagines how we interact with our inboxes. Positioned as "the inbox designed for humans and agents," it acts as a bridge between traditional communication and the burgeoning world of AI automation. Instead of just organizing your mail, Upstream treats your inbox as a workspace where AI agents can operate alongside you to triage, draft, and execute tasks.

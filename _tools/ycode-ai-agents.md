@@ -1,23 +1,23 @@
 ---
-affiliate_link: https://www.ycode.com/ai-agents
-category: code
-date: '2026-07-28'
-domain: www.ycode.com
-image: /assets/images/og/tool-ycode-ai-agents.png
-name: Ycode AI Agents
-pricing: freemium
-rating: 4.8
-slug: ycode-ai-agents
-source: producthunt
-tagline: Build websites with AI
+affiliate_link: "https://www.ycode.com/ai-agents"
+category: "code"
+date: "2026-07-28"
+domain: "www.ycode.com"
+image: "/assets/images/og/tool-ycode-ai-agents.png"
+name: "Ycode AI Agents"
+pricing: "freemium"
+rating: 4.0
+slug: "ycode-ai-agents"
+source: "producthunt"
+tagline: "Build websites with AI"
+title: "Ycode AI Agents \u2014 Build websites with AI"
 tags:
-- ai
-- code
-- ycode
-- agents
-- productivity
-title: Ycode AI Agents — Build websites with AI
+  - ai
+  - code
+  - ycode
+  - agents
 ---
+
 
 ## What is Ycode AI Agents?
 Ycode AI Agents is an intelligent web-building assistant designed to streamline the creation of professional-grade, responsive websites through natural language prompts. It bridges the gap between complex coding and visual design, allowing users to generate layouts, components, and site structures without needing to write a single line of code.

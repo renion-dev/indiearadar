@@ -1,23 +1,23 @@
 ---
-affiliate_link: https://pinery.app/
-category: productivity
-date: '2026-07-28'
-domain: pinery.app
-image: /assets/images/og/tool-pinery-prose.png
-name: Pinery Prose
-pricing: freemium
-rating: 3.6
-slug: pinery-prose
-source: producthunt
-tagline: AI co-author for books + every edit is a diff you approve
+affiliate_link: "https://pinery.app/"
+category: "productivity"
+date: "2026-07-28"
+domain: "pinery.app"
+image: "/assets/images/og/tool-pinery-prose.png"
+name: "Pinery Prose"
+pricing: "freemium"
+rating: 4.0
+slug: "pinery-prose"
+source: "producthunt"
+tagline: "AI co-author for books + every edit is a diff you approve"
+title: "Pinery Prose \u2014 AI co-author for books + every edit is a diff you approve"
 tags:
-- ai
-- productivity
-- pinery
-- prose
-- author
-title: Pinery Prose — AI co-author for books + every edit is a diff you approve
+  - ai
+  - productivity
+  - pinery
+  - prose
 ---
+
 
 ## What is Pinery Prose?
 Pinery Prose is an AI-powered co-authoring tool designed specifically for long-form book writing. It distinguishes itself by prioritizing granular control, ensuring that every AI-generated suggestion is presented as a "diff" that you must manually approve, preventing the AI from "hallucinating" changes into your draft.

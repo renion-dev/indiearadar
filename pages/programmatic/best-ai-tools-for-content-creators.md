@@ -11,7 +11,7 @@ programmatic: true
 
 generated: true
 
-tool_count: 10
+tool_count: 11
 
 related_tools:
   - alsonai-studio-for-animated-shorts
@@ -22,6 +22,7 @@ related_tools:
   - openseo
   - pawesome
   - recipebook-by-shofo
+  - storeclaw
   - superunit
   - velo-30
 

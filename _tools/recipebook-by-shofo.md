@@ -1,23 +1,23 @@
 ---
-affiliate_link: https://recipebook.shofo.ai/
-category: content
-date: '2026-07-28'
-domain: recipebook.shofo.ai
-image: /assets/images/og/tool-recipebook-by-shofo.png
-name: RecipeBook by Shofo
-pricing: freemium
-rating: 4.1
-slug: recipebook-by-shofo
-source: producthunt
-tagline: Buy video training data by the hour featuring 25M+ clips
+affiliate_link: "https://recipebook.shofo.ai/"
+category: "content"
+date: "2026-07-28"
+domain: "recipebook.shofo.ai"
+image: "/assets/images/og/tool-recipebook-by-shofo.png"
+name: "RecipeBook by Shofo"
+pricing: "freemium"
+rating: 4.0
+slug: "recipebook-by-shofo"
+source: "producthunt"
+tagline: "Buy video training data by the hour featuring 25M+ clips"
+title: "RecipeBook by Shofo \u2014 Buy video training data by the hour featuring 25M+ clips"
 tags:
-- ai
-- content
-- recipebook
-- shofo
-- productivity
-title: RecipeBook by Shofo — Buy video training data by the hour featuring 25M+ clips
+  - ai
+  - content
+  - recipebook
+  - shofo
 ---
+
 
 ## What is RecipeBook by Shofo?
 RecipeBook by Shofo is a specialized platform that provides high-quality, structured video training data for AI developers and researchers. With a library of over 25 million clips, it allows users to purchase specific hours of labeled video content to accelerate the training of computer vision and multimodal AI models.

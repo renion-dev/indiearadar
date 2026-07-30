@@ -5,11 +5,11 @@ title: "Stitch 2.0 by Google \u2014 Vibe design beautiful production-ready UI in
 tagline: "Vibe design beautiful production-ready UI in seconds"
 category: "design"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
 domain: "blog.google"
-image: ""
+image: "/assets/images/og/tool-stitch-20-by-google.png"
 tags:
   - ai
   - design
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 896
 ---
+
 
 ## What is Stitch 2.0 by Google?
 

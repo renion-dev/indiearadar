@@ -5,11 +5,11 @@ title: "Fuzzy AI \u2014 We warm your prospects before reaching out"
 tagline: "We warm your prospects before reaching out"
 category: "marketing"
 date: "2026-07-30"
-rating: 4.8
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://getfuzzy.ai"
 domain: "getfuzzy.ai"
-image: ""
+image: "/assets/images/og/tool-fuzzy-ai.png"
 tags:
   - ai
   - marketing
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 688
 ---
+
 
 
 ## What is Fuzzy AI?

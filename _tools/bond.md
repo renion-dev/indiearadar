@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://www.bondapp.io/"
 domain: "bondapp.io"
-image: ""
+image: "/assets/images/og/tool-bond.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 830
 ---
+
 
 ## What is Bond?
 **Bond** (https://www.bondapp.io/) is an intelligent task management platform that aims to solve the "to-do list graveyard" problem. Unlike traditional apps that simply store your tasks, Bond acts as an autonomous assistant. By integrating with your calendar, email, and workflow tools, it doesn't just remind you to work—it helps you prioritize, schedule, and execute your tasks automatically. Its tagline, "The AI to-do list that does itself," captures its mission to minimize manual planning and maximize deep work.

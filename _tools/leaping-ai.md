@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://leapingai.com
-category: productivity
-date: '2026-07-28'
-domain: leapingai.com
-image: /assets/images/og/tool-leaping-ai.png
-name: Leaping AI
-pricing: freemium
-rating: 3.8
-slug: leaping-ai
-source: producthunt
-tagline: AI agents that call and text in multi-day campaigns
+affiliate_link: "https://leapingai.com"
+category: "code"
+date: "2026-07-28"
+domain: "leapingai.com"
+image: "/assets/images/og/tool-leaping-ai.png"
+name: "Leaping AI"
+pricing: "freemium"
+rating: 4.0
+slug: "leaping-ai"
+source: "producthunt"
+tagline: "AI agents that call and text in multi-day campaigns"
+title: "Leaping AI \u2014 AI agents that call and text in multi-day campaigns"
 tags:
-- ai
-- productivity
-- leaping
-- agents
-- that
-title: Leaping AI — AI agents that call and text in multi-day campaigns
+  - ai
+  - code
+  - leaping
 ---
+
 
 ## What is Leaping AI?
 Leaping AI is an automation platform that deploys intelligent AI agents capable of executing multi-day outreach campaigns via phone calls and text messages. It bridges the gap between static chatbots and human sales reps by handling complex, persistent follow-up sequences that nurture leads over time.

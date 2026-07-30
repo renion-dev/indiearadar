@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://aymo.ai
-category: productivity
-date: '2026-07-26'
-domain: aymo.ai
-image: /assets/images/tools/aymo-ai.jpg
-name: Aymo AI
-pricing: freemium
-rating: 3.4
-slug: aymo-ai
-source: producthunt
-tagline: All-in-one AI Platform for Teams
+affiliate_link: "https://aymo.ai"
+category: "productivity"
+date: "2026-07-26"
+domain: "aymo.ai"
+image: "/assets/images/tools/aymo-ai.jpg"
+name: "Aymo AI"
+pricing: "freemium"
+rating: 4.0
+slug: "aymo-ai"
+source: "producthunt"
+tagline: "All-in-one AI Platform for Teams"
+title: "Aymo AI \u2014 All-in-one AI Platform for Teams"
 tags:
-- ai
-- productivity
-- aymo
-- all
-- one
-title: Aymo AI — All-in-one AI Platform for Teams
+  - ai
+  - productivity
+  - aymo
 ---
+
 
 ## What is Aymo AI?
 Aymo AI is an all-in-one platform designed to centralize team workflows by integrating advanced AI capabilities directly into collaborative environments. It acts as a unified hub for content generation, task automation, and team communication, eliminating the need to juggle multiple disparate AI subscriptions.

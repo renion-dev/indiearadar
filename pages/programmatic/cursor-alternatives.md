@@ -21,9 +21,9 @@ related_tools:
   - anysearch
   - athena-by-shoplazza
   - aymo-ai
+  - bond
   - brainfeed
-  - cekura
-  - chatcut
+  - brew
 
 ---
 

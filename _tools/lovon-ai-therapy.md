@@ -9,15 +9,17 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://lovon.app"
 domain: "lovon.app"
-image: ""
+image: "/assets/images/og/tool-lovon-ai-therapy.png"
 tags:
   - ai
   - productivity
   - artificial intelligence
   - health
+  - lovon
 source: "producthunt"
 votes: 831
 ---
+
 
 ## What is Lovon AI Therapy?
 **Lovon AI Therapy** (https://lovon.app) is an innovative digital platform designed to bridge the gap between mental health support and accessibility. Using the tagline *"Talk it out and feel better,"* Lovon provides a private, judgment-free space where users can vent, process emotions, or seek guidance through conversational AI. Unlike traditional therapy, which can be expensive and time-consuming, Lovon offers immediate, 24/7 empathetic listening, making emotional regulation available at your fingertips.

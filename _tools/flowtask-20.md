@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://flowtask.work
-category: productivity
-date: '2026-07-28'
-domain: flowtask.work
-image: /assets/images/og/tool-flowtask-20.png
-name: FlowTask 2.0
-pricing: freemium
-rating: 3.4
-slug: flowtask-20
-source: producthunt
-tagline: Company brain for AI Agents
+affiliate_link: "https://flowtask.work"
+category: "productivity"
+date: "2026-07-28"
+domain: "flowtask.work"
+image: "/assets/images/og/tool-flowtask-20.png"
+name: "FlowTask 2.0"
+pricing: "freemium"
+rating: 4.0
+slug: "flowtask-20"
+source: "producthunt"
+tagline: "Company brain for AI Agents"
+title: "FlowTask 2.0 \u2014 Company brain for AI Agents"
 tags:
-- ai
-- productivity
-- flowtask
-- company
-- brain
-title: FlowTask 2.0 — Company brain for AI Agents
+  - ai
+  - productivity
+  - flowtask
 ---
+
 
 ## What is FlowTask 2.0?
 FlowTask 2.0 acts as a centralized "company brain," allowing AI agents to access, process, and act upon your team’s internal documentation and workflows. It bridges the gap between static knowledge bases and autonomous execution, ensuring your AI agents have the context they need to perform complex tasks accurately.

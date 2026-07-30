@@ -3,13 +3,13 @@ name: "Tencent EdgeOne Makers"
 slug: "tencent-edgeone-makers"
 title: "Tencent EdgeOne Makers \u2014 Ship AI agents like web apps, in minutes."
 tagline: "Ship AI agents like web apps, in minutes."
-category: "productivity"
+category: "design"
 date: "2026-07-30"
 rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://pages.edgeone.ai"
 domain: "pages.edgeone.ai"
-image: ""
+image: "/assets/images/og/tool-tencent-edgeone-makers.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 1024
 ---
+
 
 ## What is Tencent EdgeOne Makers?
 

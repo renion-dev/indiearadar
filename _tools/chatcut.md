@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://chatcut.io"
 domain: "chatcut.io"
-image: ""
+image: "/assets/images/og/tool-chatcut.png"
 tags:
   - ai
   - marketing
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 520
 ---
+
 
 
 ## What is ChatCut?

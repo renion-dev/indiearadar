@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://happycapy.ai"
 domain: "happycapy.ai"
-image: ""
+image: "/assets/images/og/tool-happycapy.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 1407
 ---
+
 
 ## What is happycapy?
 

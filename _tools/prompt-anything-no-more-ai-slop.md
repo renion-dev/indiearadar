@@ -1,24 +1,24 @@
 ---
-affiliate_link: https://www.promptanything.io/
-category: productivity
-date: '2026-07-26'
-domain: www.promptanything.io
-image: /assets/images/tools/prompt-anything-no-more-ai-slop.jpg
-name: 'Prompt Anything: No more AI slop'
-pricing: freemium
-rating: 3.8
-slug: prompt-anything-no-more-ai-slop
-source: producthunt
-tagline: Become an expert prompt engineer in minutes, for anything AI
+affiliate_link: "https://www.promptanything.io/"
+category: "productivity"
+date: "2026-07-26"
+domain: "www.promptanything.io"
+image: "/assets/images/tools/prompt-anything-no-more-ai-slop.jpg"
+name: "Prompt Anything: No more AI slop"
+pricing: "freemium"
+rating: 4.0
+slug: "prompt-anything-no-more-ai-slop"
+source: "producthunt"
+tagline: "Become an expert prompt engineer in minutes, for anything AI"
+title: "'Prompt Anything: No more AI slop \u2014 Become an expert prompt engineer in minutes,"
 tags:
-- ai
-- productivity
-- prompt
-- anything
-- more
-title: 'Prompt Anything: No more AI slop — Become an expert prompt engineer in minutes,
-  for anything AI'
+  - ai
+  - productivity
+  - prompt
+  - anything
+  - more
 ---
+
 
 ## What is Prompt Anything: No more AI slop?
 Prompt Anything is an intelligent prompt-engineering assistant designed to bridge the gap between mediocre AI outputs and professional-grade results. It helps users transform vague ideas into structured, high-context prompts that eliminate the "slop" often associated with generic AI responses.

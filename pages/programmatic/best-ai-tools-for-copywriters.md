@@ -11,7 +11,7 @@ programmatic: true
 
 generated: true
 
-tool_count: 7
+tool_count: 8
 
 related_tools:
   - chatcut
@@ -20,6 +20,7 @@ related_tools:
   - lev8
   - openseo
   - pawesome
+  - storeclaw
   - superunit
 
 ---
