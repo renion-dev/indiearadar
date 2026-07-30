@@ -1,23 +1,23 @@
 ---
-affiliate_link: https://mcp-billing.com
-category: productivity
-date: '2026-07-28'
-domain: mcp-billing.com
-image: /assets/images/og/tool-mcp-billing.png
-name: MCP-Billing
-pricing: freemium
-rating: 3.1
-slug: mcp-billing
-source: producthunt
-tagline: OAuth 2.1 + usage-based Stripe billing for MCP servers
+affiliate_link: "https://mcp-billing.com"
+category: "productivity"
+date: "2026-07-28"
+domain: "mcp-billing.com"
+image: "/assets/images/og/tool-mcp-billing.png"
+name: "MCP-Billing"
+pricing: "freemium"
+rating: 4.0
+slug: "mcp-billing"
+source: "producthunt"
+tagline: "OAuth 2.1 + usage-based Stripe billing for MCP servers"
+title: "MCP-Billing \u2014 OAuth 2.1 + usage-based Stripe billing for MCP servers"
 tags:
-- ai
-- productivity
-- mcp
-- billing
-- oauth
-title: MCP-Billing — OAuth 2.1 + usage-based Stripe billing for MCP servers
+  - ai
+  - productivity
+  - mcp
+  - billing
 ---
+
 
 ## What is MCP-Billing?
 MCP-Billing is a specialized infrastructure tool that enables Model Context Protocol (MCP) server developers to monetize their services through secure OAuth 2.1 authentication and usage-based Stripe billing. It bridges the gap between open-source AI tools and sustainable business models by handling the heavy lifting of user identity and metering.

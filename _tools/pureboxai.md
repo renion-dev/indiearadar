@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://purebox.ai
-category: productivity
-date: '2026-07-26'
-domain: purebox.ai
-image: /assets/images/tools/pureboxai.jpg
-name: PureBox.ai
-pricing: freemium
-rating: 3.5
-slug: pureboxai
-source: producthunt
-tagline: Review-first AI cleanup for your real Gmail inbox.
+affiliate_link: "https://purebox.ai"
+category: "productivity"
+date: "2026-07-26"
+domain: "purebox.ai"
+image: "/assets/images/tools/pureboxai.jpg"
+name: "PureBox.ai"
+pricing: "freemium"
+rating: 4.0
+slug: "pureboxai"
+source: "producthunt"
+tagline: "Review-first AI cleanup for your real Gmail inbox."
+title: "PureBox.ai \u2014 Review-first AI cleanup for your real Gmail inbox."
 tags:
-- ai
-- productivity
-- purebox
-- review
-- first
-title: PureBox.ai — Review-first AI cleanup for your real Gmail inbox.
+  - ai
+  - productivity
+  - purebox
 ---
+
 
 ## What is PureBox.ai?
 PureBox.ai is an intelligent email management tool that uses AI to analyze, categorize, and clean up your real Gmail inbox based on your actual reading habits. Instead of generic filters, it learns what you value, allowing you to batch-process newsletters and promotional clutter with a single click.

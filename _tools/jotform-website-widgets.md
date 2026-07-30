@@ -1,23 +1,24 @@
 ---
-affiliate_link: https://www.jotform.com/website-widgets/
-category: code
-date: '2026-07-28'
-domain: www.jotform.com
-image: /assets/images/og/tool-jotform-website-widgets.png
-name: Jotform Website Widgets
-pricing: freemium
+affiliate_link: "https://www.jotform.com/website-widgets/"
+category: "code"
+date: "2026-07-28"
+domain: "www.jotform.com"
+image: "/assets/images/og/tool-jotform-website-widgets.png"
+name: "Jotform Website Widgets"
+pricing: "freemium"
 rating: 4.0
-slug: jotform-website-widgets
-source: producthunt
-tagline: Build and embed no-code website widgets in minutes
+slug: "jotform-website-widgets"
+source: "producthunt"
+tagline: "Build and embed no-code website widgets in minutes"
+title: "Jotform Website Widgets \u2014 Build and embed no-code website widgets in minutes"
 tags:
-- ai
-- code
-- jotform
-- website
-- productivity
-title: Jotform Website Widgets — Build and embed no-code website widgets in minutes
+  - ai
+  - code
+  - jotform
+  - website
+  - widgets
 ---
+
 
 ## What is Jotform Website Widgets?
 Jotform Website Widgets is a comprehensive library of no-code tools designed to enhance website functionality and user engagement. It allows users to easily embed interactive elements—ranging from advanced calculators and social media feeds to file uploaders and interactive maps—without writing a single line of code.

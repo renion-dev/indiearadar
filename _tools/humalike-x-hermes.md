@@ -5,11 +5,11 @@ title: "Humalike x Hermes \u2014 Social intelligence plugin for Hermes Agent"
 tagline: "Social intelligence plugin for Hermes Agent"
 category: "code"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://humalike.ai/hermes"
 domain: "humalike.ai"
-image: ""
+image: "/assets/images/og/tool-humalike-x-hermes.png"
 tags:
   - ai
   - code
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 520
 ---
+
 
 
 ## What is Humalike x Hermes?

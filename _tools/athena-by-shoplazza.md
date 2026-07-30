@@ -1,23 +1,23 @@
 ---
-affiliate_link: https://www.shoplaza.ai
-category: productivity
-date: '2026-07-26'
-domain: www.shoplaza.ai
-image: /assets/images/tools/athena-by-shoplazza.jpg
-name: Athena by Shoplazza
-pricing: freemium
-rating: 4.3
-slug: athena-by-shoplazza
-source: producthunt
-tagline: An orchestrator agent for your entire commerce stack
+affiliate_link: "https://www.shoplaza.ai"
+category: "productivity"
+date: "2026-07-26"
+domain: "www.shoplaza.ai"
+image: "/assets/images/tools/athena-by-shoplazza.jpg"
+name: "Athena by Shoplazza"
+pricing: "freemium"
+rating: 4.0
+slug: "athena-by-shoplazza"
+source: "producthunt"
+tagline: "An orchestrator agent for your entire commerce stack"
+title: "Athena by Shoplazza \u2014 An orchestrator agent for your entire commerce stack"
 tags:
-- ai
-- productivity
-- athena
-- shoplazza
-- orchestrator
-title: Athena by Shoplazza — An orchestrator agent for your entire commerce stack
+  - ai
+  - productivity
+  - athena
+  - shoplazza
 ---
+
 
 ## What is Athena by Shoplazza?
 Athena by Shoplazza is an AI-powered orchestrator designed to unify and automate your entire e-commerce operations stack. By acting as a central intelligence layer, it connects disparate tools—from inventory management to marketing automation—to execute complex workflows through simple natural language commands.

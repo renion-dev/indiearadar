@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://pawesome.space/
-category: marketing
-date: '2026-07-26'
-domain: pawesome.space
-image: /assets/images/tools/pawesome.jpg
-name: Pawesome
-pricing: freemium
+affiliate_link: "https://pawesome.space/"
+category: "marketing"
+date: "2026-07-26"
+domain: "pawesome.space"
+image: "/assets/images/tools/pawesome.jpg"
+name: "Pawesome"
+pricing: "freemium"
 rating: 4.0
-slug: pawesome
-source: producthunt
-tagline: Your AI Native Inbound Marketing Engine
+slug: "pawesome"
+source: "producthunt"
+tagline: "Your AI Native Inbound Marketing Engine"
+title: "Pawesome \u2014 Your AI Native Inbound Marketing Engine"
 tags:
-- ai
-- marketing
-- pawesome
-- your
-- productivity
-title: Pawesome — Your AI Native Inbound Marketing Engine
+  - ai
+  - marketing
+  - pawesome
 ---
+
 
 ## What is Pawesome?
 Pawesome is an AI-native inbound marketing engine designed to automate the heavy lifting of content creation and lead generation. It integrates directly with your brand’s voice to produce high-quality, SEO-optimized content that drives organic traffic and converts visitors into qualified leads.

@@ -1,0 +1,33 @@
+slug: beehiiv
+
+professions:
+  - marketers
+  - founders
+  - content-creators
+  - copywriters
+
+use_cases:
+  - newsletter
+  - email-marketing
+  - audience-growth
+  - monetization
+
+platforms:
+  - web
+
+content_types:
+  - text
+
+integrations:
+  - stripe
+
+search_intents:
+  - best newsletter platform
+  - email marketing software
+  - substack alternative
+  - creator newsletter
+
+semantic_tags:
+  - creator-economy
+  - newsletter
+  - publishing

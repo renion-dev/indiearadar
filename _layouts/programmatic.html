@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+
+  <!-- HERO -->
+  <section class="hero" style="text-align: left; padding: 2rem 0;">
+    <h1 class="hero-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="hero-description">{{ page.description }}</p>
+    {% endif %}
+
+    <div class="hero-stats" style="justify-content: flex-start; gap: 2.5rem;">
+      <div class="stat">
+        <span class="stat-number">{{ page.tool_count | default: 0 }}</span>
+        <span class="stat-label">AI Tools</span>
+
+      </div>
+
+      {% include structured-data.html %}
+
+      <div class="stat">
+        <span class="stat-number">⬆️</span>
+        <span class="stat-label">Updated {{ page.date | default: site.time | date: "%b %d, %Y" }}</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">📌</span>
+        <span class="stat-label">Programmatic SEO</span>
+      </div>
+    </div>
+
+    <div class="hero-cta" style="justify-content: flex-start;">
+      <a href="#tools" class="btn btn-primary">Browse Tools</a>
+      <a href="#faq" class="btn btn-ghost">FAQ</a>
+    </div>
+  </section>
+
+  <!-- TOOLS GRID -->
+  <section id="tools" style="padding: 2rem 0;">
+    <div class="section-header">
+      <h2>Recommended AI Tools</h2>
+    </div>
+    <div class="tools-grid">
+      {% assign selected_tools = site.tools | where_exp: "tool", "page.related_tools contains tool.slug" %}
+      {% for tool in selected_tools %}
+      {% include tool-card.html tool=tool %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Similar AI Tools -->
+  {% if page.category %}
+  {% assign similar = site.tools | where_exp: "tool", "tool.category == page.category and page.related_tools contains
+  tool.slug == false" | slice: 0, 6 %}
+  {% if similar.size > 0 %}
+  <section style="padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border);">
+    <div class="section-header">
+      <h2>Similar AI Tools</h2>
+    </div>
+    <div class="tools-grid">
+      {% for tool in similar %}
+      {% include tool-card.html tool=tool %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  {% endif %}
+
+
+
+  <!-- FAQ -->
+  {% if page.faq and page.faq.size > 0 %}
+  <section id="faq" style="padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border);">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      {% for item in page.faq %}
+      <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+        <h3 style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.25rem; color: var(--text-primary);">
+          {{ item.question }}
+        </h3>
+        <p style="color: var(--text-secondary); line-height: 1.6;">
+          {{ item.answer }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+</div>

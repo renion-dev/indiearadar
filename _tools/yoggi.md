@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://yoggichat.app/
-category: productivity
-date: '2026-07-26'
-domain: yoggichat.app
-image: /assets/images/tools/yoggi.jpg
-name: Yoggi
-pricing: freemium
-rating: 3.8
-slug: yoggi
-source: producthunt
-tagline: Safe AI chat for kids
+affiliate_link: "https://yoggichat.app/"
+category: "productivity"
+date: "2026-07-26"
+domain: "yoggichat.app"
+image: "/assets/images/tools/yoggi.jpg"
+name: "Yoggi"
+pricing: "freemium"
+rating: 4.0
+slug: "yoggi"
+source: "producthunt"
+tagline: "Safe AI chat for kids"
+title: "Yoggi \u2014 Safe AI chat for kids"
 tags:
-- ai
-- productivity
-- yoggi
-- safe
-- chat
-title: Yoggi — Safe AI chat for kids
+  - ai
+  - productivity
+  - yoggi
 ---
+
 
 ## What is Yoggi?
 Yoggi is a specialized AI chat platform designed specifically for children, prioritizing safety, privacy, and age-appropriate interaction. It provides a walled-garden environment where kids can explore their curiosity and learn through conversation without the risks associated with mainstream, unrestricted AI models.

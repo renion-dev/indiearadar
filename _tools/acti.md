@@ -5,11 +5,11 @@ title: "Acti \u2014 Agentic keyboard for mobile commands and search"
 tagline: "Agentic keyboard for mobile commands and search"
 category: "productivity"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.9
 pricing: "freemium"
 affiliate_link: "https://openacti.com:443/"
 domain: "openacti.com:443"
-image: ""
+image: "/assets/images/og/tool-acti.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 925
 ---
+
 
 
 ## What is Acti?

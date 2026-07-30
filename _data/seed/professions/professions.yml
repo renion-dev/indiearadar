@@ -1,0 +1,109 @@
+items:
+  - slug: developers
+    title: Developers
+    description: Best AI tools for software developers.
+    tool_filters:
+      categories:
+        - code
+        - productivity
+    limit: 20
+    faq:
+      - question: What are the best AI tools for developers?
+        answer: The best AI tools for developers include coding assistants, debugging tools, and productivity enhancers.
+      - question: Are there free AI tools for developers?
+        answer: Yes, many AI tools for developers offer free tiers with basic features.
+
+  - slug: designers
+    title: Designers
+    description: Best AI tools for designers.
+    tool_filters:
+      categories:
+        - design
+    limit: 20
+    faq:
+      - question: What AI tools help designers?
+        answer: AI design tools assist with UI/UX, prototyping, image generation, and creative workflows.
+      - question: Can AI replace designers?
+        answer: AI enhances design workflows but doesn't replace human creativity.
+
+  - slug: marketers
+    title: Marketers
+    description: Best AI tools for marketers.
+    tool_filters:
+      categories:
+        - marketing
+    limit: 20
+    faq:
+      - question: What AI tools are best for marketing?
+        answer: Marketing AI tools include SEO, content generation, social media, and analytics platforms.
+      - question: How can AI improve marketing ROI?
+        answer: AI optimizes targeting, personalization, and campaign analytics.
+
+  - slug: founders
+    title: Startup Founders
+    description: Best AI tools for startup founders.
+    tool_filters:
+      categories:
+        - productivity
+        - marketing
+    limit: 20
+    faq:
+      - question: What AI tools should founders use?
+        answer: Founders benefit from AI for productivity, marketing automation, and analytics.
+      - question: Are there free AI tools for startups?
+        answer: Many AI tools offer free plans or startup discounts.
+
+  - slug: students
+    title: Students
+    description: Best AI tools for students.
+    tool_filters:
+      categories:
+        - education
+        - productivity
+    limit: 20
+    faq:
+      - question: What AI tools help students study?
+        answer: AI tools for students include note-taking, writing assistance, and research tools.
+      - question: Are AI tools for students free?
+        answer: Most student AI tools have free plans with premium upgrades.
+
+  - slug: content
+    title: Content
+    description: Best AI tools for content creation.
+    tool_filters:
+      categories:
+        - content
+        - writing
+        - video
+    limit: 20
+    faq:
+      - question: What AI tools are best for content creation?
+        answer: AI content tools include writing assistants, video generators, and image editors.
+      - question: Can AI write content well?
+        answer: AI can generate drafts, but human editing ensures quality and originality.
+
+  - slug: automation
+    title: Automation
+    description: Best AI tools for automation and workflows.
+    tool_filters:
+      categories:
+        - automation
+    limit: 20
+    faq:
+      - question: What AI tools automate workflows?
+        answer: Automation AI tools handle repetitive tasks, integrations, and business process optimization.
+      - question: How to automate with AI?
+        answer: Use AI tools for task automation, API integrations, and no-code workflow builders.
+
+  - slug: analytics
+    title: Analytics
+    description: Best AI tools for data and analytics.
+    tool_filters:
+      categories:
+        - analytics
+    limit: 20
+    faq:
+      - question: What AI tools are best for analytics?
+        answer: AI analytics tools include data visualization, predictive analytics, and BI platforms.
+      - question: Can AI improve data analysis?
+        answer: AI speeds up pattern detection and provides actionable insights from large datasets.

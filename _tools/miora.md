@@ -5,11 +5,11 @@ title: "Miora \u2014 Scale your creativity on editable canvas with agent memory"
 tagline: "Scale your creativity on editable canvas with agent memory"
 category: "design"
 date: "2026-07-30"
-rating: 5.0
+rating: 4.8
 pricing: "freemium"
 affiliate_link: "https://miora.design"
 domain: "miora.design"
-image: ""
+image: "/assets/images/og/tool-miora.png"
 tags:
   - ai
   - design
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 510
 ---
+
 
 
 ## What is Miora?

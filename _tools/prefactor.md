@@ -5,11 +5,11 @@ title: "Prefactor \u2014 Evaluate your AI Agents in real-time"
 tagline: "Evaluate your AI Agents in real-time"
 category: "code"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://prefactor.tech/producthunt"
 domain: "prefactor.tech"
-image: ""
+image: "/assets/images/og/tool-prefactor.png"
 tags:
   - ai
   - code
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 599
 ---
+
 
 
 ## What is Prefactor?

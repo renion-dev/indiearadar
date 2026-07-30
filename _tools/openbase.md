@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://openbase.cloud
-category: productivity
-date: '2026-07-26'
-domain: openbase.cloud
-image: /assets/images/tools/openbase.jpg
-name: Openbase
-pricing: freemium
-rating: 3.2
-slug: openbase
-source: producthunt
-tagline: Manage your team of AI agents by voice, from anywhere
+affiliate_link: "https://openbase.cloud"
+category: "productivity"
+date: "2026-07-26"
+domain: "openbase.cloud"
+image: "/assets/images/tools/openbase.jpg"
+name: "Openbase"
+pricing: "freemium"
+rating: 4.0
+slug: "openbase"
+source: "producthunt"
+tagline: "Manage your team of AI agents by voice, from anywhere"
+title: "Openbase \u2014 Manage your team of AI agents by voice, from anywhere"
 tags:
-- ai
-- productivity
-- openbase
-- manage
-- your
-title: Openbase — Manage your team of AI agents by voice, from anywhere
+  - ai
+  - productivity
+  - openbase
 ---
+
 
 ## What is Openbase?
 Openbase is a voice-first orchestration platform that allows you to manage, direct, and collaborate with your team of AI agents in real-time. By bridging the gap between complex AI workflows and natural conversation, it enables users to delegate tasks and monitor progress entirely through voice commands from any location.

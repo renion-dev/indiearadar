@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://easycircuit.app
-category: design
-date: '2026-07-28'
-domain: easycircuit.app
-image: /assets/images/og/tool-easycircuit.png
-name: EasyCircuit
-pricing: freemium
-rating: 3.2
-slug: easycircuit
-source: producthunt
-tagline: Hardware prototyping, as simple as vibe-coding
+affiliate_link: "https://easycircuit.app"
+category: "design"
+date: "2026-07-28"
+domain: "easycircuit.app"
+image: "/assets/images/og/tool-easycircuit.png"
+name: "EasyCircuit"
+pricing: "freemium"
+rating: 4.0
+slug: "easycircuit"
+source: "producthunt"
+tagline: "Hardware prototyping, as simple as vibe-coding"
+title: "EasyCircuit \u2014 Hardware prototyping, as simple as vibe-coding"
 tags:
-- ai
-- design
-- easycircuit
-- hardware
-- productivity
-title: EasyCircuit — Hardware prototyping, as simple as vibe-coding
+  - ai
+  - design
+  - easycircuit
 ---
+
 
 ## What is EasyCircuit?
 EasyCircuit is an AI-powered platform that accelerates hardware prototyping by allowing users to generate schematics and PCB designs using natural language prompts. It bridges the gap between conceptual ideas and manufacturing-ready files, effectively bringing the "vibe-coding" paradigm to electrical engineering.

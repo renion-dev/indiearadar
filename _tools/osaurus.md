@@ -9,7 +9,7 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://osaurus.ai"
 domain: "osaurus.ai"
-image: ""
+image: "/assets/images/og/tool-osaurus.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 586
 ---
+
 
 
 ## What is Osaurus?

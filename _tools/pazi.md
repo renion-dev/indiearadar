@@ -5,11 +5,11 @@ title: "Pazi \u2014 Vibe code business operations"
 tagline: "Vibe code business operations"
 category: "productivity"
 date: "2026-07-30"
-rating: 4.9
+rating: 4.8
 pricing: "freemium"
 affiliate_link: "https://pazi.ai/"
 domain: "pazi.ai"
-image: ""
+image: "/assets/images/og/tool-pazi.png"
 tags:
   - ai
   - productivity
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 892
 ---
+
 
 
 ## What is Pazi?

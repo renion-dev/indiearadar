@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://useliminal.xyz
-category: productivity
-date: '2026-07-28'
-domain: useliminal.xyz
-image: /assets/images/og/tool-liminal.png
-name: Liminal
-pricing: freemium
-rating: 4.7
-slug: liminal
-source: producthunt
-tagline: A workspace & 2nd brain for you, your agent, and your team
+affiliate_link: "https://useliminal.xyz"
+category: "productivity"
+date: "2026-07-28"
+domain: "useliminal.xyz"
+image: "/assets/images/og/tool-liminal.png"
+name: "Liminal"
+pricing: "freemium"
+rating: 4.0
+slug: "liminal"
+source: "producthunt"
+tagline: "A workspace & 2nd brain for you, your agent, and your team"
+title: "Liminal \u2014 A workspace & 2nd brain for you, your agent, and your team"
 tags:
-- ai
-- productivity
-- liminal
-- workspace
-- brain
-title: Liminal — A workspace & 2nd brain for you, your agent, and your team
+  - ai
+  - productivity
+  - liminal
 ---
+
 
 ## What is Liminal?
 Liminal is an AI-native workspace designed to function as a collaborative "second brain" for individuals and teams. It bridges the gap between static documentation and active execution by integrating an intelligent agent directly into your workflow to manage, synthesize, and act on your data.

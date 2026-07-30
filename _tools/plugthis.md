@@ -5,11 +5,11 @@ title: "PlugThis \u2014 Create your own Chrome Extensions by chatting with AI"
 tagline: "Create your own Chrome Extensions by chatting with AI"
 category: "code"
 date: "2026-07-30"
-rating: 4.9
+rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://plugthis.ai"
 domain: "plugthis.ai"
-image: ""
+image: "/assets/images/og/tool-plugthis.png"
 tags:
   - ai
   - code
@@ -19,6 +19,7 @@ tags:
 source: "producthunt"
 votes: 514
 ---
+
 
 
 ## What is PlugThis?

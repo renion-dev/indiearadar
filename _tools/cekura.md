@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://www.cekura.ai/
-category: productivity
-date: '2026-07-28'
-domain: www.cekura.ai
-image: /assets/images/og/tool-cekura.png
-name: Cekura
-pricing: freemium
-rating: 4.7
-slug: cekura
-source: producthunt
-tagline: The self-improvement loop for voice agents
+affiliate_link: "https://www.cekura.ai/"
+category: "productivity"
+date: "2026-07-28"
+domain: "www.cekura.ai"
+image: "/assets/images/og/tool-cekura.png"
+name: "Cekura"
+pricing: "freemium"
+rating: 4.0
+slug: "cekura"
+source: "producthunt"
+tagline: "The self-improvement loop for voice agents"
+title: "Cekura \u2014 The self-improvement loop for voice agents"
 tags:
-- ai
-- productivity
-- cekura
-- self
-- the
-title: Cekura — The self-improvement loop for voice agents
+  - ai
+  - productivity
+  - cekura
 ---
+
 
 ## What is Cekura?
 Cekura is an AI-powered quality assurance and optimization platform designed specifically for voice agents. It acts as a "self-improvement loop" by automatically evaluating call transcripts, identifying performance gaps, and providing actionable insights to refine agent behavior over time.

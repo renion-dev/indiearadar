@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://www.superunit.com/
-category: marketing
-date: '2026-07-28'
-domain: www.superunit.com
-image: /assets/images/og/tool-superunit.png
-name: Superunit
-pricing: freemium
-rating: 3.9
-slug: superunit
-source: producthunt
-tagline: 'AI agents that verify employment by phone, email & fax '
+affiliate_link: "https://www.superunit.com/"
+category: "marketing"
+date: "2026-07-28"
+domain: "www.superunit.com"
+image: "/assets/images/og/tool-superunit.png"
+name: "Superunit"
+pricing: "freemium"
+rating: 4.0
+slug: "superunit"
+source: "producthunt"
+tagline: "AI agents that verify employment by phone, email & fax "
+title: "Superunit \u2014 AI agents that verify employment by phone, email & fax "
 tags:
-- ai
-- marketing
-- superunit
-- agents
-- productivity
-title: 'Superunit — AI agents that verify employment by phone, email & fax '
+  - ai
+  - marketing
+  - superunit
 ---
+
 
 ## What is Superunit?
 Superunit is an automated verification platform that replaces manual HR legwork by deploying AI agents to conduct employment and income verifications. It handles the outreach process across phone, email, and fax, ensuring compliance and speed without the typical administrative bottleneck.

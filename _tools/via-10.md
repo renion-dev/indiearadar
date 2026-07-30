@@ -1,23 +1,22 @@
 ---
-affiliate_link: https://www.usevia.io/
-category: productivity
-date: '2026-07-26'
-domain: www.usevia.io
-image: /assets/images/tools/via-10.jpg
-name: Via 1.0
-pricing: freemium
-rating: 3.2
-slug: via-10
-source: producthunt
-tagline: Find the optimal path through your work
+affiliate_link: "https://www.usevia.io/"
+category: "productivity"
+date: "2026-07-26"
+domain: "www.usevia.io"
+image: "/assets/images/tools/via-10.jpg"
+name: "Via 1.0"
+pricing: "freemium"
+rating: 4.0
+slug: "via-10"
+source: "producthunt"
+tagline: "Find the optimal path through your work"
+title: "Via 1.0 \u2014 Find the optimal path through your work"
 tags:
-- ai
-- productivity
-- via
-- find
-- the
-title: Via 1.0 — Find the optimal path through your work
+  - ai
+  - productivity
+  - via
 ---
+
 
 ## What is Via 1.0?
 Via 1.0 is an intelligent workflow optimizer designed to help professionals navigate complex projects by identifying the most efficient sequence of tasks. By analyzing your goals and existing work dependencies, it acts as a strategic navigator to minimize friction and maximize productivity.

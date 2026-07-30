@@ -9,15 +9,17 @@ rating: 5.0
 pricing: "freemium"
 affiliate_link: "https://unabyss.com"
 domain: "unabyss.com"
-image: ""
+image: "/assets/images/og/tool-unabyss-for-claude.png"
 tags:
   - ai
   - productivity
   - productivity
   - artificial intelligence
+  - unabyss
 source: "producthunt"
 votes: 664
 ---
+
 
 
 ## What is Unabyss for Claude?
