@@ -1,0 +1,20 @@
+<!-- ============================================ -->
+<!-- Categories Grid for Homepage                -->
+<!-- ============================================ -->
+<section class="categories-section" style="padding: 2rem 0;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Popular AI Tool Categories</h2>
+      <a href="{{ '/categories' | relative_url }}" class="link-arrow">View all →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem;">
+      {% assign top_categories = site.pages | where: "programmatic", true | sort: "tool_count" | reverse | slice: 0, 12 %}
+      {% for cat in top_categories %}
+        <a href="{{ cat.url | relative_url }}" style="display: block; padding: 1rem 0.8rem; text-align: center; background: var(--bg-card, #1a1a24); border: 1px solid var(--border, #2a2a3a); border-radius: 10px; font-weight: 500; color: var(--text-primary); transition: all 0.2s; text-decoration: none;">
+          {{ cat.title | replace: "Best AI Tools for ", "" }}
+          <span style="display: block; font-size: 0.75rem; color: var(--text-muted);">{{ cat.tool_count | default: 0 }} tools</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
