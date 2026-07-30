@@ -3,8 +3,8 @@
 from pathlib import Path
 import yaml
 
-
 PROGRAMMATIC_DIR = Path("_data/programmatic")
+OUTPUT_DIR = Path("pages/programmatic")
 
 
 def load_pages():
@@ -20,17 +20,45 @@ def load_pages():
     return pages
 
 
+def render_markdown(page):
+    return f"""---
+layout: page
+title: "{page['title']}"
+permalink: /{page['slug']}/
+programmatic: true
+generated: true
+---
+
+# {page['title']}
+
+> This page was generated automatically.
+
+Programmatic SEO page.
+
+Source: `{page['_source']}`
+"""
+
+
+def generate_page(page):
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    output = OUTPUT_DIR / f"{page['slug']}.md"
+
+    output.write_text(
+        render_markdown(page),
+        encoding="utf-8",
+    )
+
+    print(f"Generated {output}")
+
+
 def main():
     pages = load_pages()
 
-    print(f"Loaded {len(pages)} programmatic page definitions\n")
+    print(f"Loaded {len(pages)} page definitions")
 
     for page in pages:
-        print(
-            f"- {page['title']} "
-            f"({page['slug']}) "
-            f"[{page['_source']}]"
-        )
+        generate_page(page)
 
 
 if __name__ == "__main__":
