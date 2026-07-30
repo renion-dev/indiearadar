@@ -1,65 +1,154 @@
 # Indie AI Radar
 
-Autonomous AI tool curation directory for solopreneurs. Built with Jekyll, powered by Python + venv, hosted for free on GitHub Pages.
+[![Autopilot — Daily Harvest & Deploy](https://github.com/renion-dev/indiearadar/actions/workflows/autopilot.yml/badge.svg)](https://github.com/renion-dev/indiearadar/actions/workflows/autopilot.yml)
 
-## Quick Start (Local)
+**Indie AI Radar** — це повністю автономна SEO-фабрика, яка щодня збирає AI-інструменти з Product Hunt, генерує програмні SEO-сторінки та автоматично деплоїть сайт.
 
-```bash
-# 1. Install Ruby dependencies
-bundle config set --local path 'vendor/bundle'
+---
+
+## 🚀 Особливості
+
+- **Автоматичний збір інструментів** — щоденний парсинг Product Hunt через GraphQL API.
+- **Програмні SEO-сторінки** — генерація сотень сторінок на основі Seed-даних (професії, категорії, ціни).
+- **Структуровані дані** — JSON-LD (ItemList, FAQPage, CollectionPage) для покращення видимості в пошуку.
+- **Внутрішня перелінковка** — блоки "Similar AI Tools" на сторінках інструментів і категорій.
+- **Повна автоматизація** — GitHub Actions запускає збір, генерацію та деплой щодня о 8:00 UTC.
+- **Сучасний дизайн** — темна тема, адаптивна сітка, каскадні логотипи.
+
+---
+
+## 🏗 Архітектура
+
+Seed Data (_data/seed/)
+│
+▼
+scripts/seed_generator.py
+│
+▼
+Programmatic Definitions (_data/programmatic/)
+│
+▼
+scripts/programmatic_generator.py
+│
+▼
+Pages (pages/programmatic/)
+│
+▼
+Jekyll
+│
+▼
+Static Site (_site/)
+
+**Принципи:**
+- **Seed — джерело істини** (бізнес-сутності: професії, категорії, ціни).
+- **Programmatic Definitions — артефакт генерації** (ніколи не редагувати вручну).
+- **Pages — артефакт генерації** (ніколи не редагувати вручну).
+
+---
+
+## 📦 Встановлення та запуск
+
+### Локальний розвиток
+
+1. Клонувати репозиторій:
+   ```bash
+   git clone https://github.com/renion-dev/indiearadar.git
+   cd indiearadar
+Встановити залежності Python:
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+Встановити залежності Ruby:
 bundle install
 
-# 2. Run locally
+cp .env.example .env
+# Додати PH_API_TOKEN та GEMINI_API_KEY
+
+python3 scripts/seed_generator.py
+python3 scripts/programmatic_generator.py
 bundle exec jekyll serve
-# → http://localhost:4000/indiearadar/
-```
+    Відкрити http://localhost:4000/indiearadar/
 
-## Python Automation (venv)
+🔧 Основні скрипти
+Скрипт	Призначення
+scripts/harvest.py	Щоденний збір нових інструментів з Product Hunt
+scripts/harvest_range.py	Збір за вказану кількість днів (з порогом голосів)
+scripts/seed_generator.py	Генерація програмних визначень із Seed-даних
+scripts/programmatic_generator.py	Генерація Markdown-сторінок із програмних визначень
+scripts/normalize_frontmatter.py	Нормалізація frontmatter для всіх інструментів
+scripts/sync_categories.py	Автоматичне додавання нових категорій у Seed
+🤖 Автоматизація
 
-```bash
-# 1. Create venv
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate  # Windows
+GitHub Actions workflow (.github/workflows/autopilot.yml) запускається щодня о 8:00 UTC:
 
-# 2. Install Python deps
-pip install -r requirements.txt
+    Запускає harvest.py для збору нових інструментів.
 
-# 3. Run harvester (needs PH_API_TOKEN and GEMINI_API_KEY env vars)
-python scripts/harvest.py
-```
+    Запускає seed_generator.py та programmatic_generator.py.
 
-## GitHub Secrets Required
+    Будує сайт через Jekyll.
 
-| Secret | Where to get | Free? |
-|--------|-------------|-------|
-| `PH_API_TOKEN` | [developer.producthunt.com](https://developer.producthunt.com) | ✅ Yes |
-| `GEMINI_API_KEY` | [aistudio.google.com](https://aistudio.google.com/app/apikey) | ✅ Yes (1500/day) |
+    Комітить і пушить зміни (нові інструменти, сторінки, sitemap).
 
-## Structure
+📁 Структура проєкту
+.
+├── _data/
+│   ├── seed/                    # Джерело істини (професії, категорії)
+│   └── programmatic/            # Згенеровані визначення сторінок (артефакт)
+├── _tools/                      # Інструменти (Markdown з frontmatter)
+├── _posts/                      # Блог-пости та дайджести
+├── _layouts/                    # Шаблони Jekyll
+├── _includes/                   # Частини шаблонів (tool-card, structured-data)
+├── pages/
+│   └── programmatic/            # Згенеровані програмні сторінки (артефакт)
+├── scripts/                     # Усі скрипти Python
+├── assets/                      # Стилі, зображення, OG-картинки
+├── docs/                        # Документація (ADR, архітектура, roadmap)
+├── .github/workflows/           # GitHub Actions
+├── _config.yml                  # Конфігурація Jekyll
+├── Gemfile                      # Залежності Ruby
+├── requirements.txt             # Залежності Python
+└── README.md                    # Цей файл
 
-```
-├── scripts/harvest.py      # Python automation (Product Hunt → Gemini → Markdown)
-├── requirements.txt        # Python deps (requests, python-dotenv)
-├── .github/workflows/      # GitHub Actions (venv + harvest + deploy)
-├── _tools/                 # Tool reviews (auto-generated)
-├── _layouts/               # Jekyll templates
-├── assets/                 # CSS, JS, images
-└── _config.yml             # Site config
-```
+🧠 Як додати нову категорію сторінок
 
-## Automation Flow
+    Відредагувати _data/seed/professions/professions.yml:
+- slug: new-category
+  title: New Category
+  description: Best AI tools for new category.
+  tool_filters:
+    categories:
+      - category1
+      - category2
+  limit: 20
 
-```
-GitHub Actions (daily cron)
-    ↓
-Python venv + scripts/harvest.py
-    ↓
-Product Hunt API → Filter AI tools → Gemini AI → Markdown
-    ↓
-Auto-commit → Jekyll build → GitHub Pages deploy
-```
+Запустити генерацію:
+bash
 
-## License
+python3 scripts/seed_generator.py
+python3 scripts/programmatic_generator.py
 
-MIT
+    Нова сторінка з'явиться за адресою:
+    /best-ai-tools-for-new-category/
+
+📊 Поточний стан
+Метрика	Значення
+Інструментів	75+
+Програмних сторінок	24+
+Блог-постів	30+
+Sitemap URL	140+
+Автоматизація	✅ GitHub Actions
+📖 Документація
+
+    Архітектура
+
+    ADR (Architecture Decision Records)
+
+    Roadmap
+
+    Монетизація
+
+    Workflows
+
+📝 Ліцензія
+
+MIT © renion-dev
