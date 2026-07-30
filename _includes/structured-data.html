@@ -1,0 +1,56 @@
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"{{ page.title | escape }}",
+  "description":"{{ page.description | escape }}",
+  "url":"{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+  "numberOfItems":{{ page.tool_count | default: 0 }}
+}
+</script>
+
+{% assign selected_tools = site.tools | where_exp: "tool", "page.related_tools contains tool.slug" %}
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"{{ page.title | escape }}",
+  "numberOfItems":{{ selected_tools.size }},
+  "itemListElement":[
+{% for tool in selected_tools %}
+{
+"@type":"ListItem",
+"position":{{ forloop.index }},
+"url":"{{ site.url }}{{ site.baseurl }}{{ tool.url }}",
+"item":{
+"@type":"SoftwareApplication",
+"name":"{{ tool.name | escape }}",
+"applicationCategory":"{{ tool.category | escape }}"
+}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
+}
+</script>
+
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+{% for item in page.faq %}
+{
+"@type":"Question",
+"name":"{{ item.question | escape }}",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"{{ item.answer | escape }}"
+}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
+}
+</script>
+{% endif %}

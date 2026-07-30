@@ -15,7 +15,11 @@ layout: default
       <div class="stat">
         <span class="stat-number">{{ page.tool_count | default: 0 }}</span>
         <span class="stat-label">AI Tools</span>
-      </div>
+      
+</div>
+
+{% include structured-data.html %}
+
       <div class="stat">
         <span class="stat-number">⬆️</span>
         <span class="stat-label">Updated {{ page.date | default: site.time | date: "%b %d, %Y" }}</span>
