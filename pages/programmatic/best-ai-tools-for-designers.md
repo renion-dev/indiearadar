@@ -1,9 +1,17 @@
 ---
 layout: programmatic
+
 title: "Best AI Tools for Designers"
+
+description: "Discover the best Best AI Tools for Designers."
+
 permalink: /best-ai-tools-for-designers/
+
 programmatic: true
+
 generated: true
+
+tool_count: 5
 
 related_tools:
   - adomate
@@ -15,4 +23,4 @@ related_tools:
 
 ## Recommended AI Tools
 
-Automatically selected tools for this category.
+Discover the best Best AI Tools for Designers.

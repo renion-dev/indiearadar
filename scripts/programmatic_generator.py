@@ -42,12 +42,23 @@ def load_tools():
         data = parse_front_matter(file)
 
         if not data:
-            print(f"Skipping {file}: no front matter")
             continue
 
-        if "slug" not in data:
-            print(f"Missing slug: {file}")
-            print(data)
+        required = [
+            "slug",
+            "name",
+            "title",
+            "category",
+            "pricing",
+            "rating",
+        ]
+
+        missing = [field for field in required if field not in data]
+
+        if missing:
+            print(
+                f"Skipping {file.name}: missing {', '.join(missing)}"
+            )
             continue
 
         data["_source"] = file.name
@@ -61,13 +72,18 @@ def filter_tools(page, tools):
     categories = set(filters.get("categories", []))
 
     if not categories:
-        return tools
+        matched = tools
+    else:
+        matched = [
+            tool
+            for tool in tools
+            if tool.get("category") in categories
+        ]
 
-    matched = []
+    limit = page.get("limit")
 
-    for tool in tools:
-        if tool.get("category") in categories:
-            matched.append(tool)
+    if limit:
+        matched = matched[:limit]
 
     return matched
 
@@ -79,12 +95,25 @@ def render_markdown(page, tools):
         for tool in tools
     )
 
+    description = page.get(
+        "description",
+        f"Discover the best {page['title']}."
+    )
+
     return f"""---
 layout: programmatic
+
 title: "{page['title']}"
+
+description: "{description}"
+
 permalink: /{page['slug']}/
+
 programmatic: true
+
 generated: true
+
+tool_count: {len(tools)}
 
 related_tools:
 {related_tools}
@@ -92,7 +121,7 @@ related_tools:
 
 ## Recommended AI Tools
 
-Automatically selected tools for this category.
+{description}
 """
 
 

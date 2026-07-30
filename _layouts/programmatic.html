@@ -3,10 +3,27 @@ layout: default
 ---
 
 <div class="container">
+
     <article class="page-content">
 
         <header class="page-header">
+
             <h1>{{ page.title }}</h1>
+
+            {% if page.description %}
+            <p class="page-description">
+                {{ page.description }}
+            </p>
+            {% endif %}
+
+            <div class="programmatic-stats">
+
+                <span>🤖 {{ page.tool_count }} AI tools</span>
+
+                <span>📅 Updated {{ site.time | date: "%B %Y" }}</span>
+
+            </div>
+
         </header>
 
         {{ content }}
@@ -28,4 +45,5 @@ layout: default
         {% endif %}
 
     </article>
+
 </div>
