@@ -17,7 +17,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
 from utils import logger, retry, Cache, RateLimiter, slugify, is_ai_related, write_file
-from og_image import generate_tool_og
+from og_image import generate_og_image
 
 PROJECT_ROOT = Path(__file__).parent.parent
 TOOLS_DIR = PROJECT_ROOT / "_tools"
