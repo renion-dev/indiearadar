@@ -51,8 +51,13 @@ layout: default
 
   <!-- Similar AI Tools -->
   {% if page.category %}
-  {% assign similar = site.tools | where_exp: "tool", "tool.category == page.category and page.related_tools contains
-  tool.slug == false" | slice: 0, 6 %}
+  {% assign similar = "" | split: "" %}
+  {% for tool in site.tools %}
+  {% if tool.category == page.category and page.related_tools contains tool.slug == false %}
+  {% assign similar = similar | push: tool %}
+  {% endif %}
+  {% endfor %}
+  {% assign similar = similar | slice: 0, 6 %}
   {% if similar.size > 0 %}
   <section style="padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border);">
     <div class="section-header">
