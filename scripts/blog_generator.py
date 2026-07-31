@@ -4,7 +4,6 @@ blog_generator.py — Автоматична генерація блог-пос�
 Комбінує заздалегідь визначені теми з AI-покращенням.
 Запускається кожні 2 години через GitHub Actions.
 """
-
 import os
 import sys
 import random
@@ -14,7 +13,6 @@ import yaml
 import requests
 from datetime import datetime, timedelta
 from pathlib import Path
-
 # Імпорт з utils
 sys.path.insert(0, str(Path(__file__).parent))
 from utils import logger, retry, slugify, write_file
@@ -25,7 +23,7 @@ POSTS_DIR = PROJECT_ROOT / "_posts"
 THEMES_FILE = PROJECT_ROOT / "_data" / "blog_themes.yml"
 
 # Мінімальний інтервал між постами (години)
-MIN_INTERVAL_HOURS = 4
+MIN_INTERVAL_HOURS = 0
 # Випадкова затримка перед публікацією (хвилини)
 RANDOM_DELAY_MIN = 0
 RANDOM_DELAY_MAX = 10
@@ -92,10 +90,24 @@ def enhance_topic_with_ai(base_title, category):
         return base_title
 
     prompt = f"""
-Given the blog topic base: "{base_title}" (category: {category}),
-suggest a more specific, engaging, and timely version of this topic for indie hackers and solopreneurs.
-Make it sound like a clickable blog post title.
-Return only the new title, without any additional text or explanation.
+Generate 3 different titles for my blog post based on the base topic: "{base_title}" (category: {category}).
+Target audience: Indie hackers and solopreneurs (busy, result-driven, love data).
+
+Requirements for each title:
+
+    Must be under 60 characters (for SEO).
+
+    Must include a specific number, time frame, or dollar amount if applicable.
+
+    Must use one of these 3 distinct angles:
+
+        Angle A: Contrarian (challenge a common belief in this niche).
+
+        Angle B: Actionable/Recipe (promise a specific step-by-step outcome).
+
+        Angle C: Status/Validation (use social proof or personal win).
+
+Output format: Only the 3 titles, numbered 1-3. No extra text.
 """
     try:
         resp = requests.post(
@@ -128,20 +140,41 @@ def generate_post_content(title, category):
         return None
 
     prompt = f"""
-Write a blog post in the style of Indie AI Radar — a blog for indie hackers and solopreneurs.
+Write a blog post for Indie AI Radar — a no-BS blog for solopreneurs who hate fluff.
 
 Title: {title}
 Category: {category}
 
-Style guidelines:
-- Friendly, approachable tone with a touch of humor
-- Practical, actionable advice with real examples
-- Use markdown formatting (## headings, bullet lists, **bold**)
-- Include a short introduction, main body (2-3 sections), and conclusion
-- Keep it between 350-500 words
-- End with a call-to-action: "Subscribe to our weekly newsletter for more indie AI tools."
+STRUCTURAL RULES (MANDATORY):
 
-Make it engaging, valuable, and written for an audience of independent developers and makers.
+    The Hook (first sentence): Start with a bold, single-sentence hot take or a specific failure/success metric. NO greetings, NO "In today's world". Example: "If you use this tool wrong, you'll lose 5 hours of your week — I just did it so you don't have to."
+
+    TL;DR Box: Immediately after the intro, add a > **⚡ TL;DR** section with 3 bullet points summarizing the verdict (must include a "Skip this if..." caveat).
+
+    Signature Sections: Use these exact subheadings in the body:
+
+        ## 🧠 The Reality Check (debunk 1 common myth about this tool/method).
+
+        ## ⚙️ The Solopreneur Playbook (step-by-step, but keep each step to 1-2 sentences).
+
+        ## 📉 The Catch (aka The Fine Print) (this is crucial! Write what sucks about it).
+
+    The "Builders' Math": Include one short calculation (e.g., "Cost: $20/mo. Time saved: 3 hrs/week. At $50/hr — it pays off in 2 days.")
+
+TONE & VOICE:
+
+    Write like a tired but enthusiastic indie dev who has tried 100 tools this month.
+
+    Use short, punchy sentences (max 15 words per sentence on average).
+
+    Be brutally objective. If the tool is overhyped — say it. If it's a game-changer — explain why in 1 specific case.
+
+    Humor is allowed ONLY as self-deprecation (e.g., "Yes, I broke the production server testing this. Twice.").
+
+LENGTH: 350-500 words.
+
+CTA: End with a rough, non-corporate CTA. Instead of "Subscribe to our weekly newsletter", 
+write: "P.S. We send 1 weekly radar ping with tools that actually survive the 7-day test. No spam. Just signal. Drop your email [link]."
 """
     try:
         resp = requests.post(
@@ -271,15 +304,37 @@ Stay tuned for next week's digest!
 **Subscribe to our newsletter** to get these updates delivered to your inbox."""
 
     prompt = """
-Write a weekly digest post for Indie AI Radar (target: indie hackers and solopreneurs).
+Write a weekly "Indie AI Radar" newsletter for busy solopreneurs.
 
-It should include:
-- A warm welcome
-- A list of 3-5 recent AI tools (you can invent names or use generic descriptions)
-- A key trend or insight from the week
-- A call-to-action to subscribe
+Style:
+- zero fluff
+- practical
+- concise
+- markdown
+- 300–400 words
+- avoid marketing buzzwords
+- focus on saving time and making money
 
-Keep it between 300-400 words. Use markdown formatting. Make it friendly and engaging.
+Structure:
+
+# 👋 Welcome
+Write a short welcoming introduction (2-3 sentences).
+
+# 🚀 AI Tools
+List 3-5 real AI tools released or significantly updated during the last 7 days.
+
+For each tool include:
+- what it does
+- why it matters
+- who should use it
+
+Keep each description under 40 words.
+
+# 📈 Weekly Insight
+Summarize one important trend from this week's AI ecosystem and explain why it matters to indie founders.
+
+# 📬 Subscribe
+End with a short CTA encouraging readers to subscribe for next week's digest.
 """
     try:
         resp = requests.post(
