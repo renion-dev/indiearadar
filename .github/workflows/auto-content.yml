@@ -50,6 +50,11 @@ jobs:
           source venv/bin/activate
           python scripts/generate_tags.py
 
+      - name: Generate programmatic pages
+        run: |
+          source venv/bin/activate
+          python scripts/programmatic_generator.py
+
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
