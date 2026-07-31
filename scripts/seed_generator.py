@@ -1,30 +1,68 @@
 #!/usr/bin/env python3
+"""
+Seed Generator - creates programmatic definitions from ALL seed data.
+Scans _data/seed/**/*.yml and generates definitions in _data/programmatic/<category>/
+"""
 
 from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-SEED = ROOT / "_data" / "seed" / "professions" / "professions.yml"
-OUTPUT = ROOT / "_data" / "programmatic" / "best-tools" / "professions"
+SEED_DIR = ROOT / "_data" / "seed"
+PROGRAMMATIC_DIR = ROOT / "_data" / "programmatic"
 
-OUTPUT.mkdir(parents=True, exist_ok=True)
+def process_seed_file(seed_file):
+    """Process a single seed YAML file and generate programmatic definitions."""
+    with open(seed_file, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
 
-data = yaml.safe_load(SEED.read_text())
-count = 0
+    if not data or 'items' not in data:
+        print(f"⚠️ No 'items' in {seed_file}, skipping.")
+        return
 
-for item in data["items"]:
-    page = {
-        "title": f"Best AI Tools for {item['title']}",
-        "slug": f"best-ai-tools-for-{item['slug']}",
-        "description": item["description"],
-        "tool_filters": item["tool_filters"],
-        "limit": item.get("limit", 20),
-        "category": item["slug"],
-        "faq": item.get("faq", [])
-    }
+    # Визначаємо категорію — назва батьківської папки
+    category = seed_file.parent.name  # e.g., professions, industries, pricing
+    print(f"📂 Processing category: {category}")
 
-    outfile = OUTPUT / f"{item['slug']}.yml"
-    outfile.write_text(yaml.safe_dump(page, sort_keys=False, allow_unicode=True))
-    count += 1
+    for item in data['items']:
+        slug = item.get('slug')
+        if not slug:
+            print(f"⚠️ Item without slug in {seed_file}, skipping.")
+            continue
 
-print(f"Generated {count} page definitions")
+        # Папка призначення: _data/programmatic/<category>/
+        out_dir = PROGRAMMATIC_DIR / category
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        out_file = out_dir / f"{slug}.yml"
+
+        # Формуємо визначення сторінки
+        definition = {
+            'title': item.get('title'),
+            'description': item.get('description'),
+            'tool_filters': item.get('tool_filters', {}),
+            'limit': item.get('limit', 20),
+            'faq': item.get('faq', []),
+            'category': category  # додаємо категорію для шаблону
+        }
+
+        with open(out_file, 'w', encoding='utf-8') as f:
+            yaml.dump(definition, f, allow_unicode=True, sort_keys=False)
+
+        print(f"✅ Generated: {out_file}")
+
+def main():
+    # Рекурсивно шукаємо всі .yml файли в _data/seed/
+    seed_files = list(SEED_DIR.glob('**/*.yml'))
+    if not seed_files:
+        print("⚠️ No seed files found in _data/seed/")
+        return
+
+    print(f"📂 Found {len(seed_files)} seed files.")
+    for seed_file in seed_files:
+        process_seed_file(seed_file)
+
+    print("✅ All definitions generated successfully.")
+
+if __name__ == "__main__":
+    main()

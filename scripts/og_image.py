@@ -13,7 +13,7 @@ from utils import logger, RateLimiter
 # Лімітер для pollinations.ai: 1 запит на 2 секунди
 POLLINATIONS_RATE_LIMIT = RateLimiter(calls=1, period=2)
 
-def generate_tool_og(tool_name, category, slug, output_dir="assets/images/og"):
+def generate_og_image(tool_name, category, slug, output_dir="assets/images/og"):
     """
     Generate OG image for a tool using pollinations.ai.
     Returns relative path to the generated image.

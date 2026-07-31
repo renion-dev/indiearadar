@@ -1,0 +1,14 @@
+title: Developers
+description: Best AI tools for software developers.
+tool_filters:
+  categories:
+  - code
+  - productivity
+limit: 20
+faq:
+- question: What are the best AI tools for developers?
+  answer: The best AI tools for developers include coding assistants, debugging tools,
+    and productivity enhancers.
+- question: Are there free AI tools for developers?
+  answer: Yes, many AI tools for developers offer free tiers with basic features.
+category: professions

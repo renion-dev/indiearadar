@@ -1,175 +1,84 @@
 #!/usr/bin/env python3
+"""
+Programmatic Page Generator
+Reads all YAML definitions from _data/programmatic/**/*.yml
+and generates Markdown pages in pages/programmatic/
+"""
 
 from pathlib import Path
 import yaml
+import frontmatter
+from datetime import datetime
 
-PROGRAMMATIC_DIR = Path("_data/programmatic")
-TOOLS_DIR = Path("_tools")
-OUTPUT_DIR = Path("pages/programmatic")
-
-
-def load_pages():
-    pages = []
-
-    for file in sorted(PROGRAMMATIC_DIR.rglob("*.yml")):
-        with open(file, "r", encoding="utf-8") as f:
-            page = yaml.safe_load(f)
-
-        page["_source"] = file.name
-        pages.append(page)
-
-    return pages
-
-
-def parse_front_matter(path: Path):
-    text = path.read_text(encoding="utf-8")
-
-    if not text.startswith("---"):
-        return None
-
-    parts = text.split("---", 2)
-
-    if len(parts) < 3:
-        return None
-
-    return yaml.safe_load(parts[1])
-
+ROOT = Path(__file__).resolve().parent.parent
+DEFINITIONS_DIR = ROOT / "_data" / "programmatic"
+PAGES_DIR = ROOT / "pages" / "programmatic"
+TOOLS_DIR = ROOT / "_tools"
 
 def load_tools():
     tools = []
-
-    for file in sorted(TOOLS_DIR.glob("*.md")):
-        data = parse_front_matter(file)
-
-        if not data:
-            continue
-
-        required = [
-            "slug",
-            "name",
-            "title",
-            "category",
-            "pricing",
-            "rating",
-        ]
-
-        missing = [field for field in required if field not in data]
-
-        if missing:
-            print(
-                f"Skipping {file.name}: missing {', '.join(missing)}"
-            )
-            continue
-
-        data["_source"] = file.name
-        tools.append(data)
-
+    for tool_file in TOOLS_DIR.glob("*.md"):
+        try:
+            post = frontmatter.load(tool_file)
+            data = post.metadata
+            if 'slug' not in data:
+                print(f"Skipping {tool_file.name}: missing slug")
+                continue
+            tools.append(data)
+        except Exception as e:
+            print(f"⚠️ Error loading {tool_file}: {e}")
     return tools
 
+def filter_tools(tools, tool_filters):
+    filtered = tools.copy()
+    for key, value in tool_filters.items():
+        if key == "categories":
+            filtered = [t for t in filtered if any(cat in t.get("categories", []) for cat in value)]
+        elif key == "pricing":
+            filtered = [t for t in filtered if t.get("pricing") == value]
+    return filtered
 
-def filter_tools(page, tools):
-    filters = page.get("tool_filters", {})
-    categories = set(filters.get("categories", []))
+def generate_page(definition_file):
+    with open(definition_file, 'r', encoding='utf-8') as f:
+        definition = yaml.safe_load(f)
 
-    if not categories:
-        matched = tools
-    else:
-        matched = [
-            tool
-            for tool in tools
-            if tool.get("category") in categories
-        ]
+    slug = definition_file.stem  # використовуємо ім'я файлу як slug
+    title = definition.get('title', slug.replace('-', ' ').title())
+    description = definition.get('description', '')
+    tool_filters = definition.get('tool_filters', {})
+    limit = definition.get('limit', 20)
+    faq = definition.get('faq', [])
+    category = definition.get('category', 'unknown')
 
-    limit = page.get("limit")
+    all_tools = load_tools()
+    filtered = filter_tools(all_tools, tool_filters)
+    limited = filtered[:limit]
 
-    if limit:
-        matched = matched[:limit]
+    fm = {
+        'layout': 'programmatic',
+        'title': title,
+        'description': description,
+        'permalink': f'/{slug}/',
+        'programmatic': True,
+        'related_tools': [t.get('slug') for t in limited if t.get('slug')],
+        'tool_count': len(limited),
+        'category': category,
+        'faq': faq,
+        'last_modified': datetime.now().isoformat()
+    }
 
-    return matched
+    out_file = PAGES_DIR / f"{slug}.md"
+    with open(out_file, 'w', encoding='utf-8') as f:
+        f.write("---\n")
+        f.write(yaml.dump(fm, allow_unicode=True, sort_keys=False))
+        f.write("---\n")
 
-
-def render_markdown(page, tools):
-
-    related_tools = "\n".join(
-        f"  - {tool['slug']}"
-        for tool in tools
-    )
-
-    faq_items = page.get("faq", [])
-
-    faq = ""
-    if faq_items:
-        faq = "\nfaq:\n"
-        for item in faq_items:
-            faq += f"  - question: \"{item['question']}\"\n"
-            faq += f"    answer: \"{item['answer']}\"\n"
-
-    description = page.get(
-        "description",
-        f"Discover the best {page['title']}."
-    )
-
-    return f"""---
-layout: programmatic
-
-title: "{page['title']}"
-
-description: "{description}"
-
-permalink: /{page['slug']}/
-
-programmatic: true
-
-generated: true
-
-tool_count: {len(tools)}
-
-related_tools:
-{related_tools}
-{faq}
----
-
-## Recommended AI Tools
-
-{description}
-"""
-
-
-def generate_page(page, tools):
-
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-    output = OUTPUT_DIR / f"{page['slug']}.md"
-
-    output.write_text(
-        render_markdown(page, tools),
-        encoding="utf-8",
-    )
-
-    print(
-        f"Generated {output} ({len(tools)} tools)"
-    )
-
+    print(f"✅ Generated: {out_file} ({len(limited)} tools)")
 
 def main():
-
-    pages = load_pages()
-
-    tools = load_tools()
-
-    print(f"Loaded {len(tools)} tools")
-    print(f"Loaded {len(pages)} page definitions\n")
-
-    for page in pages:
-
-        matched = filter_tools(page, tools)
-
-        print(
-            f"{page['title']}: {len(matched)} matching tools"
-        )
-
-        generate_page(page, matched)
-
+    PAGES_DIR.mkdir(parents=True, exist_ok=True)
+    for def_file in DEFINITIONS_DIR.glob('**/*.yml'):
+        generate_page(def_file)
 
 if __name__ == "__main__":
     main()

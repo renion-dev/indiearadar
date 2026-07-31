@@ -1,0 +1,13 @@
+title: Healthcare
+description: Best AI tools for healthcare professionals — from diagnostics to patient
+  management.
+tool_filters:
+  categories:
+  - health
+  - productivity
+limit: 20
+faq:
+- question: What are the best AI tools for healthcare?
+  answer: Tools like [tool1] and [tool2] help with medical imaging, patient records,
+    and clinical decision support.
+category: industries

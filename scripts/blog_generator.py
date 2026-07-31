@@ -172,7 +172,7 @@ def save_post(title, content, category, tags, date=None):
     filepath = POSTS_DIR / filename
 
     # Генеруємо OG-зображення
-    og_path = generate_og_image(title, slug)
+    og_path = generate_og_image(title, category, slug)
 
     frontmatter = {
         "title": title,
