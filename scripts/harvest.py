@@ -32,7 +32,7 @@ from utils import (
 )
 
 # Імпорт з og_image
-from og_image import generate_tool_og
+from og_image import generate_og_image
 
 # Налаштування шляхів
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -297,7 +297,8 @@ def main():
         tool['slug'] = slug
 
         # Генеруємо OG-зображення (шлях до файлу)
-        og_path = generate_tool_og(
+        #generate_og_image(tool_name, category, slug, output_dir="assets/images/og"
+        og_path = generate_og_image(
             tool_name=tool['name'],
             category="productivity",
             slug=slug,

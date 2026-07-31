@@ -5,6 +5,7 @@ date: "2026-07-26"
 domain: "beehiiv.com"
 image: "/assets/images/tools/beehiiv.jpg"
 name: "beehiiv"
+slug: "beehiiv"
 pricing: "freemium"
 rating: 4.0
 source: "producthunt"
