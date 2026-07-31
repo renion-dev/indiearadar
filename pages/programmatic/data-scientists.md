@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Data Scientists
+title: Best AI Tools for Data Scientists
 description: Best AI tools for data science and analytics.
 permalink: /data-scientists/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: professions
+category: data-scientists
 faq: []
-last_modified: '2026-07-31T20:30:45.924842'
+last_modified: '2026-07-31T18:37:25.280683'
 ---

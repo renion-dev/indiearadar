@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Design
+title: Best AI Tools for Design
 description: Best AI tools for design.
 permalink: /design/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: professions
+category: design
 faq: []
-last_modified: '2026-07-31T20:30:46.062398'
+last_modified: '2026-07-31T18:37:25.447747'
 ---
