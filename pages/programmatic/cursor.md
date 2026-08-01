@@ -6,6 +6,7 @@ permalink: /cursor/
 programmatic: true
 related_tools:
 - lightfield
+- tandem
 - via-10
 - pinery-prose
 - rork-max
@@ -14,9 +15,8 @@ related_tools:
 - goldfish
 - plugthis
 - cursor-for-ios
-- prodshort
 tool_count: 10
 category: unknown
 faq: []
-last_modified: '2026-07-31T20:30:45.099555'
+last_modified: '2026-08-01T14:43:01.837627'
 ---

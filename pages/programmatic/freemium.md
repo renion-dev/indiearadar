@@ -6,6 +6,7 @@ permalink: /freemium/
 programmatic: true
 related_tools:
 - lightfield
+- tandem
 - via-10
 - pinery-prose
 - rork-max
@@ -16,6 +17,7 @@ related_tools:
 - cursor-for-ios
 - prodshort
 - cleanlist-ai
+- basedash-audit-logs
 - fuzzy-ai
 - honestly
 - franchise-builders
@@ -23,10 +25,8 @@ related_tools:
 - yoggi
 - polygres
 - browseract
-- adomate
-- qsash
 tool_count: 20
 category: pricing
 faq: []
-last_modified: '2026-07-31T20:30:45.838754'
+last_modified: '2026-08-01T14:43:02.509447'
 ---
