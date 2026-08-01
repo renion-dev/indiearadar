@@ -15,7 +15,6 @@ layout: default
       <div class="stat">
         <span class="stat-number">{{ page.tool_count | default: 0 }}</span>
         <span class="stat-label">AI Tools</span>
-
       </div>
 
       {% include structured-data.html %}
@@ -53,8 +52,10 @@ layout: default
   {% if page.category %}
   {% assign similar = "" | split: "" %}
   {% for tool in site.tools %}
-  {% if tool.category == page.category and page.related_tools contains tool.slug == false %}
+  {% if tool.category == page.category %}
+  {% unless page.related_tools contains tool.slug %}
   {% assign similar = similar | push: tool %}
+  {% endunless %}
   {% endif %}
   {% endfor %}
   {% assign similar = similar | slice: 0, 6 %}
@@ -71,8 +72,6 @@ layout: default
   </section>
   {% endif %}
   {% endif %}
-
-
 
   <!-- FAQ -->
   {% if page.faq and page.faq.size > 0 %}
