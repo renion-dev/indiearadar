@@ -9,7 +9,7 @@ from pathlib import Path
 import yaml
 import frontmatter
 from datetime import datetime
-
+import frontmatter
 ROOT = Path(__file__).resolve().parent.parent
 DEFINITIONS_DIR = ROOT / "_data" / "programmatic"
 PAGES_DIR = ROOT / "pages" / "programmatic"
