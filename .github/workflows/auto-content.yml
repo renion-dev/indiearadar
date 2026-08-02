@@ -62,7 +62,8 @@ jobs:
           git config user.name "AI Curator"
           git config user.email "bot@indiearadar.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-          git add -A
+          # Додаємо ТІЛЬКИ потрібні каталоги, ігноруючи _site
+          git add _tools/ _data/programmatic/ pages/programmatic/ tag/ _posts/ assets/
           if git diff --cached --quiet; then
             echo "✅ No new tools to commit"
           else
