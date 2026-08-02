@@ -13,36 +13,29 @@ image: "assets/images/og/tool-building-a-micro-saas-with-ai-real-case-study-of-5
 
 # Building a Micro-SaaS with AI: Real Case Study of $5k MRR in 3 Months
 
-Most "AI-powered" SaaS founders are just building fancy wrappers that provide zero value beyond a basic GPT-4 prompt.
+Most people think building a $5k MRR SaaS requires a team of five and six months of development, but I did it alone in 90 days by weaponizing GPT-4 APIs and refusing to build features nobody asked for.
 
 > **⚡ TL;DR**
-> *   I hit $5k MRR in 90 days by automating a specific, boring B2B workflow.
-> *   The "secret" isn't the AI—it’s the proprietary data pipeline I built around it.
-> *   Skip this if you’re looking for a "passive income" magic button; this requires constant maintenance.
+> * I hit $5k MRR by automating a boring B2B workflow with a simple AI wrapper.
+> * Speed to market beats feature parity every single time.
+> * Skip this if you’re looking for a "passive income" dream; this requires constant support and iteration.
 
 ## 🧠 The Reality Check
-
-Everyone thinks AI SaaS is about having the "smartest" model. Wrong. If your business model relies on OpenAI’s API being better than the next guy’s, you’re already dead. The real moat isn't the LLM; it’s the niche dataset you aggregate that the public model can't access. I spent 70% of my time on data cleaning and 30% on the actual AI implementation.
+The biggest myth in the indie space is that you need a "moat" or proprietary AI model to survive. You don't. Your "moat" is simply solving a specific, annoying problem for a niche group of people faster than the incumbents. I didn't invent a new algorithm; I just glued existing APIs together to save a specific type of consultant three hours of manual data entry per day.
 
 ## ⚙️ The Solopreneur Playbook
-
-1. **Find a boring spreadsheet.** Identify a manual task businesses do in Excel that takes 4+ hours a week.
-2. **Build the "Glue."** Use n8n to connect that spreadsheet to an AI agent that cleans the mess.
-3. **Validate before coding.** Sell the solution via a simple landing page before writing a single line of production code.
-4. **Iterate on feedback.** Spend your first two weeks fixing the hallucinations that lose your users money.
-5. **Scale the pipeline.** Once the workflow is stable, wrap it in a UI (I used Next.js and Supabase).
+1. **Identify the pain:** Find a LinkedIn community where people complain about a recurring, manual task.
+2. **Build the MVP:** Use Next.js and Vercel, and keep the UI ugly but functional.
+3. **API Integration:** Connect the OpenAI API to handle the logic, but don't over-engineer the prompts.
+4. **Cold Outreach:** DM the people complaining in step 1 and offer a free trial in exchange for brutal feedback.
+5. **Scale:** Once you have 10 paying users, double your price and reinvest the profit into better UI/UX.
 
 ## 📉 The Catch (aka The Fine Print)
+The fine print is that you are now a slave to OpenAI’s latency and pricing updates. If they change their model, your entire backend might break, and I’ve spent more than one weekend debugging "hallucinations" that cost a client a lead. You are also not building an asset; you’re building a service that relies entirely on a third-party platform. If they ban your API key tomorrow, you’re out of business.
 
-The API costs will kill your margins if you aren't careful. I broke the production server twice by running infinite loops during my first week of testing. You also have to deal with "LLM drift"—where an update to GPT-4 makes your prompts suddenly output garbage. You are essentially babysitting a toddler that can do math. It’s not set-and-forget; it’s a high-maintenance digital employee.
+**The Builders' Math:**
+API costs: $150/mo. Server costs: $20/mo. Total monthly burn: $170. Revenue: $5,000. Net profit: $4,830. The setup time was roughly 80 hours total. At a $50/hr valuation, the project broke even in the first month.
 
-## The Builders' Math
-
-*   **Cost:** $150/mo (API usage + hosting).
-*   **Time saved for users:** 10 hrs/week.
-*   **Pricing:** $50/mo per user.
-*   **Result:** At 100 users, the $5k MRR covers costs with massive margin. It pays off the moment you land your 4th customer.
-
-Stop chasing the "next big AI trend." Go find someone's spreadsheet and automate the pain out of it. If you can save them two hours, they’ll pay you for the rest of their lives.
+I spent the last three months terrified that a bigger competitor would notice me and ship a clone. They haven’t yet, because they’re too busy building "AI agents" that don't actually do anything. Stop trying to build the next ChatGPT and start building a tool that fixes one tiny, expensive problem.
 
 P.S. We send 1 weekly radar ping with tools that actually survive the 7-day test. No spam. Just signal. Drop your email [link].
