@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install requests pyyaml python-dotenv pillow
+          pip install requests pyyaml python-dotenv pillow frontmatter
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
