@@ -2,18 +2,18 @@ name: Autopilot — Daily Harvest & Deploy
 
 on:
   schedule:
-    - cron: '0 8 * * *'   # щодня о 8:00 UTC
-  workflow_dispatch:       # ручний запуск
+    - cron: '0 8 * * *'
+  workflow_dispatch:
 
 jobs:
   autopilot:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -50,16 +50,17 @@ jobs:
 
       - name: Generate sitemap
         run: |
-          # Генеруємо sitemap у корінь проекту, щоб його можна було додати без конфліктів
           python3 scripts/generate_sitemap.py --output sitemap.xml
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Додаємо тільки потрібні каталоги, виключаючи _site
-          git add _tools/ _data/programmatic/ pages/programmatic/
-          # Додаємо sitemap із кореня (якщо він згенерований)
-          git add sitemap.xml
-          git diff --staged --quiet || git commit -m "chore: autopilot update $(date -u +'%Y-%m-%d')"
-          git push origin HEAD:feature/seo-automation
+          git pull origin feature/seo-automation --no-rebase || echo "Pull failed, continuing"
+          git add _tools/ _data/programmatic/ pages/programmatic/ sitemap.xml
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: autopilot update $(date -u +'%Y-%m-%d')"
+            git push origin HEAD:feature/seo-automation
+          fi
