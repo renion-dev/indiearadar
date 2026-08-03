@@ -62,5 +62,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: autopilot update $(date -u +'%Y-%m-%d')"
-            git push origin HEAD:feature/seo-automation
+            git push origin main
           fi
