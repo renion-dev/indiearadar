@@ -79,6 +79,7 @@ jobs:
           bundler-cache: true
 
       - name: Build site
+          run: git pull origin main || echo "Pull failed, continuing"
         run: |
           bundle install
           bundle exec jekyll build
