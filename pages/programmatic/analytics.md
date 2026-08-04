@@ -14,5 +14,5 @@ faq:
 - question: Can AI improve data analysis?
   answer: AI speeds up pattern detection and provides actionable insights from large
     datasets.
-last_modified: '2026-08-04T04:50:17.544336'
+last_modified: '2026-08-04T04:56:20.023647'
 ---
