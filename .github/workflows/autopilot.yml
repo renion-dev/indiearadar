@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull origin feature/seo-automation --no-rebase || echo "Pull failed, continuing"
+          git pull origin main --no-rebase || echo "Pull failed, continuing"
           git add _tools/ _data/programmatic/ pages/programmatic/ sitemap.xml
           if git diff --staged --quiet; then
             echo "No changes to commit"
