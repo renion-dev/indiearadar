@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: QA Engineers
+title: Best AI Tools for QA Engineers
 description: Best AI tools for testing and quality assurance.
 permalink: /qa-engineers/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: professions
+category: qa-engineers
 faq: []
-last_modified: '2026-08-04T09:07:45.057837'
+last_modified: '2026-08-04T06:14:36.007024'
 ---

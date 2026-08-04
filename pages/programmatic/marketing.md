@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Marketing
+title: Best AI Tools for Marketing
 description: Best AI tools for marketing.
 permalink: /marketing/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: professions
+category: marketing
 faq: []
-last_modified: '2026-08-04T09:07:45.025045'
+last_modified: '2026-08-04T06:14:35.854575'
 ---
