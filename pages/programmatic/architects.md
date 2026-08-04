@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Best AI Tools for Software Architects
+title: Software Architects
 description: Best AI tools for software architects.
 permalink: /architects/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: architects
+category: professions
 faq: []
-last_modified: '2026-08-04T04:50:17.912417'
+last_modified: '2026-08-04T09:07:44.849302'
 ---

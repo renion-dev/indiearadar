@@ -1,17 +1,17 @@
 ---
 layout: programmatic
-title: Best AI Tools for Students
+title: Students
 description: Best AI tools for students.
 permalink: /students/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: students
+category: professions
 faq:
 - question: What AI tools help students study?
   answer: AI tools for students include note-taking, writing assistance, and research
     tools.
 - question: Are AI tools for students free?
   answer: Most student AI tools have free plans with premium upgrades.
-last_modified: '2026-08-04T04:50:17.890886'
+last_modified: '2026-08-04T09:07:44.976037'
 ---

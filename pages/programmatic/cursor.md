@@ -5,18 +5,18 @@ description: ''
 permalink: /cursor/
 programmatic: true
 related_tools:
-- leaping-ai
-- agentx
-- unquestion
-- caimera
-- claude-code-usage-tracking-by-langwatch
-- honestly
-- screencap
-- happycapy
-- liminal
-- ycode-ai-agents
+- lightfield
+- tandem
+- via-10
+- pinery-prose
+- rork-max
+- openbase
+- unabyss
+- goldfish
+- plugthis
+- cursor-for-ios
 tool_count: 10
 category: unknown
 faq: []
-last_modified: '2026-08-04T04:50:16.782161'
+last_modified: '2026-08-04T09:07:44.112818'
 ---
