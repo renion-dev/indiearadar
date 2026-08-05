@@ -13,5 +13,5 @@ faq:
     platforms.
 - question: How can AI improve marketing ROI?
   answer: AI optimizes targeting, personalization, and campaign analytics.
-last_modified: '2026-08-04T23:40:04.474841'
+last_modified: '2026-08-05T10:12:29.541630'
 ---
