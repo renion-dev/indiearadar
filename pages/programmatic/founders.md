@@ -12,5 +12,5 @@ faq:
   answer: Founders benefit from AI for productivity, marketing automation, and analytics.
 - question: Are there free AI tools for startups?
   answer: Many AI tools offer free plans or startup discounts.
-last_modified: '2026-08-07T09:37:04.923641'
+last_modified: '2026-08-07T11:09:33.401156'
 ---
