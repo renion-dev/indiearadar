@@ -8,5 +8,5 @@ related_tools: []
 tool_count: 0
 category: architects
 faq: []
-last_modified: '2026-08-06T10:15:28.769327'
+last_modified: '2026-08-07T04:35:02.780488'
 ---
