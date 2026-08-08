@@ -11,5 +11,5 @@ faq:
 - question: How can AI improve e-commerce?
   answer: AI helps with product recommendations, customer support chatbots, and inventory
     management.
-last_modified: '2026-08-08T08:07:21.582675'
+last_modified: '2026-08-08T10:02:33.850404'
 ---
