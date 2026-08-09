@@ -12,5 +12,5 @@ faq:
 - question: What are the best AI tools for healthcare?
   answer: Tools like [tool1] and [tool2] help with medical imaging, patient records,
     and clinical decision support.
-last_modified: '2026-08-09T19:51:09.446083'
+last_modified: '2026-08-09T21:18:38.353543'
 ---
