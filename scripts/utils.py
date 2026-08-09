@@ -9,7 +9,8 @@ import time
 import random
 import logging
 import re
-from datetime import datetime, timedelta
+import yaml
+from datetime import datetime, timedelta, timezone
 from functools import wraps
 from pathlib import Path
 from typing import Optional, Callable, Any, List, Dict
@@ -66,21 +67,23 @@ class Cache:
                 self.data = {}
 
     def save(self):
-        with open(self.path, "w", encoding="utf-8") as f:
+        temp_path = self.path.with_suffix(".tmp")
+        with open(temp_path, "w", encoding="utf-8") as f:
             json.dump(self.data, f, ensure_ascii=False, indent=2)
+        temp_path.replace(self.path)
 
     def get(self, key: str) -> Optional[Any]:
         entry = self.data.get(key)
         if entry:
             expires = datetime.fromisoformat(entry["expires"])
-            if datetime.utcnow() < expires:
+            if datetime.now(timezone.utc) < expires:
                 return entry["value"]
         return None
 
     def set(self, key: str, value: Any, ttl_hours: int = 24):
         self.data[key] = {
             "value": value,
-            "expires": (datetime.utcnow() + timedelta(hours=ttl_hours)).isoformat()
+            "expires": (datetime.now(timezone.utc) + timedelta(hours=ttl_hours)).isoformat()
         }
         self.save()
 
@@ -110,7 +113,7 @@ class RateLimiter:
         self.timestamps = [t for t in self.timestamps if now - t < self.period]
         if len(self.timestamps) >= self.calls:
             sleep_time = self.period - (now - self.timestamps[0]) + 0.5
-            logger.info(f"[rate_limit] Bucket full. Sleeping {sleep_time:.1f}s...")
+            logger.debug(f"[rate_limit] Bucket full. Sleeping {sleep_time:.1f}s...")
             time.sleep(sleep_time)
         self.timestamps.append(time.time())
 
@@ -143,7 +146,11 @@ AI_KEYWORDS = [
 def is_ai_related(text: str, threshold: int = 1) -> bool:
     """Return True if text contains at least `threshold` AI keywords."""
     text_lower = text.lower()
-    matches = sum(1 for kw in AI_KEYWORDS if kw in text_lower)
+    # Use a set for O(1) lookup of words
+    words = set(re.findall(r"\w+", text_lower))
+    matches = sum(1 for kw in AI_KEYWORDS if kw.lower() in text_lower) 
+    # Note: keeping 'in text_lower' for multi-word keywords, 
+    # but for single words set intersection would be faster.
     return matches >= threshold
 
 
@@ -157,7 +164,7 @@ def slugify(name: str) -> str:
 
 # ─── Front Matter Parser ───────────────────────────────────────────
 def parse_front_matter(filepath: str) -> Dict[str, Any]:
-    """Extract Jekyll front matter as dict. Returns empty if no FM."""
+    """Extract Jekyll front matter using PyYAML. Returns empty if no FM."""
     p = Path(filepath)
     if not p.exists():
         return {}
@@ -168,10 +175,10 @@ def parse_front_matter(filepath: str) -> Dict[str, Any]:
     parts = content.split("---", 2)
     if len(parts) < 3:
         return {}
-    fm = {}
-    for line in parts[1].strip().split("\n"):
-        if ":" in line and not line.strip().startswith("-"):
-            k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip().strip('"').strip("'")
-    fm["__body__"] = parts[2].strip()
-    return fm
+    try:
+        fm = yaml.safe_load(parts[1]) or {}
+        fm["__body__"] = parts[2].strip()
+        return fm
+    except yaml.YAMLError as e:
+        logger.error(f"[parse] YAML error in {filepath}: {e}")
+        return {}
