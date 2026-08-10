@@ -4,9 +4,19 @@ title: Cursor Alternatives
 description: ''
 permalink: /cursor/
 programmatic: true
-related_tools: []
-tool_count: 0
+related_tools:
+- leaping-ai
+- agentx
+- unquestion
+- caimera
+- claude-code-usage-tracking-by-langwatch
+- honestly
+- screencap
+- happycapy
+- liminal
+- ycode-ai-agents
+tool_count: 10
 category: unknown
 faq: []
-last_modified: '2026-08-10T11:32:14.936991'
+last_modified: '2026-08-10T15:32:51.377384'
 ---
