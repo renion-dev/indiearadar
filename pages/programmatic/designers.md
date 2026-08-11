@@ -13,5 +13,5 @@ faq:
     workflows.
 - question: Can AI replace designers?
   answer: AI enhances design workflows but doesn't replace human creativity.
-last_modified: '2026-08-11T17:32:35.531346'
+last_modified: '2026-08-11T20:22:41.673306'
 ---
