@@ -13,5 +13,5 @@ faq:
     and productivity enhancers.
 - question: Are there free AI tools for developers?
   answer: Yes, many AI tools for developers offer free tiers with basic features.
-last_modified: '2026-08-12T11:12:42.095584'
+last_modified: '2026-08-12T15:30:55.492520'
 ---
