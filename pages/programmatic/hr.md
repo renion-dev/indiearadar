@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Best AI Tools for HR Professionals
+title: HR Professionals
 description: Best AI tools for HR and recruitment.
 permalink: /hr/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: hr
+category: professions
 faq: []
-last_modified: '2026-08-13T17:34:32.067142'
+last_modified: '2026-08-13T20:03:55.180474'
 ---

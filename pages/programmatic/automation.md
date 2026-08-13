@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Best AI Tools for Automation
+title: Automation
 description: Best AI tools for automation and workflows.
 permalink: /automation/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: automation
+category: professions
 faq:
 - question: What AI tools automate workflows?
   answer: Automation AI tools handle repetitive tasks, integrations, and business
@@ -14,5 +14,5 @@ faq:
 - question: How to automate with AI?
   answer: Use AI tools for task automation, API integrations, and no-code workflow
     builders.
-last_modified: '2026-08-13T17:34:31.958253'
+last_modified: '2026-08-13T20:03:54.995523'
 ---
