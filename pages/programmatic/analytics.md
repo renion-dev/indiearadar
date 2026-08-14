@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Analytics
+title: Best AI Tools for Analytics
 description: Best AI tools for data and analytics.
 permalink: /analytics/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: professions
+category: analytics
 faq:
 - question: What AI tools are best for analytics?
   answer: AI analytics tools include data visualization, predictive analytics, and
@@ -14,5 +14,5 @@ faq:
 - question: Can AI improve data analysis?
   answer: AI speeds up pattern detection and provides actionable insights from large
     datasets.
-last_modified: '2026-08-14T00:09:56.834059'
+last_modified: '2026-08-14T06:57:42.661465'
 ---

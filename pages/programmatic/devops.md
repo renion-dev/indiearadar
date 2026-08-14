@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: DevOps Engineers
+title: Best AI Tools for DevOps Engineers
 description: Best AI tools for DevOps and infrastructure.
 permalink: /devops/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: professions
+category: devops
 faq: []
-last_modified: '2026-08-14T00:09:56.991245'
+last_modified: '2026-08-14T06:57:42.552070'
 ---
