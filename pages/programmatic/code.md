@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Best AI Tools for Code
+title: Code
 description: Best AI tools for code.
 permalink: /code/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: code
+category: professions
 faq: []
-last_modified: '2026-08-14T06:57:42.463810'
+last_modified: '2026-08-14T11:10:56.285212'
 ---

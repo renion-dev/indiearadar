@@ -1,12 +1,12 @@
 ---
 layout: programmatic
-title: Best AI Tools for Game Developers
+title: Game Developers
 description: Best AI tools for game development.
 permalink: /game-developers/
 programmatic: true
 related_tools: []
 tool_count: 0
-category: game-developers
+category: professions
 faq: []
-last_modified: '2026-08-14T06:57:42.420512'
+last_modified: '2026-08-14T11:10:56.173192'
 ---
