@@ -11,31 +11,32 @@ tags:
 image: "assets/images/og/tool-pricing-ai-features-subscription-usage-based-or-one-time-pay.png"
 ---
 
-Most AI wrappers are bleeding money because founders are scared to charge for the compute they’re burning.
+Most AI founders are bleeding cash by picking the wrong pricing model for features that literally cost them money every time a user clicks "Generate."
 
 > **⚡ TL;DR**
-> * **Usage-based** is the only way to protect your margins if your AI model is expensive.
-> * **Subscriptions** are for high-retention utility tools, not novelty wrappers.
-> * **Skip this if** you’re building a simple UI layer that doesn't provide a clear, repeatable ROI for the user.
+> * **Usage-based** is the only way to protect your margins if you use GPT-4/Claude APIs.
+> * **Subscriptions** are for high-retention utility tools; avoid these if your AI feature is a "one-off" task.
+> * **Skip this if:** You are selling a B2B enterprise contract where procurement departments only understand flat-fee annual billing.
 
 ## 🧠 The Reality Check
-The biggest myth? "If I charge a flat subscription, users will love me." Wrong. If you charge $20/mo and a power user runs $50 worth of GPT-4o-Turbo calls, you aren’t a business; you’re a charity with a server bill. Stop trying to be "fair" and start being profitable.
+The biggest myth is that "Unlimited AI" is a marketing flex. It’s actually a suicide note. Unless you own your own models and run them on cheap rented GPUs, you are subsidizing your users' prompt engineering habits. If a user spends $50 in API costs but pays you $20 a month, you are paying them to use your software. Stop being a charity.
 
 ## ⚙️ The Solopreneur Playbook
-1. **Analyze your API costs:** Calculate your average cost per prompt and add a 4x buffer for overhead.
-2. **Choose your model:** If your tool is a "utility," go with a subscription. If it’s a "generator," go with credit-based usage.
-3. **Build a credit wall:** Force users to buy tokens upfront to reduce churn and increase your immediate cash flow.
-4. **Automate the refill:** Implement auto-recharge once a user hits 20% of their credit balance.
+1. **Calculate your per-request cost:** Take your average prompt/completion token count and multiply it by the API provider's rate.
+2. **Apply the "Multiplier of 5":** Your price per request should be at least 5x your cost to cover server overhead and your own time.
+3. **Implement a hybrid model:** Offer a small monthly base fee for access, then force "credits" for heavy AI usage.
+4. **Kill the "Unlimited" button:** Replace it with a hard credit cap that resets monthly to prevent runaway API bills.
 
 ## 📉 The Catch (aka The Fine Print)
-Usage-based billing is a UX nightmare. Users hate "running out" of credits mid-workflow. You’ll spend half your time in support tickets explaining why their $10 credit pack vanished in three days. Also, setting up Stripe Metered Billing is a headache that will cost you a full weekend of coding. Yes, I broke my production database twice trying to sync credit balances. It wasn't fun.
+Usage-based billing creates "billing anxiety." Users hate feeling like a taxi meter is running while they type. If your UI isn't fast or high-quality, they will feel ripped off the moment they hit their limit. I once pushed a usage-based update and got three support emails calling me a thief within an hour. Yes, I broke the production server testing the credit deduction logic. Twice.
 
-**The Builders' Math**
-*   **Cost:** $0.02 per query.
-*   **Pricing:** $10 for 300 credits.
-*   **Margin:** You clear $4.00 per pack after API costs.
-*   **Reality:** If a user runs 20 queries a day, they burn through a pack in 15 days. You hit break-even on the customer acquisition cost in under two weeks.
+## The Builders' Math
+*   **Cost:** API costs $0.05 per generation.
+*   **Pricing:** You charge $0.25 per generation (5x multiplier).
+*   **Scenario:** A user does 10 generations a day.
+*   **Profit:** You make $2.00/day profit per user.
+*   **Result:** You cover your base infrastructure costs in 10 days of usage.
 
-If you aren't charging for the compute, you aren't running a business—you're just subsidizing other people’s automation. Stop being a martyr and start tracking your unit economics. 
+Stop trying to guess what your users want. Give them a credit system, track the data, and adjust your prices when the API bill hits your inbox. If they aren't willing to pay for the compute they consume, they aren't your customers—they’re just server load.
 
 P.S. We send 1 weekly radar ping with tools that actually survive the 7-day test. No spam. Just signal. Drop your email [link].
