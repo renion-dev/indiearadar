@@ -13,5 +13,5 @@ faq:
     tools.
 - question: Are AI tools for students free?
   answer: Most student AI tools have free plans with premium upgrades.
-last_modified: '2026-08-21T14:06:54.838930'
+last_modified: '2026-08-21T16:37:11.097058'
 ---
