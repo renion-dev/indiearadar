@@ -13,5 +13,5 @@ faq:
     editors.
 - question: Can AI write content well?
   answer: AI can generate drafts, but human editing ensures quality and originality.
-last_modified: '2026-08-21T16:37:11.027321'
+last_modified: '2026-08-21T18:39:16.199212'
 ---
