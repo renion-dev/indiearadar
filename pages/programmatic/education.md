@@ -8,5 +8,5 @@ related_tools: []
 tool_count: 0
 category: industries
 faq: []
-last_modified: '2026-08-21T08:05:30.501309'
+last_modified: '2026-08-21T09:56:02.789086'
 ---
