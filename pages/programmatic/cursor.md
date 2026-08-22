@@ -4,9 +4,19 @@ title: Cursor Alternatives
 description: ''
 permalink: /cursor/
 programmatic: true
-related_tools: []
-tool_count: 0
+related_tools:
+- tandem
+- publora
+- minimax-h3
+- customerio-summer-release
+- lovon-ai-therapy
+- yamanote-3d
+- brew
+- happycapy
+- cleanlist-ai
+- flowtask-20
+tool_count: 10
 category: unknown
 faq: []
-last_modified: '2026-08-22T09:02:45.585521'
+last_modified: '2026-08-22T10:26:16.245078'
 ---
